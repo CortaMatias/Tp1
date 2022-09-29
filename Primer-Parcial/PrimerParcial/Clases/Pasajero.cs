@@ -6,18 +6,26 @@ using System.Threading.Tasks;
 
 namespace PrimerParcial.Clases
 {
-    class Pasajero
+    public class Pasajero : Persona
     {
-        private string nombre;
-        private string apellido;
-        private int edad;
-        private string sexo;
-        private string equipaje;
+        private int equipaje; //En kilos.
+        private bool premium;
+        private bool bolsoDeMano;
+       
+        public Pasajero(int equipaje, bool premium, bool bolsoDeMano, 
+            string nombre, string apellido, string genero,long dni,string pais, DateTime nacimiento,
+            Pasaporte pasaporte) : base (nombre, apellido,genero,dni, pais,nacimiento, pasaporte)
+        {
+            this.Equipaje = equipaje;
+            this.Premium = premium;
+            this.BolsoDeMano = bolsoDeMano;
+        }
+        public int Equipaje { get => equipaje; set => equipaje = value; }
+        public bool Premium { get => premium; set => premium = value; }
+        public bool BolsoDeMano { get => bolsoDeMano; set => bolsoDeMano = value; }
 
-        public string Nombre { get => nombre; set => nombre = value; }
-        public string Apellido { get => apellido; set => apellido = value; }
-        public int Edad { get => edad; set => edad = value; }
-        public string Sexo { get => sexo; set => sexo = value; }
-        public string Equipaje { get => equipaje; set => equipaje = value; }
+
+       
+
     }
 }

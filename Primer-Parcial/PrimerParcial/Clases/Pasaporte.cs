@@ -6,30 +6,29 @@ using System.Threading.Tasks;
 
 namespace PrimerParcial.Clases
 {
-    class Pasaporte : Pasajero
+    public class Pasaporte
     {
         private DateTime vencimiento;
+        private DateTime emision;
         private string codigo;
-        private string lugarNacimiento;
         private int codigoPais;
-        private string pais;
+        private string tipo;
     
-        public Pasaporte(DateTime vencimiento, string codigo, string lugarNacimiento, int codigoPais,
-            string nombre, string apellido, int edad,string sexo, string equipaje, string pais)
+        public Pasaporte(DateTime vencimiento, DateTime emision, string codigo,
+            int codigoPais, string tipo)            
         {
-            this.vencimiento = vencimiento;
-            this.codigo = codigo;
-            this.codigoPais = codigoPais;
-            this.lugarNacimiento = lugarNacimiento;
-            base.Apellido = apellido;
-            base.Nombre = nombre;
-            base.Edad = edad;
-            base.Sexo = sexo;
-            base.Equipaje = equipaje;
-            this.pais = pais;
+            this.Emision = emision;
+            this.Vencimiento = vencimiento;
+            this.Codigo = codigo;
+            this.CodigoPais = codigoPais;
+            this.Tipo = tipo;
         }
 
 
-    
+        public DateTime Vencimiento { get => vencimiento; set => vencimiento = value; }
+        public string Codigo { get => codigo; set => codigo = value; }
+        public int CodigoPais { get => codigoPais; set => codigoPais = value; }
+        public string Tipo { get => tipo; set => tipo = value; }
+        public DateTime Emision { get => emision; set => emision = value; }
     }
 }
