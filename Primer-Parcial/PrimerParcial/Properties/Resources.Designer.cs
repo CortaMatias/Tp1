@@ -63,6 +63,16 @@ namespace PrimerParcial.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Acapulco {
+            get {
+                object obj = ResourceManager.GetObject("Acapulco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap advertencia {
             get {
                 object obj = ResourceManager.GetObject("advertencia", resourceCulture);
@@ -73,9 +83,9 @@ namespace PrimerParcial.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cotizar {
+        internal static System.Drawing.Bitmap Atenas {
             get {
-                object obj = ResourceManager.GetObject("cotizar", resourceCulture);
+                object obj = ResourceManager.GetObject("Atenas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,16 +133,6 @@ namespace PrimerParcial.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cruz_quitar_signo1 {
-            get {
-                object obj = ResourceManager.GetObject("cruz-quitar-signo1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap destino__1_ {
             get {
                 object obj = ResourceManager.GetObject("destino (1)", resourceCulture);
@@ -153,6 +153,16 @@ namespace PrimerParcial.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Galapagos {
+            get {
+                object obj = ResourceManager.GetObject("Galapagos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kisspng_cruise_ship_carnival_cruise_line_clip_art_5b07fa6a2f9e47_8436134315272495141951 {
             get {
                 object obj = ResourceManager.GetObject("kisspng-cruise-ship-carnival-cruise-line-clip-art-5b07fa6a2f9e47.8436134315272495" +
@@ -164,10 +174,9 @@ namespace PrimerParcial.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap kisspng_cruise_ship_clip_art_vector_cartoon_cruises_5a6e9e8532e9c2_9172450515171989812086 {
+        internal static System.Drawing.Bitmap La_Habana {
             get {
-                object obj = ResourceManager.GetObject("kisspng-cruise-ship-clip-art-vector-cartoon-cruises-5a6e9e8532e9c2.91724505151719" +
-                        "89812086", resourceCulture);
+                object obj = ResourceManager.GetObject("La-Habana", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -175,10 +184,9 @@ namespace PrimerParcial.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap kisspng_ferry_cruise_ship_desktop_wallpaper_clip_art_cruise_5abe534aec4d83_7959738115224226029679__1_ {
+        internal static System.Drawing.Bitmap Lima {
             get {
-                object obj = ResourceManager.GetObject("kisspng-ferry-cruise-ship-desktop-wallpaper-clip-art-cruise-5abe534aec4d83.795973" +
-                        "8115224226029679 (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("Lima", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +204,26 @@ namespace PrimerParcial.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Montevideo {
+            get {
+                object obj = ResourceManager.GetObject("Montevideo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NUEVAYORK_ {
+            get {
+                object obj = ResourceManager.GetObject("NUEVAYORK!", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap oculto {
             get {
                 object obj = ResourceManager.GetObject("oculto", resourceCulture);
@@ -206,9 +234,129 @@ namespace PrimerParcial.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap opcion_de_maximizar_tamano__1_ {
+            get {
+                object obj = ResourceManager.GetObject("opcion-de-maximizar-tamano (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pasajero {
             get {
                 object obj = ResourceManager.GetObject("pasajero", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pascua {
+            get {
+                object obj = ResourceManager.GetObject("Pascua", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PuertoMadryn {
+            get {
+                object obj = ResourceManager.GetObject("PuertoMadryn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PuertoMadryn___ {
+            get {
+                object obj = ResourceManager.GetObject("PuertoMadryn!!!", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Recife_ {
+            get {
+                object obj = ResourceManager.GetObject("Recife!", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rio {
+            get {
+                object obj = ResourceManager.GetObject("Rio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Santiago {
+            get {
+                object obj = ResourceManager.GetObject("Santiago", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Taipei {
+            get {
+                object obj = ResourceManager.GetObject("Taipei", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ushuaia {
+            get {
+                object obj = ResourceManager.GetObject("Ushuaia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Venecia {
+            get {
+                object obj = ResourceManager.GetObject("Venecia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap work_from_home {
+            get {
+                object obj = ResourceManager.GetObject("work-from-home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap work_from_home__1_ {
+            get {
+                object obj = ResourceManager.GetObject("work-from-home (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

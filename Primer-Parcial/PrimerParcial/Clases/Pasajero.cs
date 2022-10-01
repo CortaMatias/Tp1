@@ -25,7 +25,30 @@ namespace PrimerParcial.Clases
         public bool BolsoDeMano { get => bolsoDeMano; set => bolsoDeMano = value; }
 
 
-       
+       public static bool operator == (Pasajero p1, Pasajero p2)
+        {
+            if (p1.Dni == p2.Dni) return true;
+            else return false;
+        }
 
+        public static bool operator !=(Pasajero p1, Pasajero p2)
+        {
+            return !(p1 == p2);
+        }
+
+        public override bool Equals(object obj)
+        {
+            bool ret = false;
+            if (obj is Pasajero)
+            {
+                ret = this == ((Pasajero)obj);
+            }
+            return ret;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }

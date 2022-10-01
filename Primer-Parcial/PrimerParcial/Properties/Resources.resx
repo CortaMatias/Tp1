@@ -118,23 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cruz-quitar-signo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cruz-quitar-signo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PuertoMadryn!!!" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PuertoMadryn!!!.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ushuaia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ushuaia.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="work-from-home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\work-from-home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="oculto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\oculto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="crucero (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\crucero (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cruz-quitar-signo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cruz-quitar-signo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="kisspng-cruise-ship-clip-art-vector-cartoon-cruises-5a6e9e8532e9c2.9172450515171989812086" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-cruise-ship-clip-art-vector-cartoon-cruises-5a6e9e8532e9c2.9172450515171989812086.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pasajero" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pasajero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="advertencia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\advertencia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,25 +136,76 @@
   <data name="crucero" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\crucero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kisspng-ferry-cruise-ship-desktop-wallpaper-clip-art-cruise-5abe534aec4d83.7959738115224226029679 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-ferry-cruise-ship-desktop-wallpaper-clip-art-cruise-5abe534aec4d83.7959738115224226029679 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="work-from-home (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\work-from-home (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cotizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cotizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Venecia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Venecia.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="La-Habana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\La-Habana.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="crucero (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\crucero (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Acapulco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Acapulco.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="expediente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\expediente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kisspng-cruise-ship-carnival-cruise-line-clip-art-5b07fa6a2f9e47.8436134315272495141951" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-cruise-ship-carnival-cruise-line-clip-art-5b07fa6a2f9e47.8436134315272495141951.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="destino (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\destino (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Taipei" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Taipei.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NUEVAYORK!" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NUEVAYORK!.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lima" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lima.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minimizar-signo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimizar-signo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Rio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rio.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Montevideo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Montevideo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Santiago" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Santiago.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Atenas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Atenas.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PuertoMadryn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PuertoMadryn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cruz-quitar-signo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cruz-quitar-signo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Galapagos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Galapagos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="crucero1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\crucero1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="destino (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\destino (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kisspng-cruise-ship-carnival-cruise-line-clip-art-5b07fa6a2f9e47.8436134315272495141951" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-cruise-ship-carnival-cruise-line-clip-art-5b07fa6a2f9e47.8436134315272495141951.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Recife!" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Recife!.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pascua" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pascua.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pasajero" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pasajero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="opcion-de-maximizar-tamano (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\opcion-de-maximizar-tamano (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

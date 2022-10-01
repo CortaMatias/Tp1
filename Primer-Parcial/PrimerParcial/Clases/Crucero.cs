@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,12 +12,14 @@ namespace PrimerParcial.Clases
         private string matricula;
         private string nombre;
         private int camarotes;
-        private int piscina = 0;
-        private int gimnasio = 0;
-        private int cine = 0;
-        private int casino = 0;
+        private bool piscina = false;
+        private bool gimnasio = false;
+        private bool cine = false;
+        private bool casino = false;
         private double bodega;
         private int capacidadPersonas;
+        private string rutaFoto = "";
+        
 
 
         public Crucero(string matricula, string nombre, int camarotes,  double bodega, int capacidadPersonas)
@@ -27,35 +30,42 @@ namespace PrimerParcial.Clases
             this.bodega = bodega;
             this.CapacidadPersonas = capacidadPersonas;
         }
-        public Crucero(string matricula, string nombre, int camarotes, double bodega, int capacidadPersonas, int casinos) : this(matricula, nombre, camarotes, bodega, capacidadPersonas)
+        public Crucero(string matricula, string nombre, int camarotes, double bodega, int capacidadPersonas, bool casinos) : this(matricula, nombre, camarotes, bodega, capacidadPersonas)
         {
             this.Casino = casinos;
         }
 
-        public Crucero(string matricula, string nombre, int camarotes, double bodega, int capacidadPersonas, int casinos, int gimnasio) : this(matricula, nombre, camarotes,  bodega, capacidadPersonas,casinos)
+        public Crucero(string matricula, string nombre, int camarotes, double bodega, int capacidadPersonas, bool casinos, bool gimnasio) : this(matricula, nombre, camarotes,  bodega, capacidadPersonas,casinos)
         {
             this.Gimnasio = gimnasio;
         }
 
-        public Crucero(string matricula, string nombre, int camarotes, double bodega, int capacidadPersonas, int casinos, int gimnasio, int cine) : this(matricula, nombre, camarotes, bodega, capacidadPersonas, casinos, gimnasio)
+        public Crucero(string matricula, string nombre, int camarotes, double bodega, int capacidadPersonas, bool casinos, bool gimnasio, bool cine) : this(matricula, nombre, camarotes, bodega, capacidadPersonas, casinos, gimnasio)
         {
             this.Cine = cine;
         }
 
-        public Crucero(string matricula, string nombre, int camarotes, double bodega, int capacidadPersonas, int casinos, int gimnasio, int cine, int piscina) : this(matricula, nombre, camarotes, bodega, capacidadPersonas,casinos, gimnasio, cine)
+        public Crucero(string matricula, string nombre, int camarotes, double bodega, int capacidadPersonas, bool casinos, bool gimnasio, bool cine, bool piscina) : this(matricula, nombre, camarotes, bodega, capacidadPersonas,casinos, gimnasio, cine)
         {
             this.Piscina = piscina;
         }
 
+        public Crucero(string matricula, string nombre, int camarotes, double bodega, int capacidadPersonas, bool casinos, bool gimnasio, bool cine, bool piscina, string foto) : this (matricula, nombre, camarotes, bodega, capacidadPersonas, casinos, gimnasio, cine, piscina)
+        {
+            this.RutaFoto = foto;
+        }
+
+
         public string Matricula { get => matricula;}
         public string Nombre { get => nombre;}
         public int Camarotes { get => camarotes;}
-        public int Casino { get => casino; set => casino = value; }
         public double Bodega { get => bodega;}
-        public int Piscina { get => piscina; set => piscina = value; }
-        public int Gimnasio { get => gimnasio; set => gimnasio = value; }
-        public int Cine { get => cine; set => cine = value; }
         public int CapacidadPersonas { get => capacidadPersonas; set => capacidadPersonas = value; }
+        public bool Piscina { get => piscina; set => piscina = value; }
+        public bool Gimnasio { get => gimnasio; set => gimnasio = value; }
+        public bool Cine { get => cine; set => cine = value; }
+        public bool Casino { get => casino; set => casino = value; }
+        public string RutaFoto { get => rutaFoto; set => rutaFoto = value; }
 
         private string Mostrar()
         {
@@ -76,6 +86,34 @@ namespace PrimerParcial.Clases
         {
             return c1.Mostrar();
         }
+
+
+        public int  CalcularHorasTotales(List<Viajes> l)
+        {
+            int duracionTotal = 0;
+            foreach(Viajes v in l)
+            {
+                if(this.Nombre == v.Crucero.Nombre)
+                {
+                    duracionTotal += v.DuracionViaje;
+                }
+            }
+            return duracionTotal;
+        }
+
+        public int CalcularViajesTotales(List<Viajes> l)
+        {
+            int contadorViajes = 0;
+            foreach(Viajes v in l)
+            {
+                if(this.Nombre == v.Crucero.Nombre)
+                {
+                    contadorViajes++;
+                }
+            }
+            return contadorViajes;
+        }
+
 
     }
 }

@@ -14,64 +14,105 @@ namespace PrimerParcial.Forms
     public partial class ListaPasajeros : Form
     {
         #region #atributos
-        List<Viajes> lista;//Lista original de viajes
-        List<Viajes> nuevaLista;//Lista auxiliar para filtrar los viajes.
-        List<Pasajero> listaFilter;//Lista auxiliar para filtrar los pasajeros.
+        private List<Viajes> lista = new ();//Lista original de viajes
+        private List<Viajes> nuevaLista = new();//Lista auxiliar para filtrar los viajes.
+        private List<Pasajero> listaFilter = new();//Lista auxiliar para filtrar los pasajeros.
 
         public List<Viajes> NuevaLista { get => nuevaLista; set => nuevaLista = value; }
         public List<Pasajero> ListaFilter { get => listaFilter; set => listaFilter = value; }
         public List<Viajes> Lista { get => lista; set => lista = value; }
         #endregion
 
-        public ListaPasajeros(List<Viajes> lista) 
+        public ListaPasajeros() 
         {
-            this.Lista = lista;
             InitializeComponent();
         }
         
         #region #Eventos
-        //Cuando carga el form cargamos el comboBoxViaje con las fechas de los viajes de la lista.
+        //Cuando carga el form cargamos el comboBoxViaje con el nombre de los cruceros
         private void ListaPasajeros_Load(object sender, EventArgs e)
-        {         
-            ComboViaje(Lista);
+        {
+            ComboCrucero(Lista);
         }
 
-        //Cuando el comboFecha selecciona un item usamos ese indice para obtener la fecha del viaje seleccionado
-        //Se utiliza una nueva lista para guardar los viajes en caso de que haya mas de uno en la misma fecha 
-        //Y le pasamos esa nueva lista al ComboCrucero
-        private void cmbFecha_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            cmbCrucero.Items.Clear();
-            cmBoxNombre.Items.Clear();
-            DateTime fecha = Lista[cmbFecha.SelectedIndex].Fecha;
-            NuevaLista = Viajes.filterViaje(fecha, Lista);
-            ComboCrucero(NuevaLista);
-        }
-        //Cuando el ComboBoxNombre selecciona un item usamos el indice para buscar en la lista de pasajeros
-        //y mostrar los datos del mismo
-        private void cmBoxNombre_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            this.showPasajero(Lista[0].Lista[cmBoxNombre.SelectedIndex]);
-        }
-           
-        //Cuando el comboBoxCrucero se selecciona usamos el indice para sacar de la lista de Viajes auxiliar la lista de pasajeros
-        //que le vamos a pasar al ComboBoxNombre
+
         private void cmbCrucero_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cmbFecha.Items.Clear();
+             string c = ObtenerCrucero();
+             ComboViaje(Lista, c);
+            cmbFecha.Enabled = true;
+        }
+
+        private void cmbFecha_SelectedIndexChanged(object sender, EventArgs e)
+        {
             cmBoxNombre.Items.Clear();
-            ListaFilter = NuevaLista[cmbCrucero.SelectedIndex].Lista;
+            string p = ObtenerFecha();
+            string c = ObtenerCrucero();
+            foreach (Viajes v in Lista)
+            {
+                DateTime f = v.FechaSalida;
+                string fecha = f.ToShortDateString();
+                if(fecha == p && v.Crucero.Nombre == c)
+                {
+                    showDestino(v.Destino.ToString());
+                    ListaFilter = v.Lista;
+                }
+            }
+           
             ComboNombre(ListaFilter);
             cmBoxNombre.Enabled = true;
-            showDestino(NuevaLista[cmbCrucero.SelectedIndex].Destino);
+        }
+
+        private void cmBoxNombre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string n = ObtenerPasajero();
+            foreach(Pasajero p in ListaFilter )
+            {
+                if (p.Nombre == n) 
+                {          
+                    show(p);
+                }            
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (cmbCrucero.SelectedItem != null && cmbFecha.SelectedItem != null) habilitarAdd();
+            else MessageBox.Show("Primero debe seleccionar un viaje (Nombre del crucero y Fecha de salida)", "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void cmbCrucero_MouseClick(object sender, MouseEventArgs e)
+        {
+            deshabilitarAdd();
+        }
+
+        private void cmBoxNombre_MouseClick(object sender, MouseEventArgs e)
+        {
+            deshabilitarAdd();
+        }
+
+        private void cmbFecha_MouseClick(object sender, MouseEventArgs e)
+        {
+            deshabilitarAdd();
+        }
+
+        private void btnValidar_Click(object sender, EventArgs e)
+        {
+            //VALIDAR DATOS PASAJERO
         }
         #endregion
 
 
+
         #region #Metodos
-        
-        
+
+        public void inicializarLista(List<Viajes> lista)
+        {
+            this.Lista = lista;
+        }
         //Carga los datos del pasajero elegido en el comboBoxNombre 
-        public void showPasajero(Pasajero p)
+        protected virtual void show(Pasajero p)
         {
             txtNombre.Text = p.Nombre;
             txtGenero.Text = p.Genero;
@@ -92,45 +133,107 @@ namespace PrimerParcial.Forms
             txtNacimiento.Text = p.Nacimiento.ToShortDateString();
         }
 
-        public void showDestino(string d)
+        protected virtual void showDestino(string d)
         {
             txtDestino.Text = d;
         }
 
         //Carga en el comboBox los nombres de la lista correspondiente a lo seleccionado por el usuario en los otros comboBoxes
-        private void ComboNombre(List<Pasajero> l)
+        protected void ComboNombre(List<Pasajero> l)
         {
-            foreach(Pasajero p in l)
-            {
-                cmBoxNombre.Items.Add(p.Nombre);
-            }
+            foreach(Pasajero p in l)  cmBoxNombre.Items.Add(p.Nombre);                               
         }
 
         //Carga los nombres de los cruceros que partiaron en viaje en la fecha seleccionada en el comboBoxFecha
         private void ComboCrucero(List<Viajes> l)
         {
-            foreach (Viajes v in l) 
+          foreach(Viajes c in l)
             {
-                cmbCrucero.Items.Add(v.Crucero.Nombre);
+                cmbCrucero.Items.Add(c.Crucero.Nombre);
             }
-            cmbCrucero.Enabled = true;
-        }
-        //Carga la fecha de los viajes disponibles en la lista
-        private void ComboViaje(List<Viajes> l)
-        {
-            foreach (Viajes viaje in l)
+            for (int i= 0 ; i < cmbCrucero.Items.Count - 2; i++) 
             {
-                cmbFecha.Items.Add(viaje.Fecha.ToShortDateString());                
-            }
-            for (int i = 0; i < cmbFecha.Items.Count - 1; i++)
-            {
-                if (cmbFecha.Items[i].ToString() == l[i].Fecha.ToShortDateString())
+                for(int j = cmbCrucero.Items.Count - 1; j > i+1 ; j--)
                 {
-                    cmbFecha.Items.RemoveAt(i);
+                    if (cmbCrucero.Items[i].ToString() == cmbCrucero.Items[j].ToString()) cmbCrucero.Items.RemoveAt(j);
                 }
             }
         }
 
+        //Carga la fecha de los viajes disponibles en la lista
+        private void ComboViaje(List<Viajes> l, string crucero)
+        {
+            foreach(Viajes v in l)
+            {
+               if(v.Crucero.Nombre.ToString() == crucero)
+                {
+                    cmbFecha.Items.Add(v.FechaSalida.ToShortDateString());
+                }
+            }
+        }
+
+        private string ObtenerCrucero()
+        {
+            object NombreCrucero = cmbCrucero.SelectedItem;
+            string nombre = Convert.ToString(NombreCrucero);
+            return nombre;
+        }
+
+        private string ObtenerFecha()
+        {
+            object fecha = cmbFecha.SelectedItem;
+            string f = Convert.ToString(fecha);
+            return f;
+        }
+
+        private string ObtenerPasajero()
+        {
+            object NombrePasajero = cmBoxNombre.SelectedItem;
+            string nombre = Convert.ToString(NombrePasajero);
+            return nombre;
+        }
+
+        protected virtual void habilitarAdd()
+        {
+            btnValidar.Visible = true;
+            btnValidar.Enabled = true;
+            foreach (var t in grpDatos.Controls)
+            {
+                if (t is TextBox)
+                {
+                    TextBox text = t as TextBox;
+                    text.Enabled = true;
+                    text.Text = "";
+                    if (text.Name == "txtEdad") text.BackColor = Color.Black;
+                }
+            }         
+        }
+        protected virtual void deshabilitarAdd()
+        {
+            btnValidar.Visible = false;
+            btnValidar.Enabled = false;
+            foreach(var t in grpDatos.Controls)
+            {
+                if(t is TextBox)
+                {
+                    TextBox text = t as TextBox;
+                    text.Enabled = false;
+                    if (text.Name == "txtEdad") text.BackColor = Color.White;
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
         #endregion
+
+
     }
 }

@@ -1,7 +1,4 @@
-C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\bin\Debug\net5.0-windows\PrimerParcial.exe
 C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\bin\Debug\net5.0-windows\PrimerParcial.deps.json
-C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\bin\Debug\net5.0-windows\PrimerParcial.runtimeconfig.json
-C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\bin\Debug\net5.0-windows\PrimerParcial.runtimeconfig.dev.json
 C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\bin\Debug\net5.0-windows\PrimerParcial.dll
 C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\bin\Debug\net5.0-windows\ref\PrimerParcial.dll
 C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\bin\Debug\net5.0-windows\PrimerParcial.pdb
@@ -14,9 +11,14 @@ C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debu
 C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debug\net5.0-windows\PrimerParcial.dll
 C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debug\net5.0-windows\ref\PrimerParcial.dll
 C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debug\net5.0-windows\PrimerParcial.pdb
-C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debug\net5.0-windows\PrimerParcial.genruntimeconfig.cache
 C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debug\net5.0-windows\PrimerParcial.Forms.Home.resources
 C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debug\net5.0-windows\PrimerParcial.Properties.Resources.resources
 C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debug\net5.0-windows\PrimerParcial.Forms.ListaPasajeros.resources
-C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debug\net5.0-windows\PrimerParcial.csproj.AssemblyReference.cache
-C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debug\net5.0-windows\PrimerParcial.Forms.ListaViajes.resources
+C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debug\net5.0-windows\PrimerParcial.Forms.Cruceros.resources
+C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debug\net5.0-windows\PrimerParcial.Forms.Historial.resources
+C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debug\net5.0-windows\PrimerParcial.Forms.MostrarViajes.resources
+C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\bin\Debug\net5.0-windows\PrimerParcial.exe
+C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\bin\Debug\net5.0-windows\PrimerParcial.runtimeconfig.json
+C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\bin\Debug\net5.0-windows\PrimerParcial.runtimeconfig.dev.json
+C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debug\net5.0-windows\PrimerParcial.genruntimeconfig.cache
+C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debug\net5.0-windows\PrimerParcial.Forms.panelHome.resources

@@ -43,10 +43,18 @@ namespace PrimerParcial
                         home.Show();
                     }else msgError("Usuario invalido");
                 }else msgError("Ingrese una contraseña");               
-            }else msgError("Ingrese un usuario");
-            
-                
-            
+            }else msgError("Ingrese un usuario");        
+        }
+
+        private bool ValidarUsuario(string usuario, string contraseña)
+        {
+            NombreUsuario = usuario;
+            foreach (Vendedor v1 in vendedores)
+            {
+                if (v1 == new Vendedor(usuario, contraseña)) return true;
+                else break;
+            }
+            return false;
         }
 
         private void msgError(string msg)
@@ -64,16 +72,7 @@ namespace PrimerParcial
             txtNombre.BackColor = Color.FromArgb(37, 54, 75);
         }
 
-        private bool ValidarUsuario(string usuario, string contraseña)
-        {
-            NombreUsuario = usuario;
-            foreach (Vendedor v1 in vendedores)
-            {
-                if (v1 == new Vendedor(usuario, contraseña))  return true;
-                else break;              
-            }
-            return false;
-        }
+
 
 
 
@@ -91,7 +90,7 @@ namespace PrimerParcial
             if(txtNombre.Text == "")
             {
                 txtNombre.Text = "Usuario";
-                txtNombre.ForeColor = Color.White;
+
             }
         }        
         private void txtNombre_MouseEnter(object sender, EventArgs e)
@@ -139,7 +138,6 @@ namespace PrimerParcial
             if (txtContraseña.Text == "")
             {
                 txtContraseña.Text = "Contraseña";
-                txtContraseña.ForeColor = Color.White;
                 txtContraseña.UseSystemPasswordChar = false;
             }
         }

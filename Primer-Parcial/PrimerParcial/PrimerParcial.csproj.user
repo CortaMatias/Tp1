@@ -4,6 +4,12 @@
     <Compile Update="Forms\Cruceros.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\panelHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Historial.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\ListaPasajeros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -11,6 +17,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\MostrarViajes.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

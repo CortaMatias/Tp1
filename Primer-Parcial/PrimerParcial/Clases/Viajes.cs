@@ -14,22 +14,23 @@ namespace PrimerParcial.Clases
         private static double precioRegional = 57;
         private static double precioExtraRegional = 120;
         private string destino;
-        private DateTime fecha;
+        private DateTime fechaSalida;
+        private DateTime fechaRegreso;
         private Crucero crucero;
         private int camarotePremium;
         private int camaroteTurista;
-        private double duracionViaje;
+        private int duracionViaje;
         private List<Pasajero> lista;
 
         public Viajes(string destino, DateTime fecha, Crucero crucero, int camarotePremium
-            , int camaroteTurista, double duracionViaje) : this()
+            , int camaroteTurista) : this()
         {
             this.Destino = destino;
-            this.Fecha = fecha;
+            this.FechaSalida = fecha;
             this.Crucero = crucero;
             this.CamarotePremium = camarotePremium;
             this.CamaroteTurista = camaroteTurista;
-            this.DuracionViaje = duracionViaje;
+            this.DuracionViaje = CalcularDuracion();
         }
         private Viajes()
         {
@@ -38,20 +39,36 @@ namespace PrimerParcial.Clases
 
         public string Partida { get => partida; set => partida = value; }
         public string Destino { get => destino; set => destino = value; }
-        public DateTime Fecha { get => fecha; set => fecha = value; }
         public Crucero Crucero { get => crucero; set => crucero = value; }
         public int CamarotePremium { get => camarotePremium; set => camarotePremium = value; }
         public int CamaroteTurista { get => camaroteTurista; set => camaroteTurista = value; }
         public double CostoPremium { get => costoPremium; set => costoPremium = value; }
         public double CostoTurista { get => costoTurista; set => costoTurista = value; }
-        public double DuracionViaje { get => duracionViaje; set => duracionViaje = value; }
-        internal List<Pasajero> Lista { get => lista; set => lista = value; }
+        public List<Pasajero> Lista { get => lista; set => lista = value; }
+        public DateTime FechaSalida { get => fechaSalida; set => fechaSalida = value; }
+        public int DuracionViaje { get => duracionViaje; set => duracionViaje = value; }
+
+        public static bool operator == (Viajes v, destinos destino)
+        {
+            return (destino.ToString() == v.Destino);
+        }
+        public static bool operator !=(Viajes v, destinos destino)
+        {
+            return !(v.Crucero.Nombre == destino.ToString());
+        }
+
+
+
+        public static void AgregarViaje(Viajes v1, List<Viajes> list)
+        {
+            if (Viajes.ValidarDatosViaje(v1)) list.Add(v1);
+        }
 
         private string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Destino: {this.Destino}");
-            sb.AppendLine($"Fecha de salida: {this.Fecha}");
+            sb.AppendLine($"Fecha de salida: {this.FechaSalida}");
             sb.AppendLine($"Crucero: {this.Crucero}");
             sb.AppendLine($"Duracion: {this.DuracionViaje}");
             sb.AppendLine($"Camarotes Premium: {this.camarotePremium}");
@@ -66,7 +83,7 @@ namespace PrimerParcial.Clases
             List<Viajes> lista = new List<Viajes>();
             foreach (Viajes v in l)
             {
-                if (v.Fecha == f) lista.Add(v);
+                if (v.FechaSalida == f) lista.Add(v);
             }
             return lista;
         }
@@ -92,6 +109,23 @@ namespace PrimerParcial.Clases
             int camarotesTurista = (int)(c1.Camarotes * 0.65);
             return camarotesTurista;
         }
+
+        private int CalcularDuracion()
+        {
+            int duracion = 0;
+            Random r = new Random();
+            foreach (var i in Enum.GetValues(typeof(destinos))) 
+            {
+                if (this.Destino == i.ToString()) { duracion = r.Next(72, 361); break; }
+                else { duracion = r.Next(480, 721); }
+            }
+            return duracion;
+        }
+
+
+        
+        
+
 
         
 
@@ -119,10 +153,7 @@ namespace PrimerParcial.Clases
             //Validar DAtos del viaje
             return true;
         }
-        public static void AgregarViaje(Viajes v1, List<Viajes> list)
-        {
-            if (Viajes.ValidarDatosViaje(v1)) list.Add(v1);
-        }
+        
 
     }
 }
