@@ -1,6 +1,6 @@
 ## **ROYAL CRUISES**
 
-## Sobre mi :  
+## SOBRE MI :  
 
 ### Mi nombre es **Matias Corta** y empece a programar en febrero cuando arranque el curso de ingreso 
 *Este trabajo fue un gran desafio para mi porque una habia hecho algo tan "Grande" me llevo muchisimo tiempo pero me gusto mucho hacerlo porque aprendi un monton de cosas, me hubiese gustado poder dedicarle mas tiempo que se me fue preparando otras materias y ese tiempo hubiese hecho que todo el proyecto en si estuviese mas ordenado y prolijo. Sin embargo considero que el trabajo esteticamente y el funcionamiento es correcto y esta bueno.*
@@ -13,7 +13,7 @@
 - Usuario: "Felipe Bustos"  Contraseña: "feli1234"
 Luego que se pasa del Login se abre el "Home" que es un formulario principal de la aplicacion donde en el se van desplegando las distintas opciones del menu
 
-**El menu esta compuesto por:
+**EL MENU ESTA COMPUESTO POR:
 
 -Info viajes: En esta opcion podemos ver los detalles de todos los viajes cargados. Tambien esta la opcion de cargar un nuevo viaje con todas sus validaciones correspondientes.
 
@@ -23,11 +23,11 @@ Luego que se pasa del Login se abre el "Home" que es un formulario principal de 
 
 -Datos historicos: En esta opcion podemos ver informacion estadistica de los viajes, pasajeros, ganancias etc. Tambien cuenta con un filtro donde se puede buscar entre todos los pasajeros que viajaron o viajaran segun fue pedido.
 
-#### Justificacion Tecnica
+#### JUSTIFICACION TECNICA
 Se trato de aplicar todos los temas vistos en clase como Herencia, Abstraccion, Herencia de formularios, Polimorfismo etc.
 
 
-*Propuesta de valor agregado:
+##PROPUESTA DE VALOR AGREGADO
 
 -Se agrego la opcion de añadir cruceros a la lista de cruceros con todas sus validaciones correspondientes y poder mostrarlo y agregarlo a un viaje si asi se desea.
 
