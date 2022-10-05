@@ -14,9 +14,13 @@
 Luego que se pasa del Login se abre el "Home" que es un formulario principal de la aplicacion donde en el se van desplegando las distintas opciones del menu
 
 **El menu esta compuesto por:
+
 -Info viajes: En esta opcion podemos ver los detalles de todos los viajes cargados. Tambien esta la opcion de cargar un nuevo viaje con todas sus validaciones correspondientes.
+
 -Info Pasajeros: En esta opcion podemos ver los detalles de todos los pasajeros de cada viaje y tambien tenemos la opcion de agregar un pasajero al viaje seleccionado.
+
 -Info Cruceros: En esta opcion podemos ver los detalles de todos los cruceros cargados y tambien tenemos la opcion de agregar un crucero a la lista de cruceros.
+
 -Datos historicos: En esta opcion podemos ver informacion estadistica de los viajes, pasajeros, ganancias etc. Tambien cuenta con un filtro donde se puede buscar entre todos los pasajeros que viajaron o viajaran segun fue pedido.
 
 #### Justificacion Tecnica
