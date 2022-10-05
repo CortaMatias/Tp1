@@ -49,13 +49,6 @@ namespace PrimerParcial.Forms
             txtTotal.Text = total.ToString();        
         }
 
-
-
-
-
-      
-
-
         private void comboFiltro_MouseClick(object sender, MouseEventArgs e)
         {
            
@@ -118,6 +111,7 @@ namespace PrimerParcial.Forms
 
         private void txtPasaporte_KeyPress(object sender, KeyPressEventArgs e)
         {
+            listDatos.Items.Clear();
             string codigo = txtPasaporte.Text;
             listDatos.Items.Clear();
 
@@ -153,7 +147,7 @@ namespace PrimerParcial.Forms
 
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            listDatos.Items.Clear();
             string codigo = txtApellido.Text;
             listDatos.Items.Clear();
             if (Char.IsLetter(e.KeyChar) || e.KeyChar == '\b')
@@ -187,7 +181,7 @@ namespace PrimerParcial.Forms
 
         private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            listDatos.Items.Clear();
             if (Char.IsNumber(e.KeyChar)|| e.KeyChar == '\b')
             {
                 string dni = txtDni.Text;
@@ -224,6 +218,7 @@ namespace PrimerParcial.Forms
 
         private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
         {
+            listDatos.Items.Clear();
             string codigo = txtEdad.Text;
             if (Char.IsNumber(e.KeyChar) || e.KeyChar == '\b')
             {

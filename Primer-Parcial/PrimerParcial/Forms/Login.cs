@@ -62,6 +62,7 @@ namespace PrimerParcial
             lblError.Text = "      " + msg;
             lblError.Visible = true;
         }
+
         private void btnIngresar_MouseEnter(object sender, EventArgs e)
         {
             txtNombre.BackColor = Color.FromArgb(45, 60, 80);
@@ -71,10 +72,6 @@ namespace PrimerParcial
         {
             txtNombre.BackColor = Color.FromArgb(37, 54, 75);
         }
-
-
-
-
 
         private void txtNombre_Enter(object sender, EventArgs e)
         {
@@ -157,9 +154,5 @@ namespace PrimerParcial
             if(txtContraseña.UseSystemPasswordChar == true) txtContraseña.UseSystemPasswordChar = false;
             else txtContraseña.UseSystemPasswordChar = true;
         }
-    }
-
-
-       
-    
+    }  
 }

@@ -14,17 +14,17 @@ namespace PrimerParcial.Clases
         private static List<Pasajero> listaPasajeros;
         private static List<Pasaporte> listaPasaportes;
 
-        public static List<Viajes> ListaViajes { get => listaViajes; set => listaViajes = value; }
-        public static List<Crucero> ListaCruceros { get => listaCruceros; set => listaCruceros = value; }
-        public static List<Pasajero> ListaPasajeros { get => listaPasajeros; set => listaPasajeros = value; }
-        public static List<Pasaporte> ListaPasaportes { get => listaPasaportes; set => listaPasaportes = value; }
+        public static List<Viajes> ListaViajes { get => listaViajes;}
+        public static List<Crucero> ListaCruceros { get => listaCruceros; }
+        public static List<Pasajero> ListaPasajeros { get => listaPasajeros;}
+        public static List<Pasaporte> ListaPasaportes { get => listaPasaportes;}
 
         static Hardcodeo()
         {
             listaViajes = new List<Viajes>();
             listaCruceros = new List<Crucero>();
             listaPasajeros = new List<Pasajero>();
-            ListaPasaportes = new List<Pasaporte>();
+            listaPasaportes = new List<Pasaporte>();
 
             ListaCruceros.Add( new Crucero("BA – 1 – 000 – 18", "Freedom", 100, 7000, 220));
             ListaCruceros.Add( new Crucero("BA – 2 – 001 – 19", "Felicty", 150, 7500, 300));
@@ -57,7 +57,7 @@ namespace PrimerParcial.Clases
             ListaPasaportes.Add(new Pasaporte(new(2024, 1, 2), new(2020, 5, 23), "90129294", 325, Tipo.Diplomatico.ToString()));
             ListaPasaportes.Add(new Pasaporte(new(2024, 2, 2), new(2020, 2, 23), "12192294", 302, Tipo.Ordinario.ToString()));
             ListaPasaportes.Add(new Pasaporte(new(2024, 1, 2), new(2020, 5, 23), "10152994", 305, Tipo.Oficial.ToString()));
-            ListaPasaportes.Add(new Pasaporte(new(2024, 5, 0), new(2020, 2, 23), "20192294", 205, Tipo.Oficial.ToString()));
+            ListaPasaportes.Add(new Pasaporte(new(2024, 5, 1), new(2020, 2, 23), "20192294", 205, Tipo.Oficial.ToString()));
             ListaPasaportes.Add(new Pasaporte(new(2024, 2, 2), new(2020, 5, 23), "10152294", 305, Tipo.Ordinario.ToString()));
             ListaPasaportes.Add(new Pasaporte(new(2024, 5, 2), new(2020, 3, 23), "12952294", 305, Tipo.Oficial.ToString()));
             ListaPasaportes.Add(new Pasaporte(new(2024, 5, 20), new(2020, 5, 3), "20152294", 325, Tipo.Diplomatico.ToString()));
@@ -69,12 +69,12 @@ namespace PrimerParcial.Clases
             ListaPasaportes.Add(new Pasaporte(new(2024, 1, 2), new(2020, 5, 23), "10192294", 305, Tipo.Diplomatico.ToString()));
             ListaPasaportes.Add(new Pasaporte(new(2024, 2, 2), new(2020, 2, 23), "19152994", 305, Tipo.Ordinario.ToString()));
             ListaPasaportes.Add(new Pasaporte(new(2024, 1, 2), new(2020, 5, 23), "10152294", 325, Tipo.Oficial.ToString()));
-            ListaPasaportes.Add(new Pasaporte(new(2024, 5, 0), new(2020, 2, 23), "20152294", 305, Tipo.Oficial.ToString()));
+            ListaPasaportes.Add(new Pasaporte(new(2024, 5, 3), new(2020, 2, 23), "20152294", 305, Tipo.Oficial.ToString()));
             ListaPasaportes.Add(new Pasaporte(new(2024, 2, 2), new(2020, 5, 23), "10192294", 325, Tipo.Ordinario.ToString()));
             ListaPasaportes.Add(new Pasaporte(new(2024, 5, 2), new(2020, 3, 23), "12952294", 205, Tipo.Oficial.ToString()));
 
             //PASAJEROS
-            ListaPasajeros.Add(new Pasajero(25, false, true, "Juan", "Alberto", "Masculino", "3835534", "URU", new(1975, 6, 127), ListaPasaportes[0]));
+            ListaPasajeros.Add(new Pasajero(25, false, true, "Juan", "Alberto", "Masculino", "3835534", "URU", new(1975, 6, 12), ListaPasaportes[0]));
             ListaPasajeros.Add(new Pasajero(25, true, true, "Juan", "Viviene", "Masculino", "3854534", "USA", new(1995, 6, 12), ListaPasaportes[1]));
             ListaPasajeros.Add(new Pasajero(25, false, false, "Jimmie", "Fettes", "Femenino", "3835534", "PAR", new(1995, 6, 1), ListaPasaportes[2]));
             ListaPasajeros.Add(new Pasajero(25, true, true, "Juan", "Walshaw", "Masculino", "3854534", "BRA", new(1995, 6, 7), ListaPasaportes[3]));
@@ -97,7 +97,7 @@ namespace PrimerParcial.Clases
             ListaPasajeros.Add(new Pasajero(23, true, true, "Emmalynn", "Fettes", "Masculino", "383534", "ARG", new(1975, 6, 7), ListaPasaportes[20]));
             ListaPasajeros.Add(new Pasajero(25, false, true, "Juan", "Guidoni", "No binario", "5834534", "BRA", new(1992, 9, 13), ListaPasaportes[21]));
             ListaPasajeros.Add(new Pasajero(25, false, true, "Jimmie", "Alberto", "Masculino", "3834534", "USA", new(1999, 12, 12), ListaPasaportes[22]));
-            ListaPasajeros.Add(new Pasajero(25, true, true, "Juan", "Alberto", "Femenino", "3835534", "URU", new(19912, 11, 29), ListaPasaportes[23]));
+            ListaPasajeros.Add(new Pasajero(25, true, true, "Juan", "Alberto", "Femenino", "3835534", "URU", new(1992, 11, 29), ListaPasaportes[23]));
             ListaPasajeros.Add(new Pasajero(25, false, true, "Letta", "Alberto", "Masculino", "3834534", "ARG", new(1995, 6, 28), ListaPasaportes[24]));
             ListaPasajeros.Add(new Pasajero(25, false, true, "Juan", "Guidoni", "No binario", "5834534", "BRA", new(1979, 10, 23), ListaPasaportes[25]));
             ListaPasajeros.Add(new Pasajero(23, true, true, "Jimmie", "Wrightem", "Masculino", "3854554", "USA", new(1995, 6, 22), ListaPasaportes[26]));
@@ -107,7 +107,7 @@ namespace PrimerParcial.Clases
             ListaPasajeros.Add(new Pasajero(25, false, true, "Juan", "Alberto", "No binario", "3834554", "ARG", new(1979, 6, 27), ListaPasaportes[30]));
             ListaPasajeros.Add(new Pasajero(23, true, true, "Jimmie", "Alberto", "Masculino", "3835534", "USA", new(1975, 8, 17), ListaPasaportes[31]));
             ListaPasajeros.Add(new Pasajero(25, false, false, "Oswald", "Craven", "Masculino", "3834534", "BRA", new(1995, 6, 27), ListaPasaportes[2]));
-            ListaPasajeros.Add(new Pasajero(25, false, true, "Letta", "Mohamed", "Masculino", "3854534", "ARG", new(1975, 6, 127), ListaPasaportes[3]));
+            ListaPasajeros.Add(new Pasajero(25, false, true, "Letta", "Mohamed", "Masculino", "3854534", "ARG", new(1975, 6, 12), ListaPasaportes[3]));
             ListaPasajeros.Add(new Pasajero(25, false, true, "Vincents", "Wrightem", "Femenino", "3834534", "BRA", new(1979, 12, 22), ListaPasaportes[4]));
             ListaPasajeros.Add(new Pasajero(35, true, true, "Juan", "Guidoni", "Masculino", "3535535", "USA", new(1975, 3, 21), ListaPasaportes[9]));
             ListaPasajeros.Add(new Pasajero(35, true, false, "Jimmie", "Walshaw", "No binario", "3834534", "ARG", new(199, 5, 27), ListaPasaportes[10]));
@@ -119,7 +119,7 @@ namespace PrimerParcial.Clases
             ListaViajes.Add(new Viajes(destinos.Acapulco, new(2019, 3, 4), ListaCruceros[0]));
             ListaViajes.Add(new Viajes(destinos.Atenas, new(2020, 8, 5), ListaCruceros[1]));
             ListaViajes.Add(new Viajes(destinos.Bangkok, new(2021, 9, 4), ListaCruceros[2]));
-            ListaViajes.Add(new Viajes(destinos.Cartagena, new(2019, 22, 6), ListaCruceros[3]));
+            ListaViajes.Add(new Viajes(destinos.Cartagena, new(2019, 2, 6), ListaCruceros[3]));
             ListaViajes.Add(new Viajes(destinos.Miami, new(2020, 5, 10), ListaCruceros[4]));
             ListaViajes.Add(new Viajes(destinos.Recife, new(2021, 3, 7), ListaCruceros[1]));
             ListaViajes.Add(new Viajes(destinos.Montevideo, new(2019, 5, 9), ListaCruceros[5]));
