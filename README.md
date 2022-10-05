@@ -13,7 +13,7 @@
 - Usuario: "Felipe Bustos"  Contraseña: "feli1234"
 Luego que se pasa del Login se abre el "Home" que es un formulario principal de la aplicacion donde en el se van desplegando las distintas opciones del menu
 
-** EL MENU ESTA COMPUESTO POR:
+*EL MENU ESTA COMPUESTO POR:
 
 -Info viajes: En esta opcion podemos ver los detalles de todos los viajes cargados. Tambien esta la opcion de cargar un nuevo viaje con todas sus validaciones correspondientes.
 
