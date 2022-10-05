@@ -35,6 +35,7 @@ namespace PrimerParcial.Forms
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@ namespace PrimerParcial.Forms
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -129,6 +129,17 @@ namespace PrimerParcial.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(347, 666);
             this.panel1.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label6.Location = new System.Drawing.Point(102, 236);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(160, 30);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "ROYAL CRUISES";
             // 
             // label1
             // 
@@ -289,7 +300,6 @@ namespace PrimerParcial.Forms
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(937, 60);
             this.tableLayoutPanel2.TabIndex = 19;
-            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint_1);
             // 
             // tableLayoutPanel4
             // 
@@ -305,7 +315,6 @@ namespace PrimerParcial.Forms
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.74074F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(163, 54);
             this.tableLayoutPanel4.TabIndex = 20;
-            this.tableLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel4_Paint);
             // 
             // tableLayoutPanel3
             // 
@@ -390,17 +399,6 @@ namespace PrimerParcial.Forms
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1296, 666);
             this.tableLayoutPanel5.TabIndex = 18;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label6.Location = new System.Drawing.Point(85, 236);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 30);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "ROYAL CRUISES";
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -439,9 +437,7 @@ namespace PrimerParcial.Forms
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;

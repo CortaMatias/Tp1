@@ -19,13 +19,13 @@ namespace PrimerParcial.Forms
        
 
         private  List<Crucero> listaCruceros = new();
-        Crucero c1 =  new Crucero("BA – 1 – 000 – 18", "Libertad",5,100,100);
-        Crucero c2 = new Crucero("BA – 2 – 001 – 19", "Felicidad",8,90,150);
-        Crucero c3 = new Crucero("BA – 3 – 014 – 23", "Alegria",3,200,50);
+        Crucero c1 = new Crucero("BA – 1 – 000 – 18", "Libertad", 5, 100, 100);
+        Crucero c2 = new Crucero("BA – 2 – 001 – 19", "Felicidad", 8, 90, 150);
+        Crucero c3 = new Crucero("BA – 3 – 014 – 23", "Alegria", 3, 200, 50);
         Crucero c4 = new Crucero("BA – 8 – 018 – 31", "Sorpresa", 10, 100, 200);
-        Crucero c5 = new Crucero("BA – 15 – 032 – 44", "Peronito", 5,90,70);
-        Crucero c6 = new Crucero("BA – 6 – 003 – 10","Pepito", 20, 80, 500);
-        Crucero c7 = new Crucero("BA – 4 – 099 – 28", "Julio", 6,70,150);
+        Crucero c5 = new Crucero("BA – 15 – 032 – 44", "Peronito", 5, 90, 70);
+        Crucero c6 = new Crucero("BA – 6 – 003 – 10", "Pepito", 20, 80, 500);
+        Crucero c7 = new Crucero("BA – 4 – 099 – 28", "Julio", 6, 70, 150);
 
         public List<Crucero> ListaCruceros { get => listaCruceros; set => listaCruceros = value; }
 
@@ -34,8 +34,7 @@ namespace PrimerParcial.Forms
 
         Pasajero p1 = new Pasajero(50, true, true, "Mariano", "Carrazco", "Masculino","4534534", "ARG", new(1980,1,27), 
             new Pasaporte(new(2019,5,20), new(2022,4,20), "LLMM9", 302, Tipo.Diplomatico.ToString()));    
-        Pasajero p2 = new Pasajero(25, false, true, "Juan", "Alberto", "Masculino", "3834534", "PAR", new(1975, 6, 27),
-            new Pasaporte(new(2022, 6, 25), new(2028, 6, 23), "JJKK5", 305, Tipo.Oficial.ToString()));
+        Pasajero p2 = new Pasajero(25, false, true, "Juan", "Alberto", "Masculino", "3834534", "PAR", new(1975, 6, 27),new Pasaporte(new(2022, 6, 25), new(2028, 6, 23), "JJKK5", 305, Tipo.Oficial.ToString()));
         Pasajero p3 = new Pasajero(50, true, true, "Maria", "Sanchez", "Femenino", "4634534", "ARG", new(1995, 3, 28),
             new Pasaporte(new(2020, 5, 20), new(2024, 9, 28), "SSDD4", 302, Tipo.Ordinario.ToString()));
 
@@ -157,7 +156,6 @@ namespace PrimerParcial.Forms
         //Permite arrastrar el formulario apretando sobre el panel
         private void panel3_MouseMove(object sender, MouseEventArgs e)
         {
-
             if (e.Button != MouseButtons.Left)
             {
                 clickX = e.X;
@@ -169,6 +167,7 @@ namespace PrimerParcial.Forms
                 this.Top = this.Top + (e.Y - clickY);
             }
         }
+
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -184,21 +183,6 @@ namespace PrimerParcial.Forms
             {
                 MessageBox.Show("Se cancelo el cierre de la aplicacion");
             }
-
-        }
-
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel2_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 

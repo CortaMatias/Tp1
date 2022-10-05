@@ -51,30 +51,7 @@ namespace PrimerParcial.Forms
 
 
 
-        private void comboFiltro_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboFiltro.SelectedItem.ToString() == "Todos los pasajeros")
-            {
-                listDatos.Items.Clear();
-                listarPasajeros();
-            }
-            
-            else if (comboFiltro.SelectedItem.ToString() == "Destinos x Facturacion") 
-            {
-                listDatos.Items.Clear();
-                DestinoXFacturacion();
-            }
-            else if (comboFiltro.SelectedItem.ToString() == "Destino mas elegido")
-            {
-                listDatos.Items.Clear();
-                listDatos.Items.Add(DestinoMasElegido());
-            }
-            else
-            {
-                listDatos.Items.Clear();
-                PasajeroFrecuente();
-            }
-        }
+
 
       
 
@@ -361,6 +338,29 @@ namespace PrimerParcial.Forms
             }
         }
 
+        private void comboFiltro_SelectedIndexChanged_1(object sender, EventArgs e)
+        {           
+                if (comboFiltro.SelectedItem.ToString() == "Todos los pasajeros")
+                {
+                    listDatos.Items.Clear();
+                    listarPasajeros();
+                }
 
+                else if (comboFiltro.SelectedItem.ToString() == "Destinos x Facturacion")
+                {
+                    listDatos.Items.Clear();
+                    DestinoXFacturacion();
+                }
+                else if (comboFiltro.SelectedItem.ToString() == "Destino mas elegido")
+                {
+                    listDatos.Items.Clear();
+                    listDatos.Items.Add(DestinoMasElegido());
+                }
+                else
+                {
+                    listDatos.Items.Clear();
+                    PasajeroFrecuente();
+                }           
+        }
     }
 }

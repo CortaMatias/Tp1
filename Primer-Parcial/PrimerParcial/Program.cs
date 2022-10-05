@@ -18,8 +18,7 @@ namespace PrimerParcial
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new fmrLogin());
-            Application.Run(new Home());
+            Application.Run(new fmrLogin());
         }
     }
 }

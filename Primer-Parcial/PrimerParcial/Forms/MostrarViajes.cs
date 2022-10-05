@@ -28,7 +28,11 @@ namespace PrimerParcial.Forms
 
         protected override void deshabilitarAdd()
         {
-            foreach(var item in grpDatos.Controls)
+            txtNombre.Enabled = false;
+            txtEmision.Enabled = false;
+            txtNacimiento.Enabled = false;
+            txtEmision.Enabled = false;
+            foreach (var item in grpDatos.Controls)
             {
                 if (item is TextBox)
                 {
@@ -41,12 +45,12 @@ namespace PrimerParcial.Forms
                     t.BackColor = Color.White;
                 }
             }
-            txtNacimiento.Enabled = false;
-            txtEmision.Enabled = false;
+            
         }
 
         protected override bool Validar()
         {
+            errorProvider1.Clear();
             bool todoOk = true;
             string crucero = txtNombre.Text;
             int destino;
@@ -88,6 +92,23 @@ namespace PrimerParcial.Forms
 
             todoOk =  ValidarFecha(fecha,crucero, destino);
 
+            if (todoOk)
+            {
+                Crucero c = null;
+                foreach (Viajes v  in Lista)
+                {
+                    if (v.Crucero.Nombre == crucero)
+                    {
+                        c = v.Crucero;
+                        break;
+                    }
+                }
+                if(c != null)
+                {
+                    Viajes nuevo = new Viajes((destinos)destino, fecha, c);
+                    Lista.Add(nuevo);
+                }              
+            }
             return todoOk;
         }
 
@@ -108,7 +129,7 @@ namespace PrimerParcial.Forms
                     if (v.Crucero.Nombre == crucero && v.FechaSalida == fecha)
                     {
                         valida = false;
-                        errorProvider1.SetError(btnValidar, "Ya existe un viaje con este crucero en esa fecha.");
+                        errorProvider1.SetError(txtNacimiento, "Ya existe un viaje con este crucero en esa fecha.");
                     }
                     else if (v.Crucero.Nombre == crucero)
                     {
@@ -125,8 +146,9 @@ namespace PrimerParcial.Forms
                             fechaPas = fechaSalidaViajeProgramado.AddDays(-30);
                             fechaFut = fechaSalidaViajeProgramado.AddDays(30);
                         }
-                        if (fechaSalidaViajeProgramado > fechaPas && fechaSalidaViajeProgramado < fechaFut)
+                        if (fecha > fechaPas && fecha < fechaFut)
                         {
+                            valida = false;
                             errorProvider1.SetError(txtNacimiento, "El crucero no esta disponible en esa fecha.");
                         }
                     }
@@ -256,8 +278,15 @@ namespace PrimerParcial.Forms
 
         protected override void btnValidar_Click(object sender, EventArgs e)
         {
-           bool valido = Validar();
+            if (Validar())
+            {
+                MessageBox.Show("El viaje fue agregado con exito!");
+            }
+
+
         }
+
+
 
         private void MostrarViajes_Load(object sender, EventArgs e)
         {

@@ -38,11 +38,6 @@ namespace PrimerParcial.Clases
             precioRegional = 57;
             precioExtraRegional = 120;
         }
-        private Viajes(destinos destino) 
-        {
-            this.Lista = new List<Pasajero>();
-            this.Destino = destino;
-        }
 
         public Viajes()
         {
@@ -156,12 +151,12 @@ namespace PrimerParcial.Clases
 
         public int calcularDisponibilidadPremium()
         {
-            return this.CamarotePremium - CantidadPremium();
+            return this.CamarotePremium - (CantidadPremium()/2);
         }
 
         public int CalcularDisponibilidadTurista()
         {
-            return this.CamaroteTurista - CantidadTurista();
+            return this.CamaroteTurista - (CantidadTurista()/2);
         }
 
         public int CantidadTurista()

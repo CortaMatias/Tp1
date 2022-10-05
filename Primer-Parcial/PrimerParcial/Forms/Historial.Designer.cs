@@ -272,6 +272,7 @@ namespace PrimerParcial.Forms
             this.comboFiltro.Name = "comboFiltro";
             this.comboFiltro.Size = new System.Drawing.Size(199, 29);
             this.comboFiltro.TabIndex = 2;
+            this.comboFiltro.SelectedIndexChanged += new System.EventHandler(this.comboFiltro_SelectedIndexChanged_1);
             // 
             // listDatos
             // 
