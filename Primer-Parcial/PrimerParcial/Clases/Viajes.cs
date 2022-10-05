@@ -8,12 +8,10 @@ namespace PrimerParcial.Clases
 {
     public class Viajes
     {
-        private static string partida = "Puerto de Buenos Aires";
-        private static double costoPremium = 1.20;
-        private static double costoTurista = 1;
-        private static double precioRegional = 57;
-        private static double precioExtraRegional = 120;
-        private string destino;
+        private string partida ;
+        private static int precioRegional;
+        private static int precioExtraRegional;
+        private destinos destino;
         private DateTime fechaSalida;
         private DateTime fechaRegreso;
         private Crucero crucero;
@@ -22,46 +20,87 @@ namespace PrimerParcial.Clases
         private int duracionViaje;
         private List<Pasajero> lista;
 
-        public Viajes(string destino, DateTime fecha, Crucero crucero, int camarotePremium
-            , int camaroteTurista) : this()
+
+        public Viajes(destinos destino, DateTime fecha, Crucero crucero) : this()
         {
+            this.partida = "Buenos Aires";
             this.Destino = destino;
             this.FechaSalida = fecha;
             this.Crucero = crucero;
-            this.CamarotePremium = camarotePremium;
-            this.CamaroteTurista = camaroteTurista;
+            this.CamarotePremium = CalcularCamarotesPremium(this.Crucero);
+            this.CamaroteTurista = CalcularCamarotesTurista(this.Crucero);
             this.DuracionViaje = CalcularDuracion();
+            this.FechaRegreso = calcularVuelta(DuracionViaje);
         }
-        private Viajes()
+
+         static Viajes()
+        {
+            precioRegional = 57;
+            precioExtraRegional = 120;
+        }
+        private Viajes(destinos destino) 
+        {
+            this.Lista = new List<Pasajero>();
+            this.Destino = destino;
+        }
+
+        public Viajes()
         {
             this.Lista = new List<Pasajero>();
         }
 
         public string Partida { get => partida; set => partida = value; }
-        public string Destino { get => destino; set => destino = value; }
         public Crucero Crucero { get => crucero; set => crucero = value; }
         public int CamarotePremium { get => camarotePremium; set => camarotePremium = value; }
         public int CamaroteTurista { get => camaroteTurista; set => camaroteTurista = value; }
-        public double CostoPremium { get => costoPremium; set => costoPremium = value; }
-        public double CostoTurista { get => costoTurista; set => costoTurista = value; }
         public List<Pasajero> Lista { get => lista; set => lista = value; }
         public DateTime FechaSalida { get => fechaSalida; set => fechaSalida = value; }
         public int DuracionViaje { get => duracionViaje; set => duracionViaje = value; }
+        public destinos Destino { get => destino; set => destino = value; }
+        public DateTime FechaRegreso { get => fechaRegreso; set => fechaRegreso = value; }
 
         public static bool operator == (Viajes v, destinos destino)
         {
-            return (destino.ToString() == v.Destino);
+            return (destino == v.Destino);
         }
         public static bool operator !=(Viajes v, destinos destino)
         {
             return !(v.Crucero.Nombre == destino.ToString());
         }
 
-
-
-        public static void AgregarViaje(Viajes v1, List<Viajes> list)
+        public override bool Equals(object obj)
         {
-            if (Viajes.ValidarDatosViaje(v1)) list.Add(v1);
+            bool ret = false;
+            if (obj is Viajes)
+            {
+                ret = this == ((Viajes)obj);
+            }
+            return ret;
+        }
+
+        public int CalcularPasajeroPremium()
+        {
+            int contador=0;
+           foreach(Pasajero p in Lista)
+            {
+                if (p.Premium == true) contador++;
+            }
+            return contador;
+        }
+
+        public int CalcularPasajeroTurista()
+        {
+            int contador = 0;
+            foreach (Pasajero p in Lista)
+            {
+                if (p.Premium == false) contador++;
+            }
+            return contador;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
 
         private string Mostrar()
@@ -74,8 +113,19 @@ namespace PrimerParcial.Clases
             sb.AppendLine($"Camarotes Premium: {this.camarotePremium}");
             sb.AppendLine($"Camarotes Turista:{this.CamaroteTurista}");
             sb.AppendLine($"Pasajeros totales: {this.Lista.Count}");
-            sb.AppendLine($"Disponibilidad: {this.CalcularDisponibilidad(this.Crucero,this)}");
+            sb.AppendLine($"Disponibilidad: {this.CalcularDisponibilidad()}");
             return sb.ToString();
+        }
+        public override string ToString()
+        {
+            return Mostrar();
+        }
+
+        private DateTime calcularVuelta(int duracion)
+        {
+            DateTime salida = this.FechaSalida;
+            DateTime FechaRegreso = salida.AddHours(duracion);
+            return FechaRegreso;
         }
 
         public static List<Viajes> filterViaje(DateTime f, List<Viajes> l)
@@ -88,14 +138,50 @@ namespace PrimerParcial.Clases
             return lista;
         }
 
-        public static string Mostrar(Viajes v1)
+
+        public int CalcularEspacioBodega()
         {
-            return v1.Mostrar();
+            int equipaje = 0;
+            foreach(Pasajero p in this.Lista)
+            {
+                equipaje = p.Equipaje + equipaje;
+            }
+            return this.Crucero.Bodega - equipaje;
         }
 
-        public int CalcularDisponibilidad(Crucero c1, Viajes v1)
+        public int CalcularDisponibilidad()
         {          
-            return c1.CapacidadPersonas - v1.Lista.Count;
+            return this.Crucero.CapacidadPersonas - this.Lista.Count;
+        }
+
+        public int calcularDisponibilidadPremium()
+        {
+            return this.CamarotePremium - CantidadPremium();
+        }
+
+        public int CalcularDisponibilidadTurista()
+        {
+            return this.CamaroteTurista - CantidadTurista();
+        }
+
+        public int CantidadTurista()
+        {
+            int contador = 0;
+            foreach(Pasajero p in this.Lista)
+            {
+                if (p.Premium == false) contador++;
+            }
+            return contador;
+        }
+
+        public int CantidadPremium()
+        {
+            int contador = 0;
+            foreach (Pasajero p in this.Lista)
+            {
+                if (p.Premium == true) contador++;
+            }
+            return contador;
         }
 
         public static int CalcularCamarotesPremium(Crucero c1)
@@ -116,42 +202,56 @@ namespace PrimerParcial.Clases
             Random r = new Random();
             foreach (var i in Enum.GetValues(typeof(destinos))) 
             {
-                if (this.Destino == i.ToString()) { duracion = r.Next(72, 361); break; }
+                if (this.Destino == (destinos)i) { duracion = r.Next(72, 361); break; }
                 else { duracion = r.Next(480, 721); }
             }
             return duracion;
         }
 
 
-        
-        
 
-
-        
-
-        private static bool ValidarDatosPasajero(Pasajero p1) {
-            //VALIDAR DATOS DEL PASAJERO.
-            return true;
-        }
-        
-        private static bool ValidarDatosCrucero()
+        public float CalcularPrecioViaje(Pasajero p)
         {
-            //VALIDAR DATOS CRUCERO.
-            return true;
-        }
-
-        public static void AgregarPasajero(Pasajero p1, Viajes v1)
-        {
-            if (Viajes.ValidarDatosPasajero(p1))
+            int costoHora;
+            float costoBruto;
+            if ((int)this.Destino > 0 && (int)this.Destino < 11)
             {
-                v1.Lista.Add(p1);
+                costoHora = Viajes.precioRegional;
+                costoBruto = costoHora * this.DuracionViaje;
             }
+            else
+            {
+                costoHora = Viajes.precioExtraRegional;
+                costoBruto = costoHora * this.DuracionViaje;
+            }
+            if (p.Premium) costoBruto = costoBruto * 1.20F;
+            return costoBruto;
         }
 
-        public static bool ValidarDatosViaje(Viajes v1)
+        public float CalcularGananciasRegionales()
         {
-            //Validar DAtos del viaje
-            return true;
+            float ganancias = 0;
+            if ((int)this.Destino < 11)
+            {
+                foreach (Pasajero p in this.Lista)
+                {
+                    ganancias += CalcularPrecioViaje(p);
+                }
+            }
+            return ganancias; 
+        }
+
+        public float CalcularGananciasExtraRegionales()
+        {
+            float ganancias = 0;
+            if((int) this.Destino > 10)
+            {
+                foreach(Pasajero p in this.Lista)
+                {
+                    ganancias += CalcularPrecioViaje(p);
+                }
+            }
+            return ganancias;
         }
         
 

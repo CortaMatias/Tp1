@@ -15,42 +15,57 @@ namespace PrimerParcial.Forms
     {
 
         private List<Viajes> listaViajes = new List<Viajes>();
-        private static Crucero[] cruceros = {
-            new Crucero("BA – 1 – 000 – 18", "Libertad",5,1,100),
-            new Crucero("BA – 2 – 001 – 19", "Felicidad",8,2,150),
-            new Crucero("BA – 3 – 014 – 23", "Alegria",3,1,50),
-            new Crucero("BA – 8 – 018 – 31", "Sorpresa", 10, 2, 200),
-            new Crucero("BA – 15 – 032 – 44", "Peronito", 5,1,70),
-            new Crucero("BA – 6 – 003 – 10","Pepito", 20, 3, 500),
-            new Crucero("BA – 4 – 099 – 28", "Julio", 6,2,150)};
-      
-        
         public List<Viajes> ListaViajes { get => listaViajes; set => listaViajes = value; }
-        public Crucero[] Cruceros { get => cruceros; set => cruceros = value; }
+       
 
-        Pasajero p1 = new Pasajero(50, true, true, "Mariano", "Carrazco", "Masculino",4534534, "ARG", new(1980,1,27), 
-            new Pasaporte(new(2019,5,20), new(2022,4,20), "JLASKDJ32", 302, Tipo.Diplomatico.ToString()));    
-        Pasajero p2 = new Pasajero(25, false, true, "Juan", "Alberto", "Masculino", 3834534, "PAR", new(1975, 6, 27),
-            new Pasaporte(new(2022, 6, 25), new(2028, 6, 23), "ASDASD2", 305, Tipo.Oficial.ToString()));
-        Pasajero p3 = new Pasajero(50, true, true, "Maria", "Sanchez", "Femenino", 4634534, "ARG", new(1995, 3, 28),
-            new Pasaporte(new(2020, 5, 20), new(2024, 9, 28), "SSAADKDJ32", 302, Tipo.Ordinario.ToString()));
+        private  List<Crucero> listaCruceros = new();
+        Crucero c1 =  new Crucero("BA – 1 – 000 – 18", "Libertad",5,100,100);
+        Crucero c2 = new Crucero("BA – 2 – 001 – 19", "Felicidad",8,90,150);
+        Crucero c3 = new Crucero("BA – 3 – 014 – 23", "Alegria",3,200,50);
+        Crucero c4 = new Crucero("BA – 8 – 018 – 31", "Sorpresa", 10, 100, 200);
+        Crucero c5 = new Crucero("BA – 15 – 032 – 44", "Peronito", 5,90,70);
+        Crucero c6 = new Crucero("BA – 6 – 003 – 10","Pepito", 20, 80, 500);
+        Crucero c7 = new Crucero("BA – 4 – 099 – 28", "Julio", 6,70,150);
+
+        public List<Crucero> ListaCruceros { get => listaCruceros; set => listaCruceros = value; }
 
 
-        Viajes v1 = new Viajes(destinos.Montevideo.ToString(),new(2022, 10, 28),cruceros[0],45,80 );
-        Viajes v2 = new Viajes(destinos.Cartagena.ToString(), new(2022, 10, 28), cruceros[3], 90, 40);
-        Viajes v3 = new Viajes(destinos.IslaDePascua.ToString(), new(2022, 8, 15), cruceros[5], 90, 40);
-        Viajes v4 = new Viajes(destinos.Montevideo.ToString(), new(2022, 3, 6), cruceros[1], 90, 40);
-        Viajes v5 = new Viajes(destinos.IslaDePascua.ToString(), new(2020, 9, 28), cruceros[5], 90, 40);
-        Viajes v6 = new Viajes(destinos.Montevideo.ToString(), new(2020, 8, 9), cruceros[1], 90, 40);
+
+
+        Pasajero p1 = new Pasajero(50, true, true, "Mariano", "Carrazco", "Masculino","4534534", "ARG", new(1980,1,27), 
+            new Pasaporte(new(2019,5,20), new(2022,4,20), "LLMM9", 302, Tipo.Diplomatico.ToString()));    
+        Pasajero p2 = new Pasajero(25, false, true, "Juan", "Alberto", "Masculino", "3834534", "PAR", new(1975, 6, 27),
+            new Pasaporte(new(2022, 6, 25), new(2028, 6, 23), "JJKK5", 305, Tipo.Oficial.ToString()));
+        Pasajero p3 = new Pasajero(50, true, true, "Maria", "Sanchez", "Femenino", "4634534", "ARG", new(1995, 3, 28),
+            new Pasaporte(new(2020, 5, 20), new(2024, 9, 28), "SSDD4", 302, Tipo.Ordinario.ToString()));
+
+
+
 
         public Home()
         {
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
+            this.DoubleBuffered = true;
             InitializeComponent();
         }
 
-        #region #Eventos
         private void Home_Load(object sender, EventArgs e)
         {
+            ListaCruceros.Add(c1);
+            ListaCruceros.Add(c2);
+            ListaCruceros.Add(c3);
+            ListaCruceros.Add(c4);
+            ListaCruceros.Add(c5);
+            ListaCruceros.Add(c6);
+            ListaCruceros.Add(c7);
+            Viajes v1 = new Viajes(destinos.Montevideo, new(2022, 10, 28), ListaCruceros[1]);
+            Viajes v2 = new Viajes(destinos.IslaDePascua, new(2022, 10, 28), ListaCruceros[2]);
+            Viajes v3 = new Viajes(destinos.IslaDePascua, new(2022, 8, 15), ListaCruceros[2]);
+            Viajes v4 = new Viajes(destinos.Cartagena, new(2022, 3, 6), ListaCruceros[4]);
+            Viajes v5 = new Viajes(destinos.IslaDePascua, new(2020, 9, 28), ListaCruceros[3]);
+            Viajes v6 = new Viajes(destinos.Cartagena, new(2020, 8, 9), ListaCruceros[2]);
+
+            panel3.BringToFront();
             panelHome fotos = new panelHome();
             OcultarFormPanel(fotos);
             label5.Text = fmrLogin.NombreUsuario;
@@ -58,17 +73,17 @@ namespace PrimerParcial.Forms
             string date = DateTime.UtcNow.ToString("MM-dd-yy");
             label3.Text = $"Fecha: {date}";
             v1.Lista.Add(p1);
-            v1.Lista.Add(p2);
             v2.Lista.Add(p1);
-            v2.Lista.Add(p2);
             v3.Lista.Add(p1);
-            v3.Lista.Add(p2);
-            v3.Lista.Add(p3);
             v4.Lista.Add(p1);
+            v6.Lista.Add(p1);
+            v6.Lista.Add(p2);
             v4.Lista.Add(p2);
-            v4.Lista.Add(p3);
-            v4.Lista.Add(p1);
-            v4.Lista.Add(p3);
+            v3.Lista.Add(p2);
+            v6.Lista.Add(p3);
+            v3.Lista.Add(p3);
+            v2.Lista.Add(p3);
+
             listaViajes.Add(v1);
             listaViajes.Add(v2);
             listaViajes.Add(v3);
@@ -78,9 +93,37 @@ namespace PrimerParcial.Forms
         }
 
 
+
+        #region #Metodos
+        private void AbrirFormEnUnPanel(object formhija)
+        {
+            if (this.panel2.Controls.Count > 0)
+            {
+                this.panel2.Controls.RemoveAt(0);
+            }
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panel2.Controls.Add(fh);
+            this.panel2.Tag = fh;
+            fh.Show();
+        }
+
+        private void OcultarFormPanel(Form f)
+        {
+            foreach(Form t in panel2.Controls)
+            {
+                if (f.Text != t.Text) f.Hide();
+            }
+            AbrirFormEnUnPanel(f);
+        }
+
+        #endregion
+
+        #region #Eventos
         private void button2_Click(object sender, EventArgs e)
         {
-            Cruceros formCrucero = new Cruceros(cruceros, listaViajes);
+            Cruceros formCrucero = new Cruceros(ListaCruceros, listaViajes);
             OcultarFormPanel(formCrucero);
         }
 
@@ -107,7 +150,8 @@ namespace PrimerParcial.Forms
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-
+            if (this.WindowState == FormWindowState.Maximized) this.WindowState = FormWindowState.Normal;
+            else this.WindowState = FormWindowState.Maximized;
         }
 
         //Permite arrastrar el formulario apretando sobre el panel
@@ -132,7 +176,30 @@ namespace PrimerParcial.Forms
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Esta seguro que desea cerrar la aplicacion?", "Cerrar aplicacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                MessageBox.Show("Se cancelo el cierre de la aplicacion");
+            }
+
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel2_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -144,29 +211,50 @@ namespace PrimerParcial.Forms
         #endregion
 
 
-        #region #Metodos
-        private void AbrirFormEnUnPanel(object formhija)
-        {
-            if (this.panel2.Controls.Count > 0)
-            {
-                this.panel2.Controls.RemoveAt(0);
-            }
-            Form fh = formhija as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.panel2.Controls.Add(fh);
-            this.panel2.Tag = fh;
-            fh.Show();
-        }
+        #region #Tamaño
 
-        private void OcultarFormPanel(Form f)
-        {
-            foreach(Form t in panel2.Controls)
-            {
-                if (f.Text != t.Text) f.Hide();
-            }
-            AbrirFormEnUnPanel(f);
-        }
+        ////METODO PARA REDIMENCIONAR/CAMBIAR TAMAÑO A FORMULARIO  TIEMPO DE EJECUCION ----------------------------------------------------------
+        //private int tolerance = 15;
+        //private const int WM_NCHITTEST = 132;
+        //private const int HTBOTTOMRIGHT = 17;
+        //private Rectangle sizeGripRectangle;
+
+        //protected override void WndProc(ref Message m)
+        //{
+        //    switch (m.Msg)
+        //    {
+        //        case WM_NCHITTEST:
+        //            base.WndProc(ref m);
+        //            var hitPoint = this.PointToClient(new Point(m.LParam.ToInt32() & 0xffff, m.LParam.ToInt32() >> 16));
+        //            if (sizeGripRectangle.Contains(hitPoint))
+        //                m.Result = new IntPtr(HTBOTTOMRIGHT);
+        //            break;
+        //        default:
+        //            base.WndProc(ref m);
+        //            break;
+        //    }
+        //}
+
+        ////----------------DIBUJAR RECTANGULO / EXCLUIR ESQUINA PANEL 
+        //protected override void OnSizeChanged(EventArgs e)
+        //{
+        //    base.OnSizeChanged(e);
+        //    var region = new Region(new Rectangle(0, 0, this.ClientRectangle.Width, this.ClientRectangle.Height));
+        //    sizeGripRectangle = new Rectangle(this.ClientRectangle.Width - tolerance, this.ClientRectangle.Height - tolerance, tolerance, tolerance);
+        //    region.Exclude(sizeGripRectangle);
+        //    //this.pnl_contenedorP.Region = region;
+        //    this.Invalidate();
+        //}
+
+
+        ////----------------COLOR Y GRIP DE RECTANGULO INFERIOR
+        //protected override void OnPaint(PaintEventArgs e)
+        //{
+        //    SolidBrush blueBrush = new SolidBrush(Color.FromArgb(55, 61, 69));
+        //    e.Graphics.FillRectangle(blueBrush, sizeGripRectangle);
+        //    base.OnPaint(e);
+        //    ControlPaint.DrawSizeGrip(e.Graphics, Color.Transparent, sizeGripRectangle);
+        //}
 
         #endregion
     }

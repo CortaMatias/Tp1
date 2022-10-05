@@ -13,7 +13,7 @@ namespace PrimerParcial.Clases
         private bool bolsoDeMano;
        
         public Pasajero(int equipaje, bool premium, bool bolsoDeMano, 
-            string nombre, string apellido, string genero,long dni,string pais, DateTime nacimiento,
+            string nombre, string apellido, string genero,string dni,string pais, DateTime nacimiento,
             Pasaporte pasaporte) : base (nombre, apellido,genero,dni, pais,nacimiento, pasaporte)
         {
             this.Equipaje = equipaje;
@@ -24,6 +24,18 @@ namespace PrimerParcial.Clases
         public bool Premium { get => premium; set => premium = value; }
         public bool BolsoDeMano { get => bolsoDeMano; set => bolsoDeMano = value; }
 
+
+       public string MostrarPasajero(Pasajero p, string salida, string destino)
+        {
+            StringBuilder sb = new();
+            sb.Append($"Nombre: {p.Nombre} - Apellido: {p.Apellido}" +
+                $" - Genero: {p.Genero} - Dni: {p.Dni} - Pais: {p.Pais}" +
+                $"  - Nacimiento: {p.Edad} - Cod. Pasaporte: {p.Pasaporte.Codigo.ToString()}" +
+                $" - Venc. Pasaporte: {p.Pasaporte.Vencimiento.ToShortDateString()}" +
+                $"- Destino: {destino} " +
+                $"- Fecha de Salida: {salida}");
+            return sb.ToString();
+        }
 
        public static bool operator == (Pasajero p1, Pasajero p2)
         {

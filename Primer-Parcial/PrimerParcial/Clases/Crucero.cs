@@ -16,13 +16,13 @@ namespace PrimerParcial.Clases
         private bool gimnasio = false;
         private bool cine = false;
         private bool casino = false;
-        private double bodega;
+        private int bodega;
         private int capacidadPersonas;
         private string rutaFoto = "";
         
 
 
-        public Crucero(string matricula, string nombre, int camarotes,  double bodega, int capacidadPersonas)
+        public Crucero(string matricula, string nombre, int camarotes,  int bodega, int capacidadPersonas)
         {
             this.matricula = matricula;
             this.nombre = nombre;
@@ -30,27 +30,27 @@ namespace PrimerParcial.Clases
             this.bodega = bodega;
             this.CapacidadPersonas = capacidadPersonas;
         }
-        public Crucero(string matricula, string nombre, int camarotes, double bodega, int capacidadPersonas, bool casinos) : this(matricula, nombre, camarotes, bodega, capacidadPersonas)
+        public Crucero(string matricula, string nombre, int camarotes, int bodega, int capacidadPersonas, bool casinos) : this(matricula, nombre, camarotes, bodega, capacidadPersonas)
         {
             this.Casino = casinos;
         }
 
-        public Crucero(string matricula, string nombre, int camarotes, double bodega, int capacidadPersonas, bool casinos, bool gimnasio) : this(matricula, nombre, camarotes,  bodega, capacidadPersonas,casinos)
+        public Crucero(string matricula, string nombre, int camarotes, int bodega, int capacidadPersonas, bool casinos, bool gimnasio) : this(matricula, nombre, camarotes,  bodega, capacidadPersonas,casinos)
         {
             this.Gimnasio = gimnasio;
         }
 
-        public Crucero(string matricula, string nombre, int camarotes, double bodega, int capacidadPersonas, bool casinos, bool gimnasio, bool cine) : this(matricula, nombre, camarotes, bodega, capacidadPersonas, casinos, gimnasio)
+        public Crucero(string matricula, string nombre, int camarotes, int bodega, int capacidadPersonas, bool casinos, bool gimnasio, bool cine) : this(matricula, nombre, camarotes, bodega, capacidadPersonas, casinos, gimnasio)
         {
             this.Cine = cine;
         }
 
-        public Crucero(string matricula, string nombre, int camarotes, double bodega, int capacidadPersonas, bool casinos, bool gimnasio, bool cine, bool piscina) : this(matricula, nombre, camarotes, bodega, capacidadPersonas,casinos, gimnasio, cine)
+        public Crucero(string matricula, string nombre, int camarotes, int bodega, int capacidadPersonas, bool casinos, bool gimnasio, bool cine, bool piscina) : this(matricula, nombre, camarotes, bodega, capacidadPersonas,casinos, gimnasio, cine)
         {
             this.Piscina = piscina;
         }
 
-        public Crucero(string matricula, string nombre, int camarotes, double bodega, int capacidadPersonas, bool casinos, bool gimnasio, bool cine, bool piscina, string foto) : this (matricula, nombre, camarotes, bodega, capacidadPersonas, casinos, gimnasio, cine, piscina)
+        public Crucero(string matricula, string nombre, int camarotes, int bodega, int capacidadPersonas, bool casinos, bool gimnasio, bool cine, bool piscina, string foto) : this (matricula, nombre, camarotes, bodega, capacidadPersonas, casinos, gimnasio, cine, piscina)
         {
             this.RutaFoto = foto;
         }
@@ -59,7 +59,7 @@ namespace PrimerParcial.Clases
         public string Matricula { get => matricula;}
         public string Nombre { get => nombre;}
         public int Camarotes { get => camarotes;}
-        public double Bodega { get => bodega;}
+        public int Bodega { get => bodega;}
         public int CapacidadPersonas { get => capacidadPersonas; set => capacidadPersonas = value; }
         public bool Piscina { get => piscina; set => piscina = value; }
         public bool Gimnasio { get => gimnasio; set => gimnasio = value; }

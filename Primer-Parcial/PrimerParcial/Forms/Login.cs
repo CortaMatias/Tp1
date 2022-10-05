@@ -115,7 +115,14 @@ namespace PrimerParcial
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-           Application.Exit();
+            if (MessageBox.Show("Esta seguro que desea cerrar la aplicacion?", "Cerrar aplicacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                MessageBox.Show("Se cancelo el cierre de la aplicacion");
+            }
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -144,8 +151,8 @@ namespace PrimerParcial
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {           
-            if (pictureBox2.Image == imageList1.Images[0]) pictureBox2.Image = imageList1.Images[1];
-            else pictureBox2.Image = imageList1.Images[0];
+            if (pictureBox2.Image == imageList1.Images[2]) pictureBox2.Image = imageList1.Images[1];
+            else pictureBox2.Image = imageList1.Images[1];
 
             if(txtContraseña.UseSystemPasswordChar == true) txtContraseña.UseSystemPasswordChar = false;
             else txtContraseña.UseSystemPasswordChar = true;

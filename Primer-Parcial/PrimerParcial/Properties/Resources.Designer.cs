@@ -73,16 +73,6 @@ namespace PrimerParcial.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap advertencia {
-            get {
-                object obj = ResourceManager.GetObject("advertencia", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Atenas {
             get {
                 object obj = ResourceManager.GetObject("Atenas", resourceCulture);
@@ -103,19 +93,9 @@ namespace PrimerParcial.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap crucero__1_ {
+        internal static System.Drawing.Bitmap CruceroDefault {
             get {
-                object obj = ResourceManager.GetObject("crucero (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap crucero1 {
-            get {
-                object obj = ResourceManager.GetObject("crucero1", resourceCulture);
+                object obj = ResourceManager.GetObject("CruceroDefault", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +113,9 @@ namespace PrimerParcial.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap destino__1_ {
+        internal static System.Drawing.Bitmap destino {
             get {
-                object obj = ResourceManager.GetObject("destino (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("destino", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +126,16 @@ namespace PrimerParcial.Properties {
         internal static System.Drawing.Bitmap expediente {
             get {
                 object obj = ResourceManager.GetObject("expediente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap expediente1 {
+            get {
+                object obj = ResourceManager.GetObject("expediente1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -214,9 +204,9 @@ namespace PrimerParcial.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap NUEVAYORK_ {
+        internal static System.Drawing.Bitmap nuevayork {
             get {
-                object obj = ResourceManager.GetObject("NUEVAYORK!", resourceCulture);
+                object obj = ResourceManager.GetObject("nuevayork", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -257,16 +247,6 @@ namespace PrimerParcial.Properties {
         internal static System.Drawing.Bitmap Pascua {
             get {
                 object obj = ResourceManager.GetObject("Pascua", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap PuertoMadryn {
-            get {
-                object obj = ResourceManager.GetObject("PuertoMadryn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -337,16 +317,6 @@ namespace PrimerParcial.Properties {
         internal static System.Drawing.Bitmap Venecia {
             get {
                 object obj = ResourceManager.GetObject("Venecia", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap work_from_home {
-            get {
-                object obj = ResourceManager.GetObject("work-from-home", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

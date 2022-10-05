@@ -27,5 +27,19 @@ namespace PrimerParcial.Clases
             return !(v1 == v2);
         }
 
+        public override bool Equals(object obj)
+        {
+            bool ret = false;
+            if (obj is Vendedor)
+            {
+                ret = this == ((Vendedor)obj);
+            }
+            return ret;
+        }
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
     }    
 }

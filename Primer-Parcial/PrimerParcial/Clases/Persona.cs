@@ -11,14 +11,14 @@ namespace PrimerParcial.Clases
     {
         private string nombre;
         private string apellido;
-        private int edad;
+        private string edad;
         private string genero;
-        private long dni;
+        private string dni;
         private Pasaporte pasaporte;
         private string pais;
         private DateTime nacimiento;
 
-        public Persona(string nombre, string apellido, string genero, long dni, string pais, DateTime nacimiento,Pasaporte pasaporte)
+        public Persona(string nombre, string apellido, string genero, string dni, string pais, DateTime nacimiento,Pasaporte pasaporte)
         {
             this.Nombre = nombre;
             this.Apellido = apellido;
@@ -32,20 +32,20 @@ namespace PrimerParcial.Clases
 
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellido { get => apellido; set => apellido = value; }
-        public int Edad { get => edad; set => edad = value; }
+        public string Edad { get => edad; set => edad = value; }
         public string Genero { get => genero; set => genero = value; }
         public Pasaporte Pasaporte { get => pasaporte; set => pasaporte = value; }
-        public long Dni { get => dni; set => dni = value; }
+        public string Dni { get => dni; set => dni = value; }
         public string Pais { get => pais; set => pais = value; }
         public DateTime Nacimiento { get => nacimiento; set => nacimiento = value; }
 
 
-        public int calcularEdad(DateTime f)
+        public string calcularEdad(DateTime f)
         {
             //Validar cuando ingresa la fecha de nacimiento que no sea mayor a la fecha actual
             DateTime hoy = DateTime.Today;
             int edad = hoy.Year - f.Year;
-            return edad;
+            return edad.ToString();
         }
     }
 

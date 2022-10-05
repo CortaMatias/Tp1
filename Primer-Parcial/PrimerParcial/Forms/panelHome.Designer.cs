@@ -110,19 +110,21 @@ namespace PrimerParcial.Forms
             this.groupBox1.Controls.Add(this.pictureBox10);
             this.groupBox1.Controls.Add(this.pictureBox9);
             this.groupBox1.Controls.Add(this.pictureBox6);
-            this.groupBox1.Location = new System.Drawing.Point(8, 12);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(780, 431);
+            this.groupBox1.Size = new System.Drawing.Size(887, 503);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Destinos";
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(632, 13);
+            this.label12.Location = new System.Drawing.Point(710, 31);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(66, 21);
             this.label12.TabIndex = 44;
@@ -130,10 +132,11 @@ namespace PrimerParcial.Forms
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(463, 13);
+            this.label11.Location = new System.Drawing.Point(518, 31);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(49, 21);
             this.label11.TabIndex = 43;
@@ -141,10 +144,11 @@ namespace PrimerParcial.Forms
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(327, 13);
+            this.label10.Location = new System.Drawing.Point(368, 31);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 21);
             this.label10.TabIndex = 42;
@@ -152,10 +156,11 @@ namespace PrimerParcial.Forms
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(153, 13);
+            this.label9.Location = new System.Drawing.Point(194, 31);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(90, 21);
             this.label9.TabIndex = 41;
@@ -163,10 +168,11 @@ namespace PrimerParcial.Forms
             // 
             // label27
             // 
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.Transparent;
             this.label27.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label27.Location = new System.Drawing.Point(66, 289);
+            this.label27.Location = new System.Drawing.Point(74, 339);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(71, 21);
             this.label27.TabIndex = 40;
@@ -174,10 +180,11 @@ namespace PrimerParcial.Forms
             // 
             // label26
             // 
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.Transparent;
             this.label26.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label26.Location = new System.Drawing.Point(241, 289);
+            this.label26.Location = new System.Drawing.Point(285, 339);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(80, 21);
             this.label26.TabIndex = 39;
@@ -185,10 +192,11 @@ namespace PrimerParcial.Forms
             // 
             // label25
             // 
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label25.Location = new System.Drawing.Point(405, 289);
+            this.label25.Location = new System.Drawing.Point(442, 339);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(52, 21);
             this.label25.TabIndex = 38;
@@ -196,10 +204,11 @@ namespace PrimerParcial.Forms
             // 
             // label24
             // 
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label24.Location = new System.Drawing.Point(551, 288);
+            this.label24.Location = new System.Drawing.Point(604, 339);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(63, 21);
             this.label24.TabIndex = 37;
@@ -207,10 +216,11 @@ namespace PrimerParcial.Forms
             // 
             // label23
             // 
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label23.Location = new System.Drawing.Point(663, 289);
+            this.label23.Location = new System.Drawing.Point(739, 339);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(105, 21);
             this.label23.TabIndex = 36;
@@ -218,10 +228,11 @@ namespace PrimerParcial.Forms
             // 
             // label17
             // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(632, 151);
+            this.label17.Location = new System.Drawing.Point(710, 172);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(93, 21);
             this.label17.TabIndex = 35;
@@ -229,10 +240,11 @@ namespace PrimerParcial.Forms
             // 
             // label16
             // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(493, 151);
+            this.label16.Location = new System.Drawing.Point(560, 172);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(83, 21);
             this.label16.TabIndex = 34;
@@ -240,10 +252,11 @@ namespace PrimerParcial.Forms
             // 
             // label15
             // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(401, 151);
+            this.label15.Location = new System.Drawing.Point(442, 172);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(44, 21);
             this.label15.TabIndex = 33;
@@ -251,10 +264,11 @@ namespace PrimerParcial.Forms
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(192, 151);
+            this.label14.Location = new System.Drawing.Point(233, 172);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(108, 21);
             this.label14.TabIndex = 32;
@@ -262,10 +276,11 @@ namespace PrimerParcial.Forms
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(27, 151);
+            this.label13.Location = new System.Drawing.Point(47, 172);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(73, 21);
             this.label13.TabIndex = 31;
@@ -273,10 +288,11 @@ namespace PrimerParcial.Forms
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(27, 13);
+            this.label8.Location = new System.Drawing.Point(47, 31);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 21);
             this.label8.TabIndex = 16;
@@ -284,28 +300,31 @@ namespace PrimerParcial.Forms
             // 
             // pictureBox20
             // 
+            this.pictureBox20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox20.Image = global::PrimerParcial.Properties.Resources.Pascua;
-            this.pictureBox20.Location = new System.Drawing.Point(643, 313);
+            this.pictureBox20.Location = new System.Drawing.Point(703, 363);
             this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(131, 110);
+            this.pictureBox20.Size = new System.Drawing.Size(151, 110);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox20.TabIndex = 15;
             this.pictureBox20.TabStop = false;
             // 
             // pictureBox19
             // 
+            this.pictureBox19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox19.Image = global::PrimerParcial.Properties.Resources.Venecia;
-            this.pictureBox19.Location = new System.Drawing.Point(532, 313);
+            this.pictureBox19.Location = new System.Drawing.Point(573, 363);
             this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(105, 110);
+            this.pictureBox19.Size = new System.Drawing.Size(124, 110);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox19.TabIndex = 14;
             this.pictureBox19.TabStop = false;
             // 
             // pictureBox18
             // 
+            this.pictureBox18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox18.Image = global::PrimerParcial.Properties.Resources.Recife_;
-            this.pictureBox18.Location = new System.Drawing.Point(340, 313);
+            this.pictureBox18.Location = new System.Drawing.Point(381, 363);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(186, 110);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -314,18 +333,20 @@ namespace PrimerParcial.Forms
             // 
             // pictureBox17
             // 
+            this.pictureBox17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox17.Image = global::PrimerParcial.Properties.Resources.PuertoMadryn___;
-            this.pictureBox17.Location = new System.Drawing.Point(232, 313);
+            this.pictureBox17.Location = new System.Drawing.Point(255, 363);
             this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(102, 110);
+            this.pictureBox17.Size = new System.Drawing.Size(120, 110);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox17.TabIndex = 12;
             this.pictureBox17.TabStop = false;
             // 
             // pictureBox8
             // 
+            this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox8.Image = global::PrimerParcial.Properties.Resources.Santiago;
-            this.pictureBox8.Location = new System.Drawing.Point(6, 313);
+            this.pictureBox8.Location = new System.Drawing.Point(26, 363);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(220, 110);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -334,58 +355,64 @@ namespace PrimerParcial.Forms
             // 
             // pictureBox16
             // 
+            this.pictureBox16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox16.Image = global::PrimerParcial.Properties.Resources.Montevideo;
-            this.pictureBox16.Location = new System.Drawing.Point(582, 175);
+            this.pictureBox16.Location = new System.Drawing.Point(674, 196);
             this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(186, 110);
+            this.pictureBox16.Size = new System.Drawing.Size(186, 127);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox16.TabIndex = 10;
             this.pictureBox16.TabStop = false;
             // 
             // pictureBox7
             // 
+            this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox7.Image = global::PrimerParcial.Properties.Resources.Acapulco;
-            this.pictureBox7.Location = new System.Drawing.Point(6, 175);
+            this.pictureBox7.Location = new System.Drawing.Point(26, 196);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(131, 110);
+            this.pictureBox7.Size = new System.Drawing.Size(149, 127);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 9;
             this.pictureBox7.TabStop = false;
             // 
             // pictureBox15
             // 
+            this.pictureBox15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox15.Image = global::PrimerParcial.Properties.Resources.Lima;
-            this.pictureBox15.Location = new System.Drawing.Point(369, 175);
+            this.pictureBox15.Location = new System.Drawing.Point(410, 196);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(112, 110);
+            this.pictureBox15.Size = new System.Drawing.Size(131, 127);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 8;
             this.pictureBox15.TabStop = false;
             // 
             // pictureBox14
             // 
+            this.pictureBox14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox14.Image = global::PrimerParcial.Properties.Resources.Galapagos;
-            this.pictureBox14.Location = new System.Drawing.Point(487, 175);
+            this.pictureBox14.Location = new System.Drawing.Point(547, 196);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(89, 110);
+            this.pictureBox14.Size = new System.Drawing.Size(120, 127);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 7;
             this.pictureBox14.TabStop = false;
             // 
             // pictureBox13
             // 
+            this.pictureBox13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox13.Image = global::PrimerParcial.Properties.Resources.Rio;
-            this.pictureBox13.Location = new System.Drawing.Point(143, 175);
+            this.pictureBox13.Location = new System.Drawing.Point(184, 196);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(220, 110);
+            this.pictureBox13.Size = new System.Drawing.Size(220, 127);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 6;
             this.pictureBox13.TabStop = false;
             // 
             // pictureBox12
             // 
+            this.pictureBox12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox12.Image = global::PrimerParcial.Properties.Resources.Ushuaia;
-            this.pictureBox12.Location = new System.Drawing.Point(551, 37);
+            this.pictureBox12.Location = new System.Drawing.Point(634, 55);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(220, 110);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -394,18 +421,20 @@ namespace PrimerParcial.Forms
             // 
             // pictureBox11
             // 
+            this.pictureBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox11.Image = global::PrimerParcial.Properties.Resources.Taipei;
-            this.pictureBox11.Location = new System.Drawing.Point(443, 37);
+            this.pictureBox11.Location = new System.Drawing.Point(484, 55);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(102, 110);
+            this.pictureBox11.Size = new System.Drawing.Size(141, 110);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 4;
             this.pictureBox11.TabStop = false;
             // 
             // pictureBox10
             // 
+            this.pictureBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox10.Image = global::PrimerParcial.Properties.Resources.La_Habana;
-            this.pictureBox10.Location = new System.Drawing.Point(306, 37);
+            this.pictureBox10.Location = new System.Drawing.Point(347, 55);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(131, 110);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -414,18 +443,20 @@ namespace PrimerParcial.Forms
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Image = global::PrimerParcial.Properties.Resources.NUEVAYORK_;
-            this.pictureBox9.Location = new System.Drawing.Point(117, 37);
+            this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox9.Image = global::PrimerParcial.Properties.Resources.nuevayork;
+            this.pictureBox9.Location = new System.Drawing.Point(140, 55);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(183, 110);
+            this.pictureBox9.Size = new System.Drawing.Size(201, 110);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 3;
             this.pictureBox9.TabStop = false;
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox6.Image = global::PrimerParcial.Properties.Resources.Atenas;
-            this.pictureBox6.Location = new System.Drawing.Point(6, 37);
+            this.pictureBox6.Location = new System.Drawing.Point(26, 55);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(105, 110);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -437,10 +468,12 @@ namespace PrimerParcial.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(887, 503);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "panelHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

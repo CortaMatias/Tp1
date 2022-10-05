@@ -29,12 +29,15 @@ namespace PrimerParcial.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cmbNombreCrucero = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pcbCrucero = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.grpDatos = new System.Windows.Forms.GroupBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -60,9 +63,11 @@ namespace PrimerParcial.Forms
             this.txtCamarotes = new System.Windows.Forms.TextBox();
             this.txtMatricula = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pcbCrucero)).BeginInit();
             this.panel1.SuspendLayout();
             this.grpDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbNombreCrucero
@@ -89,10 +94,10 @@ namespace PrimerParcial.Forms
             // 
             // pcbCrucero
             // 
-            this.pcbCrucero.Image = global::PrimerParcial.Properties.Resources.crucero1;
+            this.pcbCrucero.Image = global::PrimerParcial.Properties.Resources.CruceroDefault;
             this.pcbCrucero.Location = new System.Drawing.Point(12, 66);
             this.pcbCrucero.Name = "pcbCrucero";
-            this.pcbCrucero.Size = new System.Drawing.Size(301, 332);
+            this.pcbCrucero.Size = new System.Drawing.Size(301, 322);
             this.pcbCrucero.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbCrucero.TabIndex = 2;
             this.pcbCrucero.TabStop = false;
@@ -100,9 +105,9 @@ namespace PrimerParcial.Forms
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
-            this.button1.Location = new System.Drawing.Point(26, 404);
+            this.button1.Location = new System.Drawing.Point(12, 392);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(266, 34);
+            this.button1.Size = new System.Drawing.Size(296, 59);
             this.button1.TabIndex = 15;
             this.button1.Text = "Nuevo Crucero";
             this.button1.UseVisualStyleBackColor = false;
@@ -110,15 +115,18 @@ namespace PrimerParcial.Forms
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.grpDatos);
             this.panel1.Location = new System.Drawing.Point(319, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(478, 446);
+            this.panel1.Size = new System.Drawing.Size(509, 452);
             this.panel1.TabIndex = 63;
             // 
             // grpDatos
             // 
             this.grpDatos.BackColor = System.Drawing.Color.Transparent;
+            this.grpDatos.Controls.Add(this.txtNombre);
+            this.grpDatos.Controls.Add(this.label14);
             this.grpDatos.Controls.Add(this.button2);
             this.grpDatos.Controls.Add(this.label13);
             this.grpDatos.Controls.Add(this.label12);
@@ -146,18 +154,41 @@ namespace PrimerParcial.Forms
             this.grpDatos.Controls.Add(this.label5);
             this.grpDatos.Location = new System.Drawing.Point(7, 10);
             this.grpDatos.Name = "grpDatos";
-            this.grpDatos.Size = new System.Drawing.Size(464, 434);
+            this.grpDatos.Size = new System.Drawing.Size(487, 433);
             this.grpDatos.TabIndex = 40;
             this.grpDatos.TabStop = false;
             this.grpDatos.Text = "Datos del crucero :";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Enabled = false;
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNombre.Location = new System.Drawing.Point(322, 386);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(110, 29);
+            this.txtNombre.TabIndex = 65;
+            this.txtNombre.Visible = false;
+            this.txtNombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombre_Validating);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Enabled = false;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(245, 390);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(71, 20);
+            this.label14.TabIndex = 64;
+            this.label14.Text = "Nombre :";
+            this.label14.Visible = false;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
             this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(66, 367);
+            this.button2.Location = new System.Drawing.Point(12, 381);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(326, 38);
+            this.button2.Size = new System.Drawing.Size(205, 34);
             this.button2.TabIndex = 63;
             this.button2.Text = "Validar Datos";
             this.button2.UseVisualStyleBackColor = false;
@@ -300,6 +331,7 @@ namespace PrimerParcial.Forms
             this.txtCasino.Name = "txtCasino";
             this.txtCasino.Size = new System.Drawing.Size(110, 29);
             this.txtCasino.TabIndex = 49;
+            this.txtCasino.TextChanged += new System.EventHandler(this.txtCasino_TextChanged);
             // 
             // txtCine
             // 
@@ -309,6 +341,7 @@ namespace PrimerParcial.Forms
             this.txtCine.Name = "txtCine";
             this.txtCine.Size = new System.Drawing.Size(110, 29);
             this.txtCine.TabIndex = 48;
+            this.txtCine.Validating += new System.ComponentModel.CancelEventHandler(this.txtCine_Validating);
             // 
             // txtGimnasio
             // 
@@ -318,6 +351,7 @@ namespace PrimerParcial.Forms
             this.txtGimnasio.Name = "txtGimnasio";
             this.txtGimnasio.Size = new System.Drawing.Size(110, 29);
             this.txtGimnasio.TabIndex = 47;
+            this.txtGimnasio.Validating += new System.ComponentModel.CancelEventHandler(this.txtGimnasio_Validating);
             // 
             // txtPiscina
             // 
@@ -327,6 +361,7 @@ namespace PrimerParcial.Forms
             this.txtPiscina.Name = "txtPiscina";
             this.txtPiscina.Size = new System.Drawing.Size(110, 29);
             this.txtPiscina.TabIndex = 46;
+            this.txtPiscina.Validating += new System.ComponentModel.CancelEventHandler(this.txtPiscina_Validating);
             // 
             // txtPasajeros
             // 
@@ -336,6 +371,7 @@ namespace PrimerParcial.Forms
             this.txtPasajeros.Name = "txtPasajeros";
             this.txtPasajeros.Size = new System.Drawing.Size(110, 29);
             this.txtPasajeros.TabIndex = 45;
+            this.txtPasajeros.Validating += new System.ComponentModel.CancelEventHandler(this.txtPasajeros_Validating);
             // 
             // txtBodega
             // 
@@ -345,6 +381,7 @@ namespace PrimerParcial.Forms
             this.txtBodega.Name = "txtBodega";
             this.txtBodega.Size = new System.Drawing.Size(110, 29);
             this.txtBodega.TabIndex = 44;
+            this.txtBodega.Validating += new System.ComponentModel.CancelEventHandler(this.txtBodega_Validating);
             // 
             // txtTurista
             // 
@@ -372,6 +409,7 @@ namespace PrimerParcial.Forms
             this.txtCamarotes.Name = "txtCamarotes";
             this.txtCamarotes.Size = new System.Drawing.Size(110, 29);
             this.txtCamarotes.TabIndex = 41;
+            this.txtCamarotes.Validating += new System.ComponentModel.CancelEventHandler(this.txtCamarotes_Validating);
             // 
             // txtMatricula
             // 
@@ -381,6 +419,7 @@ namespace PrimerParcial.Forms
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(110, 29);
             this.txtMatricula.TabIndex = 40;
+            this.txtMatricula.Validating += new System.ComponentModel.CancelEventHandler(this.txtMatricula_Validating);
             // 
             // label5
             // 
@@ -392,25 +431,32 @@ namespace PrimerParcial.Forms
             this.label5.TabIndex = 39;
             this.label5.Text = "Casino :";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Cruceros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(841, 465);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pcbCrucero);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbNombreCrucero);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(840, 465);
             this.Name = "Cruceros";
-            this.Text = "Cruceros";
+            this.Opacity = 0.9D;
             this.Load += new System.EventHandler(this.Cruceros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbCrucero)).EndInit();
             this.panel1.ResumeLayout(false);
             this.grpDatos.ResumeLayout(false);
             this.grpDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -448,5 +494,8 @@ namespace PrimerParcial.Forms
         private System.Windows.Forms.TextBox txtCamarotes;
         private System.Windows.Forms.TextBox txtMatricula;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label label14;
     }
 }

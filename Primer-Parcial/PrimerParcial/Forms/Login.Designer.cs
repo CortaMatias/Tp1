@@ -58,7 +58,7 @@ namespace PrimerParcial
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(207, 285);
+            this.panel1.Size = new System.Drawing.Size(243, 276);
             this.panel1.TabIndex = 1;
             // 
             // label2
@@ -67,7 +67,7 @@ namespace PrimerParcial
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(34, 166);
+            this.label2.Location = new System.Drawing.Point(40, 178);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 30);
             this.label2.TabIndex = 1;
@@ -77,9 +77,9 @@ namespace PrimerParcial
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(5, 7);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(201, 177);
+            this.pictureBox1.Size = new System.Drawing.Size(224, 257);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -100,9 +100,9 @@ namespace PrimerParcial
             this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnIngresar.Location = new System.Drawing.Point(246, 193);
+            this.btnIngresar.Location = new System.Drawing.Point(249, 193);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(304, 34);
+            this.btnIngresar.Size = new System.Drawing.Size(310, 34);
             this.btnIngresar.TabIndex = 0;
             this.btnIngresar.Text = "Iniciar Sesion";
             this.btnIngresar.UseVisualStyleBackColor = false;
@@ -202,14 +202,15 @@ namespace PrimerParcial
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "ver.png");
-            this.imageList1.Images.SetKeyName(1, "oculto.png");
+            this.imageList1.Images.SetKeyName(1, "ojito.png");
+            this.imageList1.Images.SetKeyName(2, "oculto.png");
             // 
             // fmrLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
-            this.ClientSize = new System.Drawing.Size(600, 270);
+            this.ClientSize = new System.Drawing.Size(592, 270);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnCerrar);
@@ -223,7 +224,7 @@ namespace PrimerParcial
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(390, 255);
+            this.MinimumSize = new System.Drawing.Size(592, 270);
             this.Name = "fmrLogin";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
