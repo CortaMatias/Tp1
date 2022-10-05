@@ -27,7 +27,7 @@ Luego que se pasa del Login se abre el "Home" que es un formulario principal de 
 Se trato de aplicar todos los temas vistos en clase como Herencia, Abstraccion, Herencia de formularios, Polimorfismo etc.
 
 
-##Propuesta de valor agregado:
+#####**Propuesta de valor agregado:
 -Se agrego la opcion de añadir cruceros a la lista de cruceros con todas sus validaciones correspondientes y poder mostrarlo y agregarlo a un viaje si asi se desea.
 -Se agrego la opcion de añadir viajes a la lista de viajes con todas sus validaciones correspondientes y poder mostrarlo y agregarle pasajeros a este viaje.
  
