@@ -84,13 +84,11 @@ En esta opcion se podra ver los datos historicos de la aplicacion, donde habra 4
  </ul>
 
 
--Info viajes: En esta opcion podemos ver los detalles de todos los viajes cargados. Tambien esta la opcion de cargar un nuevo viaje con todas sus validaciones correspondientes.
+<h2>Diagrama de Clases </h2>
 
--Info Pasajeros: En esta opcion podemos ver los detalles de todos los pasajeros de cada viaje y tambien tenemos la opcion de agregar un pasajero al viaje seleccionado.
+![Image text](https://github.com/CortaMatias/Tp1/blob/Recuperatorio/Diagrama.png)
 
--Info Cruceros: En esta opcion podemos ver los detalles de todos los cruceros cargados y tambien tenemos la opcion de agregar un crucero a la lista de cruceros.
 
--Datos historicos: En esta opcion podemos ver informacion estadistica de los viajes, pasajeros, ganancias etc. Tambien cuenta con un filtro donde se puede buscar entre todos los pasajeros que viajaron o viajaran segun fue pedido.
 
 #### JUSTIFICACION TECNICA
 Se trato de aplicar todos los temas vistos en clase como Herencia, Abstraccion, Herencia de formularios, Polimorfismo etc.
