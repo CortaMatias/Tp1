@@ -20,7 +20,7 @@ namespace PrimerParcial.Clases
         private int duracionViaje;
         private List<Pasajero> lista;
 
-        #region #Constructores
+
         public Viajes(destinos destino, DateTime fecha, Crucero crucero) : this()
         {
             this.partida = "Buenos Aires";
@@ -33,7 +33,7 @@ namespace PrimerParcial.Clases
             this.FechaRegreso = calcularVuelta(DuracionViaje);
         }
 
-        static Viajes()
+         static Viajes()
         {
             precioRegional = 57;
             precioExtraRegional = 120;
@@ -43,9 +43,7 @@ namespace PrimerParcial.Clases
         {
             this.Lista = new List<Pasajero>();
         }
-        #endregion
 
-        #region #Propiedades
         public string Partida { get => partida; set => partida = value; }
         public Crucero Crucero { get => crucero; set => crucero = value; }
         public int CamarotePremium { get => camarotePremium; set => camarotePremium = value; }
@@ -55,10 +53,8 @@ namespace PrimerParcial.Clases
         public int DuracionViaje { get => duracionViaje; set => duracionViaje = value; }
         public destinos Destino { get => destino; set => destino = value; }
         public DateTime FechaRegreso { get => fechaRegreso; set => fechaRegreso = value; }
-        #endregion
 
-        #region #Metodos
-        public static bool operator ==(Viajes v, destinos destino)
+        public static bool operator == (Viajes v, destinos destino)
         {
             return (destino == v.Destino);
         }
@@ -79,8 +75,8 @@ namespace PrimerParcial.Clases
 
         public int CalcularPasajeroPremium()
         {
-            int contador = 0;
-            foreach (Pasajero p in Lista)
+            int contador=0;
+           foreach(Pasajero p in Lista)
             {
                 if (p.Premium == true) contador++;
             }
@@ -141,7 +137,7 @@ namespace PrimerParcial.Clases
         public int CalcularEspacioBodega()
         {
             int equipaje = 0;
-            foreach (Pasajero p in this.Lista)
+            foreach(Pasajero p in this.Lista)
             {
                 equipaje = p.Equipaje + equipaje;
             }
@@ -149,24 +145,24 @@ namespace PrimerParcial.Clases
         }
 
         public int CalcularDisponibilidad()
-        {
+        {          
             return this.Crucero.CapacidadPersonas - this.Lista.Count;
         }
 
         public int calcularDisponibilidadPremium()
         {
-            return this.CamarotePremium - (CantidadPremium() / 2);
+            return this.CamarotePremium - (CantidadPremium()/2);
         }
 
         public int CalcularDisponibilidadTurista()
         {
-            return this.CamaroteTurista - (CantidadTurista() / 2);
+            return this.CamaroteTurista - (CantidadTurista()/2);
         }
 
         public int CantidadTurista()
         {
             int contador = 0;
-            foreach (Pasajero p in this.Lista)
+            foreach(Pasajero p in this.Lista)
             {
                 if (p.Premium == false) contador++;
             }
@@ -199,7 +195,7 @@ namespace PrimerParcial.Clases
         {
             int duracion = 0;
             Random r = new Random();
-            foreach (var i in Enum.GetValues(typeof(destinos)))
+            foreach (var i in Enum.GetValues(typeof(destinos))) 
             {
                 if (this.Destino == (destinos)i) { duracion = r.Next(72, 361); break; }
                 else { duracion = r.Next(480, 721); }
@@ -237,21 +233,22 @@ namespace PrimerParcial.Clases
                     ganancias += CalcularPrecioViaje(p);
                 }
             }
-            return ganancias;
+            return ganancias; 
         }
 
         public float CalcularGananciasExtraRegionales()
         {
             float ganancias = 0;
-            if ((int)this.Destino > 10)
+            if((int) this.Destino > 10)
             {
-                foreach (Pasajero p in this.Lista)
+                foreach(Pasajero p in this.Lista)
                 {
                     ganancias += CalcularPrecioViaje(p);
                 }
             }
             return ganancias;
         }
-        #endregion
+        
+
     }
 }

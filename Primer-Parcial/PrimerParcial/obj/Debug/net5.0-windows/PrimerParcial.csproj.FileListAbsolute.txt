@@ -22,5 +22,4 @@ C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\bin\Debu
 C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\bin\Debug\net5.0-windows\PrimerParcial.runtimeconfig.dev.json
 C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debug\net5.0-windows\PrimerParcial.genruntimeconfig.cache
 C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debug\net5.0-windows\PrimerParcial.Forms.panelHome.resources
-C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debug\net5.0-windows\PrimerParcial.Forms.GrupoFamiliar.resources
 C:\Users\Mati\Desktop\‎\Repositorio Facu\Primer-Parcial\PrimerParcial\obj\Debug\net5.0-windows\PrimerParcial.csproj.AssemblyReference.cache

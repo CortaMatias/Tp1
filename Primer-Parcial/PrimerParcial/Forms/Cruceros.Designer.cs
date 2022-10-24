@@ -36,10 +36,6 @@ namespace PrimerParcial.Forms
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.grpDatos = new System.Windows.Forms.GroupBox();
-            this.txtCine = new System.Windows.Forms.ComboBox();
-            this.txtGimnasio = new System.Windows.Forms.ComboBox();
-            this.txtPiscina = new System.Windows.Forms.ComboBox();
-            this.txtCasino = new System.Windows.Forms.ComboBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -56,6 +52,10 @@ namespace PrimerParcial.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.txtHoras = new System.Windows.Forms.TextBox();
             this.txtViajes = new System.Windows.Forms.TextBox();
+            this.txtCasino = new System.Windows.Forms.TextBox();
+            this.txtCine = new System.Windows.Forms.TextBox();
+            this.txtGimnasio = new System.Windows.Forms.TextBox();
+            this.txtPiscina = new System.Windows.Forms.TextBox();
             this.txtPasajeros = new System.Windows.Forms.TextBox();
             this.txtBodega = new System.Windows.Forms.TextBox();
             this.txtTurista = new System.Windows.Forms.TextBox();
@@ -64,7 +64,6 @@ namespace PrimerParcial.Forms
             this.txtMatricula = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pcbCrucero)).BeginInit();
             this.panel1.SuspendLayout();
             this.grpDatos.SuspendLayout();
@@ -76,19 +75,18 @@ namespace PrimerParcial.Forms
             this.cmbNombreCrucero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNombreCrucero.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbNombreCrucero.FormattingEnabled = true;
-            this.cmbNombreCrucero.Location = new System.Drawing.Point(88, 63);
+            this.cmbNombreCrucero.Location = new System.Drawing.Point(73, 11);
             this.cmbNombreCrucero.Name = "cmbNombreCrucero";
-            this.cmbNombreCrucero.Size = new System.Drawing.Size(251, 40);
+            this.cmbNombreCrucero.Size = new System.Drawing.Size(235, 40);
             this.cmbNombreCrucero.TabIndex = 0;
             this.cmbNombreCrucero.SelectedIndexChanged += new System.EventHandler(this.cmbNombreCrucero_SelectedIndexChanged);
-            this.cmbNombreCrucero.Click += new System.EventHandler(this.cmbNombreCrucero_Click);
             this.cmbNombreCrucero.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbNombreCrucero_MouseDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 77);
+            this.label1.Location = new System.Drawing.Point(3, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 18);
             this.label1.TabIndex = 1;
@@ -96,22 +94,20 @@ namespace PrimerParcial.Forms
             // 
             // pcbCrucero
             // 
-            this.pcbCrucero.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pcbCrucero.Image = global::PrimerParcial.Properties.Resources.CruceroDefault;
-            this.pcbCrucero.Location = new System.Drawing.Point(12, 128);
+            this.pcbCrucero.Location = new System.Drawing.Point(12, 66);
             this.pcbCrucero.Name = "pcbCrucero";
-            this.pcbCrucero.Size = new System.Drawing.Size(327, 322);
+            this.pcbCrucero.Size = new System.Drawing.Size(301, 322);
             this.pcbCrucero.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbCrucero.TabIndex = 2;
             this.pcbCrucero.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
-            this.button1.Location = new System.Drawing.Point(12, 454);
+            this.button1.Location = new System.Drawing.Point(12, 392);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(327, 59);
+            this.button1.Size = new System.Drawing.Size(296, 59);
             this.button1.TabIndex = 15;
             this.button1.Text = "Nuevo Crucero";
             this.button1.UseVisualStyleBackColor = false;
@@ -121,7 +117,7 @@ namespace PrimerParcial.Forms
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.grpDatos);
-            this.panel1.Location = new System.Drawing.Point(367, 63);
+            this.panel1.Location = new System.Drawing.Point(319, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(509, 452);
             this.panel1.TabIndex = 63;
@@ -129,10 +125,6 @@ namespace PrimerParcial.Forms
             // grpDatos
             // 
             this.grpDatos.BackColor = System.Drawing.Color.Transparent;
-            this.grpDatos.Controls.Add(this.txtCine);
-            this.grpDatos.Controls.Add(this.txtGimnasio);
-            this.grpDatos.Controls.Add(this.txtPiscina);
-            this.grpDatos.Controls.Add(this.txtCasino);
             this.grpDatos.Controls.Add(this.txtNombre);
             this.grpDatos.Controls.Add(this.label14);
             this.grpDatos.Controls.Add(this.button2);
@@ -149,6 +141,10 @@ namespace PrimerParcial.Forms
             this.grpDatos.Controls.Add(this.label2);
             this.grpDatos.Controls.Add(this.txtHoras);
             this.grpDatos.Controls.Add(this.txtViajes);
+            this.grpDatos.Controls.Add(this.txtCasino);
+            this.grpDatos.Controls.Add(this.txtCine);
+            this.grpDatos.Controls.Add(this.txtGimnasio);
+            this.grpDatos.Controls.Add(this.txtPiscina);
             this.grpDatos.Controls.Add(this.txtPasajeros);
             this.grpDatos.Controls.Add(this.txtBodega);
             this.grpDatos.Controls.Add(this.txtTurista);
@@ -156,64 +152,23 @@ namespace PrimerParcial.Forms
             this.grpDatos.Controls.Add(this.txtCamarotes);
             this.grpDatos.Controls.Add(this.txtMatricula);
             this.grpDatos.Controls.Add(this.label5);
-            this.grpDatos.Location = new System.Drawing.Point(22, 0);
+            this.grpDatos.Location = new System.Drawing.Point(7, 10);
             this.grpDatos.Name = "grpDatos";
-            this.grpDatos.Size = new System.Drawing.Size(487, 452);
+            this.grpDatos.Size = new System.Drawing.Size(487, 433);
             this.grpDatos.TabIndex = 40;
             this.grpDatos.TabStop = false;
             this.grpDatos.Text = "Datos del crucero :";
-            // 
-            // txtCine
-            // 
-            this.txtCine.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCine.FormattingEnabled = true;
-            this.txtCine.Location = new System.Drawing.Point(318, 235);
-            this.txtCine.Name = "txtCine";
-            this.txtCine.Size = new System.Drawing.Size(110, 29);
-            this.txtCine.TabIndex = 69;
-            this.txtCine.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCine_KeyPress);
-            // 
-            // txtGimnasio
-            // 
-            this.txtGimnasio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtGimnasio.FormattingEnabled = true;
-            this.txtGimnasio.Location = new System.Drawing.Point(163, 234);
-            this.txtGimnasio.Name = "txtGimnasio";
-            this.txtGimnasio.Size = new System.Drawing.Size(110, 29);
-            this.txtGimnasio.TabIndex = 68;
-            this.txtGimnasio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGimnasio_KeyPress);
-            // 
-            // txtPiscina
-            // 
-            this.txtPiscina.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPiscina.FormattingEnabled = true;
-            this.txtPiscina.Location = new System.Drawing.Point(12, 235);
-            this.txtPiscina.Name = "txtPiscina";
-            this.txtPiscina.Size = new System.Drawing.Size(110, 29);
-            this.txtPiscina.TabIndex = 67;
-            this.txtPiscina.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPiscina_KeyPress);
-            // 
-            // txtCasino
-            // 
-            this.txtCasino.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCasino.FormattingEnabled = true;
-            this.txtCasino.Location = new System.Drawing.Point(12, 321);
-            this.txtCasino.Name = "txtCasino";
-            this.txtCasino.Size = new System.Drawing.Size(110, 29);
-            this.txtCasino.TabIndex = 66;
-            this.txtCasino.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCasino_KeyPress);
             // 
             // txtNombre
             // 
             this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtNombre.Location = new System.Drawing.Point(322, 386);
-            this.txtNombre.MaxLength = 15;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(110, 29);
             this.txtNombre.TabIndex = 65;
             this.txtNombre.Visible = false;
-            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            this.txtNombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtNombre_Validating);
             // 
             // label14
             // 
@@ -368,26 +323,65 @@ namespace PrimerParcial.Forms
             this.txtViajes.Size = new System.Drawing.Size(110, 29);
             this.txtViajes.TabIndex = 50;
             // 
+            // txtCasino
+            // 
+            this.txtCasino.Enabled = false;
+            this.txtCasino.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCasino.Location = new System.Drawing.Point(12, 322);
+            this.txtCasino.Name = "txtCasino";
+            this.txtCasino.Size = new System.Drawing.Size(110, 29);
+            this.txtCasino.TabIndex = 49;
+            this.txtCasino.TextChanged += new System.EventHandler(this.txtCasino_TextChanged);
+            // 
+            // txtCine
+            // 
+            this.txtCine.Enabled = false;
+            this.txtCine.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCine.Location = new System.Drawing.Point(318, 235);
+            this.txtCine.Name = "txtCine";
+            this.txtCine.Size = new System.Drawing.Size(110, 29);
+            this.txtCine.TabIndex = 48;
+            this.txtCine.Validating += new System.ComponentModel.CancelEventHandler(this.txtCine_Validating);
+            // 
+            // txtGimnasio
+            // 
+            this.txtGimnasio.Enabled = false;
+            this.txtGimnasio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtGimnasio.Location = new System.Drawing.Point(163, 235);
+            this.txtGimnasio.Name = "txtGimnasio";
+            this.txtGimnasio.Size = new System.Drawing.Size(110, 29);
+            this.txtGimnasio.TabIndex = 47;
+            this.txtGimnasio.Validating += new System.ComponentModel.CancelEventHandler(this.txtGimnasio_Validating);
+            // 
+            // txtPiscina
+            // 
+            this.txtPiscina.Enabled = false;
+            this.txtPiscina.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPiscina.Location = new System.Drawing.Point(12, 235);
+            this.txtPiscina.Name = "txtPiscina";
+            this.txtPiscina.Size = new System.Drawing.Size(110, 29);
+            this.txtPiscina.TabIndex = 46;
+            this.txtPiscina.Validating += new System.ComponentModel.CancelEventHandler(this.txtPiscina_Validating);
+            // 
             // txtPasajeros
             // 
             this.txtPasajeros.Enabled = false;
             this.txtPasajeros.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPasajeros.Location = new System.Drawing.Point(318, 141);
-            this.txtPasajeros.MaxLength = 5;
             this.txtPasajeros.Name = "txtPasajeros";
             this.txtPasajeros.Size = new System.Drawing.Size(110, 29);
             this.txtPasajeros.TabIndex = 45;
-            this.txtPasajeros.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPasajeros_KeyPress);
+            this.txtPasajeros.Validating += new System.ComponentModel.CancelEventHandler(this.txtPasajeros_Validating);
             // 
             // txtBodega
             // 
             this.txtBodega.Enabled = false;
             this.txtBodega.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBodega.Location = new System.Drawing.Point(163, 141);
-            this.txtBodega.MaxLength = 5;
             this.txtBodega.Name = "txtBodega";
             this.txtBodega.Size = new System.Drawing.Size(110, 29);
             this.txtBodega.TabIndex = 44;
+            this.txtBodega.Validating += new System.ComponentModel.CancelEventHandler(this.txtBodega_Validating);
             // 
             // txtTurista
             // 
@@ -412,23 +406,20 @@ namespace PrimerParcial.Forms
             this.txtCamarotes.Enabled = false;
             this.txtCamarotes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtCamarotes.Location = new System.Drawing.Point(163, 50);
-            this.txtCamarotes.MaxLength = 4;
             this.txtCamarotes.Name = "txtCamarotes";
             this.txtCamarotes.Size = new System.Drawing.Size(110, 29);
             this.txtCamarotes.TabIndex = 41;
-            this.txtCamarotes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCamarotes_KeyPress);
+            this.txtCamarotes.Validating += new System.ComponentModel.CancelEventHandler(this.txtCamarotes_Validating);
             // 
             // txtMatricula
             // 
             this.txtMatricula.Enabled = false;
             this.txtMatricula.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtMatricula.Location = new System.Drawing.Point(12, 50);
-            this.txtMatricula.MaxLength = 10;
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(110, 29);
             this.txtMatricula.TabIndex = 40;
-            this.toolTip1.SetToolTip(this.txtMatricula, "Ingrese un alfanumerico de 10 digitos");
-            this.txtMatricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMatricula_KeyPress);
+            this.txtMatricula.Validating += new System.ComponentModel.CancelEventHandler(this.txtMatricula_Validating);
             // 
             // label5
             // 
@@ -450,14 +441,14 @@ namespace PrimerParcial.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
-            this.ClientSize = new System.Drawing.Size(937, 588);
+            this.ClientSize = new System.Drawing.Size(841, 465);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pcbCrucero);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbNombreCrucero);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(937, 588);
+            this.MinimumSize = new System.Drawing.Size(840, 465);
             this.Name = "Cruceros";
             this.Opacity = 0.9D;
             this.Load += new System.EventHandler(this.Cruceros_Load);
@@ -492,6 +483,10 @@ namespace PrimerParcial.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtHoras;
         private System.Windows.Forms.TextBox txtViajes;
+        private System.Windows.Forms.TextBox txtCasino;
+        private System.Windows.Forms.TextBox txtCine;
+        private System.Windows.Forms.TextBox txtGimnasio;
+        private System.Windows.Forms.TextBox txtPiscina;
         private System.Windows.Forms.TextBox txtPasajeros;
         private System.Windows.Forms.TextBox txtBodega;
         private System.Windows.Forms.TextBox txtTurista;
@@ -502,10 +497,5 @@ namespace PrimerParcial.Forms
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox txtCine;
-        private System.Windows.Forms.ComboBox txtGimnasio;
-        private System.Windows.Forms.ComboBox txtPiscina;
-        private System.Windows.Forms.ComboBox txtCasino;
-        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

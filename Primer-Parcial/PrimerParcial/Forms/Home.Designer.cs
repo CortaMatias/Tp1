@@ -159,7 +159,7 @@ namespace PrimerParcial.Forms
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Enabled = false;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(137, 559);
+            this.label2.Location = new System.Drawing.Point(130, 583);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 13;
@@ -172,7 +172,7 @@ namespace PrimerParcial.Forms
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Enabled = false;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(137, 633);
+            this.label5.Location = new System.Drawing.Point(128, 642);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 15);
             this.label5.TabIndex = 7;
@@ -185,7 +185,7 @@ namespace PrimerParcial.Forms
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Enabled = false;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(137, 600);
+            this.label3.Location = new System.Drawing.Point(130, 613);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 15);
             this.label3.TabIndex = 4;
@@ -203,7 +203,7 @@ namespace PrimerParcial.Forms
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(329, 48);
             this.button4.TabIndex = 11;
-            this.button4.Text = "HISTORIAL";
+            this.button4.Text = "Datos historicos";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -212,9 +212,9 @@ namespace PrimerParcial.Forms
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox2.Enabled = false;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(9, 539);
+            this.pictureBox2.Location = new System.Drawing.Point(9, 556);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(122, 124);
+            this.pictureBox2.Size = new System.Drawing.Size(113, 107);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -233,7 +233,7 @@ namespace PrimerParcial.Forms
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(329, 48);
             this.button2.TabIndex = 10;
-            this.button2.Text = "CRUCEROS";
+            this.button2.Text = "Info. Cruceros";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -262,7 +262,7 @@ namespace PrimerParcial.Forms
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(329, 48);
             this.button1.TabIndex = 9;
-            this.button1.Text = "PASAJEROS";
+            this.button1.Text = "Info Pasajeros";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -280,7 +280,7 @@ namespace PrimerParcial.Forms
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(329, 45);
             this.button3.TabIndex = 8;
-            this.button3.Text = "VIAJES";
+            this.button3.Text = "Info viajes";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 

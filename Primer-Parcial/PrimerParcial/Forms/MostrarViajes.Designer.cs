@@ -33,10 +33,6 @@ namespace PrimerParcial.Forms
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // grpDatos
-            // 
-            this.grpDatos.Location = new System.Drawing.Point(71, 136);
-            // 
             // label9
             // 
             this.label9.Location = new System.Drawing.Point(375, 338);
@@ -46,24 +42,17 @@ namespace PrimerParcial.Forms
             // 
             this.cmbCrucero.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmbCrucero_MouseClick);
             // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(425, 1);
-            // 
             // cmbFecha
             // 
-            this.cmbFecha.Location = new System.Drawing.Point(398, 19);
             this.cmbFecha.SelectedIndexChanged += new System.EventHandler(this.cmbFecha_SelectedIndexChanged_1);
             this.cmbFecha.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmbFecha_MouseClick);
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(797, 1);
             this.label2.Visible = false;
             // 
             // cmBoxNombre
             // 
-            this.cmBoxNombre.Location = new System.Drawing.Point(797, 18);
             this.cmBoxNombre.Visible = false;
             // 
             // txtNombre
@@ -143,9 +132,7 @@ namespace PrimerParcial.Forms
             // 
             // txtEquipaje
             // 
-            this.helpProvider1.SetHelpString(this.txtEquipaje, "Para escribir aqui primero seleccione la opcion Premium");
             this.txtEquipaje.Location = new System.Drawing.Point(357, 76);
-            this.helpProvider1.SetShowHelp(this.txtEquipaje, true);
             this.mAyuda.SetToolTip(this.txtEquipaje, "Solo numeros enteros entre 1 y 50");
             // 
             // txtCodigoPais
@@ -213,15 +200,6 @@ namespace PrimerParcial.Forms
             // txtNacimiento
             // 
             this.txtNacimiento.Location = new System.Drawing.Point(357, 199);
-            this.txtNacimiento.MaxDate = new System.DateTime(2080, 10, 21, 0, 0, 0, 0);
-            this.txtNacimiento.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.txtNacimiento.Value = new System.DateTime(2022, 10, 21, 0, 0, 0, 0);
-            // 
-            // txtEmision
-            // 
-            this.txtEmision.MaxDate = new System.DateTime(2080, 1, 1, 0, 0, 0, 0);
-            this.txtEmision.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.txtEmision.Value = new System.DateTime(2022, 10, 21, 0, 0, 0, 0);
             // 
             // txtVencimiento
             // 
@@ -279,16 +257,11 @@ namespace PrimerParcial.Forms
             this.label21.Text = "Gimnasio :";
             this.label21.Visible = true;
             // 
-            // button1
-            // 
-            this.button1.Enabled = false;
-            this.button1.Visible = false;
-            // 
             // MostrarViajes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(937, 588);
+            this.ClientSize = new System.Drawing.Size(840, 465);
             this.Name = "MostrarViajes";
             this.Text = "MostrarViajes";
             this.Load += new System.EventHandler(this.MostrarViajes_Load);

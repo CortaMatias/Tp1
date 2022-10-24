@@ -20,53 +20,14 @@ namespace PrimerParcial.Forms
             InitializeComponent();
         }
 
-        #region #Eventos
-
         protected override void button2_Click(object sender, EventArgs e)
         {
             this.habilitarAdd();
         }
 
-        protected override void cmbFecha_MouseClick(object sender, MouseEventArgs e)
-        {
-            deshabilitarAdd();
-        }
 
-        protected override void cmbCrucero_MouseClick(object sender, MouseEventArgs e)
-        {
-            deshabilitarAdd();
-        }
-
-        protected void cmbFecha_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            Viajes v = this.obtenerViaje();
-            Show(v);
-        }
-
-        protected override void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsLetter(e.KeyChar) || (e.KeyChar == '\b')) { }
-            else e.Handled = true;
-        }
-
-        protected override void btnValidar_Click(object sender, EventArgs e)
-        {
-            if (Validar())
-            {
-                MessageBox.Show("El viaje fue agregado con exito!");
-            }
-        }
-
-        private void MostrarViajes_Load(object sender, EventArgs e)
-        {
-
-        }
-        #endregion
-
-        #region #Metodos
         protected override void deshabilitarAdd()
         {
-            errorProvider1.Clear();
             txtNombre.Enabled = false;
             txtEmision.Enabled = false;
             txtNacimiento.Enabled = false;
@@ -77,14 +38,14 @@ namespace PrimerParcial.Forms
                 {
                     TextBox i = item as TextBox;
                     i.BackColor = Color.White;
-                }
-                if (item is ComboBox)
+                }              
+                if(item is ComboBox)
                 {
                     ComboBox t = item as ComboBox;
                     t.BackColor = Color.White;
                 }
             }
-
+            
         }
 
         protected override bool Validar()
@@ -94,31 +55,32 @@ namespace PrimerParcial.Forms
             string crucero = txtNombre.Text;
             int destino;
             DateTime fecha = txtNacimiento.Value;
-
-
-            if (txtNacimiento.Value == DateTime.Today)
+            
+            
+            if(txtNacimiento.Value == DateTime.Today)
             {
                 todoOk = false;
                 errorProvider1.SetError(txtNacimiento, "Elija una fecha que no sea la actual.");
             }
             else
-            {
+            {              
                 DateTime salida = txtNacimiento.Value;
+
             }
             if (crucero == "")
             {
                 todoOk = false;
                 errorProvider1.SetError(txtNombre, "Rellene los campos correspondientes");
             }
-            else
+            else 
             {
-
+       
                 if (!cmbCrucero.Items.Contains(crucero))
                 {
                     todoOk = false;
                     errorProvider1.SetError(txtNombre, "No hay ningun Crucero con ese nombre");
                 }
-
+                    
             }
             if (txtPasaporte.SelectedIndex == -1)
             {
@@ -126,13 +88,14 @@ namespace PrimerParcial.Forms
                 errorProvider1.SetError(txtPasaporte, "Seleccione un destino");
                 destino = 0;
             }
-            else destino = txtPasaporte.SelectedIndex - 1;
-            if (!ValidarFecha(fecha, crucero, destino)) todoOk = false;
+            else destino = txtPasaporte.SelectedIndex -1;
+
+            todoOk =  ValidarFecha(fecha,crucero, destino);
 
             if (todoOk)
             {
                 Crucero c = null;
-                foreach (Viajes v in Lista)
+                foreach (Viajes v  in Lista)
                 {
                     if (v.Crucero.Nombre == crucero)
                     {
@@ -140,17 +103,17 @@ namespace PrimerParcial.Forms
                         break;
                     }
                 }
-                if (c != null)
+                if(c != null)
                 {
                     Viajes nuevo = new Viajes((destinos)destino, fecha, c);
                     Lista.Add(nuevo);
-                }
+                }              
             }
             return todoOk;
         }
 
 
-        private bool ValidarFecha(DateTime fecha, string crucero, int destino)
+        private bool ValidarFecha(DateTime fecha, string crucero,int  destino)
         {
             bool valida = true;
 
@@ -218,7 +181,7 @@ namespace PrimerParcial.Forms
                     }
                     else t.Text = "";
                 }
-                if (item is ComboBox)
+                if(item is ComboBox)
                 {
                     ComboBox c = item as ComboBox;
                     if (c.Name != "txtPasaporte")
@@ -233,15 +196,15 @@ namespace PrimerParcial.Forms
                         c.Text = "";
                     }
                 }
-                if (item is DateTimePicker)
+                if(item is DateTimePicker)
                 {
                     DateTimePicker d = item as DateTimePicker;
-                    if (d.Name != "txtNacimiento")
+                    if(d.Name != "txtNacimiento")
                     {
                         d.Value = DateTime.Today;
                         d.Enabled = false;
                     }
-                }
+                }             
             }
             txtNacimiento.Value = DateTime.Today;
             foreach (var i in Enum.GetValues(typeof(destinos)))
@@ -265,7 +228,7 @@ namespace PrimerParcial.Forms
                 string casino;
                 if (v.Crucero.Piscina) piscina = "Si"; else piscina = "No";
                 if (v.Crucero.Cine) cine = "Si"; else cine = "No";
-                if (v.Crucero.Gimnasio) gimnasio = "Si"; else gimnasio = "No";
+                if (v.Crucero.Gimnasio) gimnasio = "Si"; else gimnasio= "No";
                 if (v.Crucero.Casino) casino = "Si"; else casino = "No";
                 txtNombre.Text = v.Crucero.Nombre;
                 txtApellido.Text = v.Partida;
@@ -274,7 +237,7 @@ namespace PrimerParcial.Forms
                 textBox1.Text = v.calcularDisponibilidadPremium().ToString();
                 txtEquipaje.Text = v.CalcularDisponibilidad().ToString();
                 txtCodigoPais.Text = v.DuracionViaje.ToString();
-                txtNacimiento.Text = v.FechaSalida.ToShortDateString();
+                txtNacimiento.Text = v.FechaSalida.ToShortDateString(); 
                 txtCodigoPas.Text = v.CalcularPasajeroPremium().ToString() + " Pasajeros";
                 textBox2.Text = v.Crucero.CapacidadPersonas.ToString() + " Pasajeros";
                 txtEmision.Text = v.FechaRegreso.ToShortDateString();
@@ -282,7 +245,7 @@ namespace PrimerParcial.Forms
                 txtGenero.Text = piscina;
                 txtBolso.Text = cine;
                 txtDestino.Text = gimnasio;
-                txtPremium.Text = casino;
+                txtPremium.Text = casino;                       
             }
         }
 
@@ -290,6 +253,44 @@ namespace PrimerParcial.Forms
         {
             txtPasaporte.Text = d;
         }
-        #endregion       
+
+        protected override void cmbFecha_MouseClick(object sender, MouseEventArgs e)
+        {
+            deshabilitarAdd();
+        }
+
+        protected override void cmbCrucero_MouseClick(object sender, MouseEventArgs e)
+        {
+            deshabilitarAdd();
+        }
+
+        protected  void cmbFecha_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            Viajes v = this.obtenerViaje();
+            Show(v);
+        }
+
+        protected override void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(Char.IsLetter(e.KeyChar) || (e.KeyChar == '\b')) { }      
+            else e.Handled = true;
+        }
+
+        protected override void btnValidar_Click(object sender, EventArgs e)
+        {
+            if (Validar())
+            {
+                MessageBox.Show("El viaje fue agregado con exito!");
+            }
+
+
+        }
+
+
+
+        private void MostrarViajes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
