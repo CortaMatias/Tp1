@@ -23,6 +23,7 @@
   ![Image text](https://github.com/CortaMatias/Tp1/blob/Recuperatorio/home.jpeg)
   
   - Con el boton 'Home' vamos a volver siempre a esta vista que es la principal.
+    
   - Con los botones del Menu vamos accediendo a los distintos funcionamientos de la aplicacion.
   </li>
   
@@ -32,7 +33,9 @@
  ![Image text](https://github.com/CortaMatias/Tp1/blob/Recuperatorio/viajes.jpeg)
  
  Aqui podremos ver informacion de los viajes ya existentes y tambien podremos agregar nuevos viajes.
+  
  -Para poder ver la informacion de un viaje debemos elegir el nombre del crucero y la fecha de salida y de esta forma se cargaran automaticamente la informacion de dicho viaje.
+  
  -Para poder agregar un viaje deberemos hacer click en el boton 'agregar viaje' alli quedaran habilitadas solo las opciones que necesitamos para agregar viajes como lo son:
  
  -Crucero
@@ -48,17 +51,19 @@
  
  ![Image text](https://github.com/CortaMatias/Tp1/blob/Recuperatorio/pasajeros.jpeg)
 
--Para poder ver la informacion de un pasajero debemos elegir un viaje accediendo al mismo a traves de su crucero asignado y la fecha de salida(Ya que no podra haber 2 viajes con el mismo crucero en esa fecha), una vez seleccionado el viaje podremos acceder a la lista de pasajeros en el campo "Nombre del Pasajero" 
--Para poder agregar un pasajero a un viaje tenemos que hacer el mismo procedimiento que para verlo, debemos seleccionar el viaje al que deseamos agregarlo(Si es que ese no salio.) Y apretar el boton "Vender pasaje", Una vez apretado este boton se habilitara el boton "validar datos" el cual valida que los datos ingresados esten sean correctos. Si se pasa las validaciones correspondientes se mostrara un cartel con el precio del pasaje y se preguntara por la confirmacion de la compra.
+-Para poder ver la informacion de un pasajero debemos elegir un viaje accediendo al mismo a traves de su crucero asignado y la fecha de salida(Ya que no podra haber 2 viajes con el mismo crucero en esa fecha), una vez seleccionado el viaje podremos acceder a la lista de pasajeros en el campo "Nombre del Pasajero" .
+  
+-Para poder agregar un pasajero a un viaje tenemos que hacer el mismo procedimiento que para verlo, debemos seleccionar el viaje al que deseamos agregarlo(Si es que ese no salio.) Y apretar el boton "Vender pasaje", Una vez apretado este boton se habilitara el boton "validar datos" el cual valida que los datos ingresados esten sean correctos, se desabilitaran los campos que no correspondan ingresar ya que algunos de ellos se calculan automaticamente(Como por ej. la edad). Si se pasa las validaciones correspondientes se mostrara un cartel con el precio del pasaje y se preguntara por la confirmacion de la compra.
 
 <h4>Consultar Grupo familiar </h4>
 
 ![Image text](https://github.com/CortaMatias/Tp1/blob/Recuperatorio/consultar.jpeg)
 
--Este boton esta con la intencion de ayudar al usuario que utilice la aplicacion para consultar en la lista de viajes los requisitos que pueda tener un grupo familiar a la hora de comprar un pasaje, ya sea los salones que pretenden que tengan los cruceros o la cantidad de personas que compongan el grupo familiar para poder consultar la disponibilidad de los cruceros en los viajes. Por eso decidi que permita navegar por la aplicacion mientras este formulario este abierto, para facilitar la consulta del usuario y una vez que termine de utilizarlo lo cierre.
+-Este boton esta con la intencion de ayudar al usuario que utilice la aplicacion para consultar en la lista de viajes los requisitos que pueda tener un grupo familiar a la hora de comprar un pasaje, ya sea los salones que pretenden que tengan los cruceros o la cantidad de personas que compongan el grupo familiar para poder consultar la disponibilidad de los cruceros en los viajes, en la lista se cargaran los viajes que cumplan con los requisitos ingresados. Por eso decidi que permita navegar por la aplicacion mientras este formulario este abierto, para facilitar la consulta del usuario y una vez que termine de utilizarlo lo cierre.
 </li>
-<li><h3>Login</h3></li>
-<li><h3>Login</h3></li>
+  
+<li><h3>Cruceros</h3></li>
+<li><h3>Historial</h3></li>
  </ul>
 
 
