@@ -49,10 +49,6 @@ namespace PrimerParcial.Forms
             txtTotal.Text = total.ToString();        
         }
 
-        private void comboFiltro_MouseClick(object sender, MouseEventArgs e)
-        {
-           
-        }
         private void checkDni_CheckedChanged(object sender, EventArgs e)
         {
             if (checkDni.Checked == true)
@@ -121,7 +117,7 @@ namespace PrimerParcial.Forms
                 {
                     foreach (Viajes v in Lista)
                         foreach (Pasajero p in v.Lista)
-                            listDatos.Items.Add(p.MostrarPasajero(p, v.Destino.ToString(), v.FechaSalida.ToString()));
+                            listDatos.Items.Add(p.MostrarPasajero( v.Destino.ToString(), v.FechaSalida.ToString()));
                 }
                 else
                 {
@@ -129,8 +125,7 @@ namespace PrimerParcial.Forms
                     {
                         List<Pasajero> x = v.Lista.Where(usuario => usuario.Pasaporte.Codigo.Contains(codigo)).ToList();
                         foreach (Pasajero p in x)
-
-                            listDatos.Items.Add(p.MostrarPasajero(p, v.Destino.ToString(), v.FechaSalida.ToString()));
+                            listDatos.Items.Add(p.MostrarPasajero( v.Destino.ToString(), v.FechaSalida.ToString()));
                     }
                 }
                 for (int i = 0; i < listDatos.Items.Count - 2; i++)
@@ -156,7 +151,7 @@ namespace PrimerParcial.Forms
                 {
                     foreach (Viajes v in Lista)
                         foreach (Pasajero p in v.Lista)
-                            listDatos.Items.Add(p.MostrarPasajero(p, v.Destino.ToString(), v.FechaSalida.ToString()));
+                            listDatos.Items.Add(p.MostrarPasajero( v.Destino.ToString(), v.FechaSalida.ToString()));
                 }
                 else
                 {
@@ -165,7 +160,7 @@ namespace PrimerParcial.Forms
                         List<Pasajero> x = v.Lista.Where(usuario => usuario.Apellido.Contains(codigo)).ToList();
                         foreach (Pasajero p in x)
 
-                            listDatos.Items.Add(p.MostrarPasajero(p, v.Destino.ToString(), v.FechaSalida.ToString()));
+                            listDatos.Items.Add(p.MostrarPasajero( v.Destino.ToString(), v.FechaSalida.ToString()));
                     }
                 }
                 for (int i = 0; i < listDatos.Items.Count - 2; i++)
@@ -191,7 +186,7 @@ namespace PrimerParcial.Forms
                 {
                     foreach (Viajes v in Lista)
                         foreach (Pasajero p in v.Lista)
-                            listDatos.Items.Add(p.MostrarPasajero(p, v.Destino.ToString(), v.FechaSalida.ToString()));
+                            listDatos.Items.Add(p.MostrarPasajero( v.Destino.ToString(), v.FechaSalida.ToString()));
                 }
                 else
                 {
@@ -199,8 +194,7 @@ namespace PrimerParcial.Forms
                     {
                         List<Pasajero> x = v.Lista.Where(usuario => usuario.Dni.Contains(dni)).ToList();
                         foreach (Pasajero p in x)
-
-                            listDatos.Items.Add(p.MostrarPasajero(p, v.Destino.ToString(), v.FechaSalida.ToString()));
+                        listDatos.Items.Add(p.MostrarPasajero( v.Destino.ToString(), v.FechaSalida.ToString()));
                     }
                 }
                 for (int i = 0; i < listDatos.Items.Count - 2; i++)
@@ -216,28 +210,19 @@ namespace PrimerParcial.Forms
            
         }
 
-        private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtEdad_TextChanged(object sender, EventArgs e)
         {
-            listDatos.Items.Clear();
             string codigo = txtEdad.Text;
-            if (Char.IsNumber(e.KeyChar) || e.KeyChar == '\b')
+            listDatos.Items.Clear();
+            int edad;
+            if ((int.TryParse(codigo, out edad)))
             {
-                if (codigo.Length == 1 && e.KeyChar == '\b')
-                {
-                    foreach (Viajes v in Lista)
-                        foreach (Pasajero p in v.Lista)
-                            listDatos.Items.Add(p.MostrarPasajero(p, v.Destino.ToString(), v.FechaSalida.ToString()));
-                }
-                else
-                {
                     foreach (Viajes v in Lista)
                     {
-                        List<Pasajero> x = v.Lista.Where(usuario => usuario.Dni.Contains(codigo)).ToList();
+                        List<Pasajero> x = v.Lista.Where(usuario => codigo.Length >= 2 ? usuario.Edad.Equals(codigo) : usuario.Edad.Contains(codigo)).ToList();
                         foreach (Pasajero p in x)
-
-                            listDatos.Items.Add(p.MostrarPasajero(p, v.Destino.ToString(), v.FechaSalida.ToString()));
-                    }
-                }
+                            listDatos.Items.Add(p.MostrarPasajero(v.Destino.ToString(), v.FechaSalida.ToString()));
+                    }         
                 for (int i = 0; i < listDatos.Items.Count - 2; i++)
                 {
                     for (int j = listDatos.Items.Count - 1; j > i; j--)
@@ -246,11 +231,48 @@ namespace PrimerParcial.Forms
                     }
                 }
             }
-            else e.Handled = true;
+            else
+            {
+                foreach (Viajes v in Lista)
+                    foreach (Pasajero p in v.Lista)
+                        listDatos.Items.Add(p.MostrarPasajero(v.Destino.ToString(), v.FechaSalida.ToString()));
+            }
         }
-          
+
+        private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
+        {          
+        }
+
+
+
+        private void comboFiltro_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (comboFiltro.SelectedItem.ToString() == "Todos los pasajeros")
+            {
+                listDatos.Items.Clear();
+                listarPasajeros();
+            }
+
+            else if (comboFiltro.SelectedItem.ToString() == "Destinos x Facturacion")
+            {
+                listDatos.Items.Clear();
+                DestinoXFacturacion();
+            }
+            else if (comboFiltro.SelectedItem.ToString() == "Destino mas elegido")
+            {
+                listDatos.Items.Clear();
+                listDatos.Items.Add(DestinoMasElegido());
+            }
+            else
+            {
+                listDatos.Items.Clear();
+                PasajeroFrecuente();
+            }
+        }
+
         #endregion
 
+        #region #Metodos
 
         public string DestinoMasElegido()
         {
@@ -321,7 +343,7 @@ namespace PrimerParcial.Forms
                 destino = v.Destino.ToString();
                 foreach (Pasajero p in v.Lista)
                 {
-                    listDatos.Items.Add(p.MostrarPasajero(p, salida, destino));
+                    listDatos.Items.Add(p.MostrarPasajero(salida, destino));
                 }
             }
             for (int i = 0; i < listDatos.Items.Count - 2; i++)
@@ -332,30 +354,6 @@ namespace PrimerParcial.Forms
                 }
             }
         }
-
-        private void comboFiltro_SelectedIndexChanged_1(object sender, EventArgs e)
-        {           
-                if (comboFiltro.SelectedItem.ToString() == "Todos los pasajeros")
-                {
-                    listDatos.Items.Clear();
-                    listarPasajeros();
-                }
-
-                else if (comboFiltro.SelectedItem.ToString() == "Destinos x Facturacion")
-                {
-                    listDatos.Items.Clear();
-                    DestinoXFacturacion();
-                }
-                else if (comboFiltro.SelectedItem.ToString() == "Destino mas elegido")
-                {
-                    listDatos.Items.Clear();
-                    listDatos.Items.Add(DestinoMasElegido());
-                }
-                else
-                {
-                    listDatos.Items.Clear();
-                    PasajeroFrecuente();
-                }           
-        }
+        #endregion 
     }
 }

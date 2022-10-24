@@ -154,6 +154,7 @@ namespace PrimerParcial.Forms
             this.txtEdad.TabIndex = 7;
             this.toolTip1.SetToolTip(this.txtEdad, "Ingrese la edad (Solo numeros)");
             this.txtEdad.Visible = false;
+            this.txtEdad.TextChanged += new System.EventHandler(this.txtEdad_TextChanged);
             this.txtEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress);
             // 
             // txtApellido
@@ -193,7 +194,7 @@ namespace PrimerParcial.Forms
             // 
             this.checkEdad.AutoSize = true;
             this.checkEdad.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkEdad.Location = new System.Drawing.Point(9, 115);
+            this.checkEdad.Location = new System.Drawing.Point(6, 114);
             this.checkEdad.Name = "checkEdad";
             this.checkEdad.Size = new System.Drawing.Size(73, 29);
             this.checkEdad.TabIndex = 3;
@@ -205,7 +206,7 @@ namespace PrimerParcial.Forms
             // 
             this.checkApellido.AutoSize = true;
             this.checkApellido.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkApellido.Location = new System.Drawing.Point(9, 86);
+            this.checkApellido.Location = new System.Drawing.Point(6, 86);
             this.checkApellido.Name = "checkApellido";
             this.checkApellido.Size = new System.Drawing.Size(101, 29);
             this.checkApellido.TabIndex = 2;

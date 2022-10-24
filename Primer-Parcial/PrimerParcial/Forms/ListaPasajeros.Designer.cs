@@ -77,6 +77,7 @@ namespace PrimerParcial.Forms
             this.cmBoxNombre = new System.Windows.Forms.ComboBox();
             this.cmbFecha = new System.Windows.Forms.ComboBox();
             this.mAyuda = new System.Windows.Forms.ToolTip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.grpDatos.SuspendLayout();
@@ -99,7 +100,7 @@ namespace PrimerParcial.Forms
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(329, 1);
+            this.label1.Location = new System.Drawing.Point(377, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 15);
             this.label1.TabIndex = 1;
@@ -148,9 +149,9 @@ namespace PrimerParcial.Forms
             this.grpDatos.Controls.Add(this.label6);
             this.grpDatos.Controls.Add(this.txtNombre);
             this.grpDatos.Controls.Add(this.label5);
-            this.grpDatos.Location = new System.Drawing.Point(12, 64);
+            this.grpDatos.Location = new System.Drawing.Point(60, 126);
             this.grpDatos.Name = "grpDatos";
-            this.grpDatos.Size = new System.Drawing.Size(800, 376);
+            this.grpDatos.Size = new System.Drawing.Size(800, 396);
             this.grpDatos.TabIndex = 10;
             this.grpDatos.TabStop = false;
             this.grpDatos.Text = "Datos :";
@@ -184,7 +185,7 @@ namespace PrimerParcial.Forms
             this.txtPremium.Enabled = false;
             this.txtPremium.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPremium.FormattingEnabled = true;
-            this.txtPremium.Location = new System.Drawing.Point(613, 331);
+            this.txtPremium.Location = new System.Drawing.Point(347, 78);
             this.txtPremium.Name = "txtPremium";
             this.txtPremium.Size = new System.Drawing.Size(133, 38);
             this.txtPremium.TabIndex = 16;
@@ -240,11 +241,13 @@ namespace PrimerParcial.Forms
             this.txtVencimiento.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtVencimiento.Location = new System.Drawing.Point(613, 272);
+            this.txtVencimiento.MaxDate = new System.DateTime(2080, 1, 1, 0, 0, 0, 0);
+            this.txtVencimiento.MinDate = new System.DateTime(1913, 1, 1, 0, 0, 0, 0);
             this.txtVencimiento.Name = "txtVencimiento";
             this.txtVencimiento.Size = new System.Drawing.Size(133, 35);
             this.txtVencimiento.TabIndex = 15;
             this.mAyuda.SetToolTip(this.txtVencimiento, "Llene primero la fecha de emision.");
-            this.txtVencimiento.Value = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.txtVencimiento.Value = new System.DateTime(1913, 1, 1, 0, 0, 0, 0);
             // 
             // textBox2
             // 
@@ -263,10 +266,12 @@ namespace PrimerParcial.Forms
             this.txtEmision.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtEmision.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtEmision.Location = new System.Drawing.Point(613, 202);
+            this.txtEmision.MaxDate = new System.DateTime(2060, 1, 1, 0, 0, 0, 0);
+            this.txtEmision.MinDate = new System.DateTime(1940, 1, 1, 0, 0, 0, 0);
             this.txtEmision.Name = "txtEmision";
             this.txtEmision.Size = new System.Drawing.Size(133, 35);
             this.txtEmision.TabIndex = 14;
-            this.txtEmision.Value = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.txtEmision.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
             this.txtEmision.ValueChanged += new System.EventHandler(this.txtEmision_ValueChanged);
             // 
             // txtNacimiento
@@ -275,6 +280,8 @@ namespace PrimerParcial.Forms
             this.txtNacimiento.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtNacimiento.Location = new System.Drawing.Point(347, 202);
+            this.txtNacimiento.MaxDate = new System.DateTime(3000, 1, 1, 0, 0, 0, 0);
+            this.txtNacimiento.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.txtNacimiento.Name = "txtNacimiento";
             this.txtNacimiento.Size = new System.Drawing.Size(133, 35);
             this.txtNacimiento.TabIndex = 9;
@@ -307,7 +314,7 @@ namespace PrimerParcial.Forms
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
             this.button2.Location = new System.Drawing.Point(253, 17);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(232, 40);
+            this.button2.Size = new System.Drawing.Size(227, 40);
             this.button2.TabIndex = 51;
             this.button2.Text = "Vender Pasaje";
             this.mAyuda.SetToolTip(this.button2, "Permite añadir un pasajero al viaje seleccionado");
@@ -318,7 +325,7 @@ namespace PrimerParcial.Forms
             // 
             this.btnValidar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
             this.btnValidar.Enabled = false;
-            this.btnValidar.Location = new System.Drawing.Point(542, 17);
+            this.btnValidar.Location = new System.Drawing.Point(540, 17);
             this.btnValidar.Name = "btnValidar";
             this.btnValidar.Size = new System.Drawing.Size(204, 40);
             this.btnValidar.TabIndex = 50;
@@ -351,9 +358,11 @@ namespace PrimerParcial.Forms
             // 
             this.txtEquipaje.Enabled = false;
             this.txtEquipaje.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtEquipaje.Location = new System.Drawing.Point(347, 76);
+            this.helpProvider1.SetHelpString(this.txtEquipaje, "Para escribir aqui primero seleccione la opcion Premium");
+            this.txtEquipaje.Location = new System.Drawing.Point(613, 329);
             this.txtEquipaje.MaxLength = 2;
             this.txtEquipaje.Name = "txtEquipaje";
+            this.helpProvider1.SetShowHelp(this.txtEquipaje, true);
             this.txtEquipaje.Size = new System.Drawing.Size(133, 39);
             this.txtEquipaje.TabIndex = 44;
             this.mAyuda.SetToolTip(this.txtEquipaje, "Solo numeros enteros entre 1 y 50");
@@ -443,7 +452,7 @@ namespace PrimerParcial.Forms
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(526, 341);
+            this.label18.Location = new System.Drawing.Point(262, 88);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(81, 21);
             this.label18.TabIndex = 32;
@@ -473,7 +482,7 @@ namespace PrimerParcial.Forms
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(249, 88);
+            this.label15.Location = new System.Drawing.Point(514, 341);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(98, 21);
             this.label15.TabIndex = 29;
@@ -585,7 +594,7 @@ namespace PrimerParcial.Forms
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(603, 1);
+            this.label2.Location = new System.Drawing.Point(700, 1);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 15);
             this.label2.TabIndex = 11;
@@ -607,7 +616,7 @@ namespace PrimerParcial.Forms
             this.cmBoxNombre.Enabled = false;
             this.cmBoxNombre.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmBoxNombre.FormattingEnabled = true;
-            this.cmBoxNombre.Location = new System.Drawing.Point(603, 18);
+            this.cmBoxNombre.Location = new System.Drawing.Point(700, 18);
             this.cmBoxNombre.Name = "cmBoxNombre";
             this.cmBoxNombre.Size = new System.Drawing.Size(155, 40);
             this.cmBoxNombre.TabIndex = 15;
@@ -621,12 +630,25 @@ namespace PrimerParcial.Forms
             this.cmbFecha.Enabled = false;
             this.cmbFecha.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbFecha.FormattingEnabled = true;
-            this.cmbFecha.Location = new System.Drawing.Point(302, 19);
+            this.cmbFecha.Location = new System.Drawing.Point(350, 19);
             this.cmbFecha.Name = "cmbFecha";
             this.cmbFecha.Size = new System.Drawing.Size(155, 40);
             this.cmbFecha.TabIndex = 18;
             this.cmbFecha.SelectedIndexChanged += new System.EventHandler(this.cmbFecha_SelectedIndexChanged);
             this.cmbFecha.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmbFecha_MouseClick);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
+            this.button1.Location = new System.Drawing.Point(600, 80);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(255, 40);
+            this.button1.TabIndex = 52;
+            this.button1.Text = "Consultar grupo familiar";
+            this.mAyuda.SetToolTip(this.button1, "Permite ver disponibilidad de viajes segun la cantidad del grupo familiar y los r" +
+        "equisitos.");
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // errorProvider1
             // 
@@ -637,7 +659,8 @@ namespace PrimerParcial.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(54)))), ((int)(((byte)(75)))));
-            this.ClientSize = new System.Drawing.Size(840, 465);
+            this.ClientSize = new System.Drawing.Size(937, 588);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbFecha);
             this.Controls.Add(this.cmBoxNombre);
             this.Controls.Add(this.label3);
@@ -708,5 +731,6 @@ namespace PrimerParcial.Forms
         protected System.Windows.Forms.ToolTip mAyuda;
         protected System.Windows.Forms.ErrorProvider errorProvider1;
         protected System.Windows.Forms.HelpProvider helpProvider1;
+        protected System.Windows.Forms.Button button1;
     }
 }
