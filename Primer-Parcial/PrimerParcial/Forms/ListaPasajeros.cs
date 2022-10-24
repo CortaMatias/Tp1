@@ -229,8 +229,8 @@ namespace PrimerParcial.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GrupoFamiliar formFamilia = new(Lista);
-            formFamilia.Show();
+            GrupoFamiliar formFamilia = new(Lista);          
+            formFamilia.ShowDialog();      
         }
         #endregion
 
