@@ -59,11 +59,28 @@
 
 ![Image text](https://github.com/CortaMatias/Tp1/blob/Recuperatorio/consultar.jpeg)
 
--Este boton esta con la intencion de ayudar al usuario que utilice la aplicacion para consultar en la lista de viajes los requisitos que pueda tener un grupo familiar a la hora de comprar un pasaje, ya sea los salones que pretenden que tengan los cruceros o la cantidad de personas que compongan el grupo familiar para poder consultar la disponibilidad de los cruceros en los viajes, en la lista se cargaran los viajes que cumplan con los requisitos ingresados. Por eso decidi que permita navegar por la aplicacion mientras este formulario este abierto, para facilitar la consulta del usuario y una vez que termine de utilizarlo lo cierre.
+-Este boton esta con la intencion de ayudar al usuario que utilice la aplicacion para consultar en la lista de viajes los requisitos que pueda tener un grupo familiar a la hora de comprar un pasaje, ya sea los salones que pretenden que tengan los cruceros o la cantidad de personas que compongan el grupo familiar para poder consultar la disponibilidad de los cruceros en los viajes, en la lista se cargaran los viajes que cumplan con los requisitos ingresados. Si necesitan conocer mas caracteristicas del viaje o del crucero siempre esta la opcion de entrar a la opciones "Viajes" o "Cruceros" y poder analizar todo lo que se desee.
 </li>
   
-<li><h3>Cruceros</h3></li>
+<li><h3>Cruceros</h3>
+En esta opcion se podra acceder a la informacion de cada uno de los cruceros de los que dispone la aplicacion. Tambien se podra agregar cruceros nuevos en caso de que sea necesario.
+
+![Image text](https://github.com/CortaMatias/Tp1/blob/Recuperatorio/cruceros.jpeg)
+
+-Para poder ver la informacion del crucero simplemente habra que elegirlo en la opcion "Nombre" y la informacion se completara automaticamente.
+
+-Si se quiere agregar un crucero nuevo a la lista de cruceros disponibles se debe tocar el boton "Nuevo crucero", cuando esto ocurra quedaran habilitados los campos que sean necesarios para agregar un nuevo crucero ya que algunos de los datos son de informacion obtenida con los datos principales.
+
+</li>
 <li><h3>Historial</h3></li>
+En esta opcion se podra ver los datos historicos de la aplicacion, donde habra 4 opciones principales.
+
+![Image text](https://github.com/CortaMatias/Tp1/blob/Recuperatorio/historial.jpeg)
+
+-En la parte de abajo estaran el total recaudado ya sea por los viajes regionales, los extra regionales y el total facturado.
+-Dentro de las 4 opciones que estaran disponibles para navegar tendremos las que vemos en la imagen.
+-Una vez que elijamos la opcion "Todos los pasajeros" se hara visible el control que permita el filtrado de los mismos.
+-Pueden aparecer pasajeros repetidos y esto es debido a que este pasajero esta vinculado a diferentes Viajes y es necesario volver a mostrarlo para saber a que diferentes viajes esta asignado ese pasajero, ya que a la hora de mostrarlo no solo tenemos en cuenta sus datos sino tambien los del viaje.
  </ul>
 
 
