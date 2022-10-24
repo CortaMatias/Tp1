@@ -29,20 +29,7 @@ namespace PrimerParcial.Forms
             ListaCruceros = Hardcodeo.ListaCruceros;
             InitializeComponent();
         }
-
-       
-        private void Home_Load(object sender, EventArgs e)
-        {                 
-            panelHome fotos = new panelHome();
-            OcultarFormPanel(fotos);
-            label5.Text = fmrLogin.NombreUsuario;
-            label2.ForeColor = Color.White;
-            string date = DateTime.UtcNow.ToString("MM-dd-yy");
-            label3.Text = $"Fecha: {date}";
-        }
-
-       
-
+      
         #region #Metodos
         private void AbrirFormEnUnPanel(object formhija)
         {
@@ -58,7 +45,7 @@ namespace PrimerParcial.Forms
             fh.Show();
         }
 
-        private void OcultarFormPanel(Form f)
+        internal void OcultarFormPanel(Form f)
         {
             foreach(Form t in panel2.Controls)
             {
@@ -70,6 +57,17 @@ namespace PrimerParcial.Forms
         #endregion
 
         #region #Eventos
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            panelHome fotos = new panelHome();
+            OcultarFormPanel(fotos);
+            label5.Text = fmrLogin.NombreUsuario;
+            label2.ForeColor = Color.White;
+            string date = DateTime.UtcNow.ToString("MM-dd-yy");
+            label3.Text = $"Fecha: {date}";
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             Cruceros formCrucero = new Cruceros(ListaCruceros, listaViajes);
@@ -79,7 +77,7 @@ namespace PrimerParcial.Forms
         private void button3_Click(object sender, EventArgs e)
         {
             MostrarViajes formViajes = new MostrarViajes();
-            formViajes.inicializarLista(ListaViajes);
+            formViajes.inicializarLista(ListaViajes, ListaCruceros);
             OcultarFormPanel(formViajes);
         }
 
@@ -95,8 +93,14 @@ namespace PrimerParcial.Forms
             OcultarFormPanel(formHistorial);
         }
 
-        private int clickX = 0, clickY = 0;
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ListaPasajeros pasajeros = new ListaPasajeros();
+            pasajeros.inicializarLista(ListaViajes, ListaCruceros);
+            OcultarFormPanel(pasajeros);
+        }
 
+        private int clickX = 0, clickY = 0;
         private void pictureBox5_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Maximized) this.WindowState = FormWindowState.Normal;
@@ -136,14 +140,7 @@ namespace PrimerParcial.Forms
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            ListaPasajeros pasajeros = new ListaPasajeros();
-            pasajeros.inicializarLista(ListaViajes);
-            OcultarFormPanel(pasajeros);
-        }
+
         #endregion
-
-
     }
 }

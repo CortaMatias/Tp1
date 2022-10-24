@@ -4,6 +4,9 @@
     <Compile Update="Forms\Cruceros.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\GrupoFamiliar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\panelHome.cs">
       <SubType>Form</SubType>
     </Compile>
