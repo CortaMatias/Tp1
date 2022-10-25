@@ -139,7 +139,7 @@ namespace PrimerParcial.Clases
             ListaViajes.Add(new Viajes(destinos.Montevideo, new(2023, 7, 24), ListaCruceros[4]));
             ListaViajes.Add(new Viajes(destinos.Cartagena, new(2023, 6, 20), ListaCruceros[5]));
             ListaViajes.Add(new Viajes(destinos.Atenas, new(2023, 7, 13), ListaCruceros[6]));
-            ListaViajes.Add(new Viajes(destinos.Acapulco, new(2023, 8, 21), ListaCruceros[0]));
+            ListaViajes.Add(new Viajes(destinos.Miami, new(2023, 8, 21), ListaCruceros[0]));
             ListaViajes.Add(new Viajes(destinos.Santiago, new(2022, 12, 9), ListaCruceros[1]));
             ListaViajes.Add(new Viajes(destinos.Montevideo, new(2022, 12, 24), ListaCruceros[3]));
             ListaViajes.Add(new Viajes(destinos.Bangkok, new(2022, 12, 30), ListaCruceros[4]));
@@ -161,73 +161,73 @@ namespace PrimerParcial.Clases
             ListaViajes[2].Lista.Add(ListaPasajeros[3]);
             ListaViajes[2].Lista.Add(ListaPasajeros[11]);
             ListaViajes[2].Lista.Add(ListaPasajeros[12]);
-            ListaViajes[2].Lista.Add(ListaPasajeros[3]);
+            ListaViajes[2].Lista.Add(ListaPasajeros[16]);
 
             ListaViajes[3].Lista.Add(ListaPasajeros[13]);
-            ListaViajes[3].Lista.Add(ListaPasajeros[3]);
+            ListaViajes[3].Lista.Add(ListaPasajeros[9]);
             ListaViajes[3].Lista.Add(ListaPasajeros[14]);
             ListaViajes[3].Lista.Add(ListaPasajeros[15]);
-            ListaViajes[3].Lista.Add(ListaPasajeros[3]);
+            ListaViajes[3].Lista.Add(ListaPasajeros[7]);
             ListaViajes[3].Lista.Add(ListaPasajeros[16]);
 
             ListaViajes[4].Lista.Add(ListaPasajeros[17]);
-            ListaViajes[4].Lista.Add(ListaPasajeros[3]);
+            ListaViajes[4].Lista.Add(ListaPasajeros[6]);
 
             ListaViajes[5].Lista.Add(ListaPasajeros[18]);
             ListaViajes[5].Lista.Add(ListaPasajeros[19]);
 
             ListaViajes[6].Lista.Add(ListaPasajeros[20]);
-            ListaViajes[6].Lista.Add(ListaPasajeros[0]);
+            ListaViajes[6].Lista.Add(ListaPasajeros[10]);
             ListaViajes[6].Lista.Add(ListaPasajeros[0]);
 
             ListaViajes[7].Lista.Add(ListaPasajeros[17]);
             ListaViajes[7].Lista.Add(ListaPasajeros[20]);
             ListaViajes[7].Lista.Add(ListaPasajeros[21]);
-            ListaViajes[7].Lista.Add(ListaPasajeros[3]);
+            ListaViajes[7].Lista.Add(ListaPasajeros[6]);
             
             ListaViajes[8].Lista.Add(ListaPasajeros[19]);
             ListaViajes[8].Lista.Add(ListaPasajeros[8]);
-            ListaViajes[8].Lista.Add(ListaPasajeros[7]);
+            ListaViajes[8].Lista.Add(ListaPasajeros[9]);
             ListaViajes[8].Lista.Add(ListaPasajeros[17]);
 
             ListaViajes[9].Lista.Add(ListaPasajeros[10]);
-            ListaViajes[9].Lista.Add(ListaPasajeros[17]);
+            ListaViajes[9].Lista.Add(ListaPasajeros[11]);
             ListaViajes[9].Lista.Add(ListaPasajeros[3]);
             ListaViajes[9].Lista.Add(ListaPasajeros[19]);
 
             ListaViajes[10].Lista.Add(ListaPasajeros[14]);
-            ListaViajes[10].Lista.Add(ListaPasajeros[3]);
-            ListaViajes[10].Lista.Add(ListaPasajeros[17]);
+            ListaViajes[10].Lista.Add(ListaPasajeros[24]);
+            ListaViajes[10].Lista.Add(ListaPasajeros[13]);
             ListaViajes[10].Lista.Add(ListaPasajeros[21]);
 
 
             ListaViajes[11].Lista.Add(ListaPasajeros[4]);
-            ListaViajes[11].Lista.Add(ListaPasajeros[3]);
-            ListaViajes[11].Lista.Add(ListaPasajeros[17]);
+            ListaViajes[11].Lista.Add(ListaPasajeros[23]);
+            ListaViajes[11].Lista.Add(ListaPasajeros[15]);
 
             ListaViajes[12].Lista.Add(ListaPasajeros[9]);
             ListaViajes[12].Lista.Add(ListaPasajeros[2]);
             ListaViajes[12].Lista.Add(ListaPasajeros[22]);
-            ListaViajes[12].Lista.Add(ListaPasajeros[17]);
+            ListaViajes[12].Lista.Add(ListaPasajeros[11]);
 
             ListaViajes[13].Lista.Add(ListaPasajeros[9]);
             ListaViajes[13].Lista.Add(ListaPasajeros[3]);
-            ListaViajes[13].Lista.Add(ListaPasajeros[17]);
+            ListaViajes[13].Lista.Add(ListaPasajeros[12]);
 
             ListaViajes[14].Lista.Add(ListaPasajeros[20]);
+            ListaViajes[14].Lista.Add(ListaPasajeros[15]);
             ListaViajes[14].Lista.Add(ListaPasajeros[19]);
-            ListaViajes[14].Lista.Add(ListaPasajeros[3]);
             ListaViajes[14].Lista.Add(ListaPasajeros[21]);
 
             ListaViajes[15].Lista.Add(ListaPasajeros[21]);
             ListaViajes[15].Lista.Add(ListaPasajeros[22]);
             ListaViajes[15].Lista.Add(ListaPasajeros[3]);
 
-            ListaViajes[16].Lista.Add(ListaPasajeros[17]);
+            ListaViajes[16].Lista.Add(ListaPasajeros[24]);
             ListaViajes[16].Lista.Add(ListaPasajeros[23]);
             ListaViajes[16].Lista.Add(ListaPasajeros[19]);
 
-            ListaViajes[17].Lista.Add(ListaPasajeros[17]);
+            ListaViajes[17].Lista.Add(ListaPasajeros[13]);
             ListaViajes[17].Lista.Add(ListaPasajeros[24]);
             ListaViajes[17].Lista.Add(ListaPasajeros[25]);
 
@@ -236,19 +236,19 @@ namespace PrimerParcial.Clases
             ListaViajes[18].Lista.Add(ListaPasajeros[27]);
 
             ListaViajes[19].Lista.Add(ListaPasajeros[0]);
-            ListaViajes[19].Lista.Add(ListaPasajeros[0]);
+            ListaViajes[19].Lista.Add(ListaPasajeros[24]);
             ListaViajes[19].Lista.Add(ListaPasajeros[28]);
             ListaViajes[19].Lista.Add(ListaPasajeros[3]);
 
             ListaViajes[20].Lista.Add(ListaPasajeros[29]);
             ListaViajes[20].Lista.Add(ListaPasajeros[19]);
             ListaViajes[20].Lista.Add(ListaPasajeros[30]);
-            ListaViajes[20].Lista.Add(ListaPasajeros[17]);
+            ListaViajes[20].Lista.Add(ListaPasajeros[21]);
 
             ListaViajes[21].Lista.Add(ListaPasajeros[15]);
             ListaViajes[21].Lista.Add(ListaPasajeros[13]);
-            ListaViajes[21].Lista.Add(ListaPasajeros[17]);
-            ListaViajes[21].Lista.Add(ListaPasajeros[3]);
+            ListaViajes[21].Lista.Add(ListaPasajeros[10]);
+            ListaViajes[21].Lista.Add(ListaPasajeros[5]);
 
             ListaViajes[22].Lista.Add(ListaPasajeros[20]);
             ListaViajes[22].Lista.Add(ListaPasajeros[22]);
@@ -260,10 +260,10 @@ namespace PrimerParcial.Clases
 
             ListaViajes[24].Lista.Add(ListaPasajeros[17]);
             ListaViajes[24].Lista.Add(ListaPasajeros[19]);
-            ListaViajes[24].Lista.Add(ListaPasajeros[3]);
+            ListaViajes[24].Lista.Add(ListaPasajeros[31]);
 
             ListaViajes[25].Lista.Add(ListaPasajeros[9]);
-            ListaViajes[25].Lista.Add(ListaPasajeros[17]);
+            ListaViajes[25].Lista.Add(ListaPasajeros[20]);
             ListaViajes[25].Lista.Add(ListaPasajeros[4]);
         }
     }

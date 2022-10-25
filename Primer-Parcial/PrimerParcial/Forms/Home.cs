@@ -23,8 +23,8 @@ namespace PrimerParcial.Forms
 
         public Home()
         {
-            this.SetStyle(ControlStyles.ResizeRedraw, true);
-            this.DoubleBuffered = true;
+            //this.SetStyle(ControlStyles.ResizeRedraw, true);
+            //this.DoubleBuffered = true;
             ListaViajes = Hardcodeo.ListaViajes;
             ListaCruceros = Hardcodeo.ListaCruceros;
             InitializeComponent();
