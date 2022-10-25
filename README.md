@@ -91,7 +91,8 @@ En esta opcion se podra ver los datos historicos de la aplicacion, donde habra 4
 
 
 #### JUSTIFICACION TECNICA
-Se trato de aplicar todos los temas vistos en clase como Herencia, Abstraccion, Herencia de formularios, Polimorfismo etc.
+
+Se pudieron aplicar los temas visto hasta el momento en clase, la abstraccion a la hora de crear las clases, se utilizo sobrecarga de metodos, constructores y tambien de operadores para facilitar las validaciones, los calculos y las asignaciones a las listas correspondientes. Utilizamos la Herencia tanto en las clases como en los formularios yendo de los mas general a lo particular. Tanto en las clases como en los formularios utilizamos el Encapsulamiento para cuidar el acceso a los metodos como los atributos y los componentes de los formularios para poder acceder desde sus hijos y sobreescribir los metodos y poder modificar los componentes. Se utilizaron las colecciones para listas de cruceros, pasajeros y viajes y tambien se utilizo el Dictionary y algunos de sus metodos para facilitar algunos calculos, la clase abstracta persona de la cual sale la clase pasajero, la herencia de los formularios la utilizamos con 2 formularios que la idea era que tengan la misma implementacion de elegir un crucero y una fecha de salida para poder elegir un viaje y que de esa forma exista una sola posibilidad disponible lo cual tambien se tuvo en cuenta a la hora de crear las clases y como iban a estar relacionadas las mismas. 
 
 
 ## PROPUESTA DE VALOR AGREGADO
