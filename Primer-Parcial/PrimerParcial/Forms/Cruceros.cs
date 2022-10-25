@@ -33,6 +33,11 @@ namespace PrimerParcial.Forms
             cargarComboCrucero(Listacruceros);
         }
 
+        /// <summary>
+        /// Evento que obtiene el Crucero seleccionado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbNombreCrucero_SelectedIndexChanged(object sender, EventArgs e)
         {
             Crucero seleccionado = Listacruceros[cmbNombreCrucero.SelectedIndex];
@@ -40,6 +45,11 @@ namespace PrimerParcial.Forms
 
         }
 
+        /// <summary>
+        /// Evento que habilita el formulario los componentes del formulario para ingresar un crucero.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             errorProvider1.Clear();
@@ -81,6 +91,11 @@ namespace PrimerParcial.Forms
             }
         }
 
+        /// <summary>
+        /// Evento que se activa al tocar el boton de validar que avisa si se pudo agregar el crucero o si hubo algun error.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             errorProvider1.Clear();
@@ -102,6 +117,11 @@ namespace PrimerParcial.Forms
             }
         }
 
+        /// <summary>
+        /// Evento que desactiva los campos del formulario para agregar un crucero.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbNombreCrucero_MouseDown(object sender, MouseEventArgs e)
         {
             if (cmbNombreCrucero.Text == "")
@@ -130,6 +150,11 @@ namespace PrimerParcial.Forms
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbNombreCrucero_Click(object sender, EventArgs e)
         {
             txtCasino.Enabled = false;
@@ -186,6 +211,10 @@ namespace PrimerParcial.Forms
 
         #region #Metodos
 
+        /// <summary>
+        /// Carga en el comboBox los nombres de los cruceros
+        /// </summary>
+        /// <param name="cruceros"></param>
         private void cargarComboCrucero(List<Crucero> cruceros)
         {
             foreach (Crucero c in cruceros)
@@ -194,32 +223,11 @@ namespace PrimerParcial.Forms
             }
         }
 
-
-
-        private void OcultarFormPanel(Form f)
-        {
-            foreach (Form t in panel1.Controls)
-            {
-                if (f.Text != t.Text) f.Hide();
-            }
-            AbrirFormEnUnPanel(f);
-        }
-
-        private void AbrirFormEnUnPanel(object formhija)
-        {
-            if (this.panel1.Controls.Count > 0)
-            {
-                this.panel1.Controls.RemoveAt(0);
-            }
-
-            Form fh = formhija as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.panel1.Controls.Add(fh);
-            this.panel1.Tag = fh;
-            fh.Show();
-        }
-
+        /// <summary>
+        /// Muestra los datos de un crucero en los componentes del form
+        /// </summary>
+        /// <param name="c"></param>
+        /// <param name="l"></param>
         private void showCrucero(Crucero c, List<Viajes> l)
         {
             txtMatricula.Text = c.Matricula;
@@ -236,6 +244,11 @@ namespace PrimerParcial.Forms
             txtViajes.Text = c.CalcularViajesTotales(l).ToString();
         }
 
+
+        /// <summary>
+        /// Valida los datos ingresados para agregar el crucero y si pasa las validaciones lo agrega a la lista
+        /// </summary>
+        /// <returns></returns>
         private bool validarCampos()
         {
             bool piscina = false;

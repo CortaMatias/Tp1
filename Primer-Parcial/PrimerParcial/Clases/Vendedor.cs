@@ -17,6 +17,12 @@ namespace PrimerParcial.Clases
             this.contraseña = contraseña;
         }
 
+        /// <summary>
+        /// Compara dos usuarios por su usuario y contraseña 
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         public static bool operator == (Vendedor v1, Vendedor v2)
         {
             return v1.usuario == v2.usuario && v1.contraseña == v2.contraseña;

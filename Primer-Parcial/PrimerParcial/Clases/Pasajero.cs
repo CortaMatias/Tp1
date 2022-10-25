@@ -25,6 +25,12 @@ namespace PrimerParcial.Clases
         public bool BolsoDeMano { get => bolsoDeMano; set => bolsoDeMano = value; }
 
         #region #Metodos
+        /// <summary>
+        /// Muestra el pasajero, al destino que se dirige y la fecha de salida.
+        /// </summary>
+        /// <param name="destino"></param>
+        /// <param name="salida"></param>
+        /// <returns></returns>
         public string MostrarPasajero(string destino, string salida)
         {
             StringBuilder sb = new();
@@ -37,10 +43,15 @@ namespace PrimerParcial.Clases
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Compara 2 pasajeros por el dni y retorna si estos coindicen o no.
+        /// </summary>
+        /// <param name="p1"></param>
+        /// <param name="p2"></param>
+        /// <returns></returns>
         public static bool operator ==(Pasajero p1, Pasajero p2)
         {
-            if (p1.Dni == p2.Dni) return true;
-            else return false;
+            return (p1.Dni == p2.Dni);
         }
 
         public static bool operator !=(Pasajero p1, Pasajero p2)

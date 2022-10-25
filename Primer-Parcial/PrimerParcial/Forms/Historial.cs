@@ -49,6 +49,7 @@ namespace PrimerParcial.Forms
             txtTotal.Text = total.ToString();        
         }
 
+
         private void checkDni_CheckedChanged(object sender, EventArgs e)
         {
             if (checkDni.Checked == true)
@@ -105,6 +106,12 @@ namespace PrimerParcial.Forms
             }
         }
 
+
+        /// <summary>
+        /// Filtra los elementos de la list box segun el codigo del pasaporte del pasajero
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtPasaporte_KeyPress(object sender, KeyPressEventArgs e)
         {
             listDatos.Items.Clear();
@@ -140,6 +147,11 @@ namespace PrimerParcial.Forms
         }
 
 
+        /// <summary>
+        /// Filtra los elemetnos de la lista segun el apellido del pasajero
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
             listDatos.Items.Clear();
@@ -174,6 +186,11 @@ namespace PrimerParcial.Forms
             else e.Handled = true;
         }
 
+        /// <summary>
+        /// Filtra los elementos de la list box segun el dni del pasajero
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
         {
             listDatos.Items.Clear();
@@ -210,6 +227,12 @@ namespace PrimerParcial.Forms
            
         }
 
+
+        /// <summary>
+        /// Filtra los elementos de la list box segun 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtEdad_TextChanged(object sender, EventArgs e)
         {
             string codigo = txtEdad.Text;
@@ -274,6 +297,11 @@ namespace PrimerParcial.Forms
 
         #region #Metodos
 
+
+        /// <summary>
+        /// Calcula el destino mas elegido de todos los viajes a traves de un diccionario y sus metodos.
+        /// </summary>
+        /// <returns></returns>
         public string DestinoMasElegido()
         {
             StringBuilder sb = new();
@@ -289,6 +317,10 @@ namespace PrimerParcial.Forms
             return sb.ToString();
         }
 
+
+        /// <summary>
+        /// Calcula el pasajero mas frecuente entre todos los viajes  a traves de un diccionario y sus metodos.
+        /// </summary>
         private void PasajeroFrecuente()
         {      
             Dictionary<Pasajero, int> frecuente = new Dictionary<Pasajero, int>();
@@ -308,6 +340,11 @@ namespace PrimerParcial.Forms
             listDatos.Items.Add($"El tercero pasajero mas frecuente es {tresMasFrecuente.Nombre}  su Dni es {tresMasFrecuente.Dni.ToString()} y esta en {frecuente[tresMasFrecuente]} viajes");
         }
 
+
+        /// <summary>
+        /// Calcula la facturacion dependiendo el destino del viaje a traves de un diccionario y sus metodos.
+        /// </summary>
+        /// <returns></returns>
         public string DestinoXFacturacion()
         {
             float precioBruto;
@@ -322,15 +359,18 @@ namespace PrimerParcial.Forms
                     destino[v.Destino] += precioBruto;
                 }
             }
-            Dictionary<destinos, float> x = destino.OrderByDescending(x => x.Value).ToDictionary( x => x.Key, x => x.Value);
-            foreach(var item in x)
+            Dictionary<destinos, float> d = destino.OrderByDescending(x => x.Value).ToDictionary( x => x.Key, x => x.Value);
+            foreach(var item in d)
             {
-                listDatos.Items.Add($"Destino: {item.Key}  - Facturacion Total(sin iva): {item.Value.ToString("0.##")}  - Facturacion con iva: {(item.Value * 1.21).ToString("0.##")}");
+                listDatos.Items.Add($"Destino: {item.Key}  - Facturacion Total(sin iva): {item.Value.ToString("0.##")}  " +
+                    $"- Facturacion con iva: {(item.Value * 1.21).ToString("0.##")}");
             }
             return sb.ToString();
         }
 
-
+        /// <summary>
+        /// Lista los pasajeros en la listBox 
+        /// </summary>
         private void listarPasajeros()
         {
             grpFiltrarPasajeros.Visible = true;

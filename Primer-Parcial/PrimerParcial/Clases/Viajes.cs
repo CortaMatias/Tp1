@@ -58,10 +58,24 @@ namespace PrimerParcial.Clases
         #endregion
 
         #region #Metodos
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="v"></param>
+        /// <param name="destino"></param>
+        /// <returns></returns>
         public static bool operator ==(Viajes v, destinos destino)
         {
             return (destino == v.Destino);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="v"></param>
+        /// <param name="destino"></param>
+        /// <returns></returns>
         public static bool operator !=(Viajes v, destinos destino)
         {
             return !(v.Crucero.Nombre == destino.ToString());
@@ -77,6 +91,10 @@ namespace PrimerParcial.Clases
             return ret;
         }
 
+        /// <summary>
+        ///  Calcula la cantidad de pasajeros premium que hay en un viaje.
+        /// </summary>
+        /// <returns></returns>
         public int CalcularPasajeroPremium()
         {
             int contador = 0;
@@ -87,6 +105,10 @@ namespace PrimerParcial.Clases
             return contador;
         }
 
+        /// <summary>
+        /// Calcula la cantidad de pasajeros turista que hay en un viaje.
+        /// </summary>
+        /// <returns></returns>
         public int CalcularPasajeroTurista()
         {
             int contador = 0;
@@ -120,6 +142,11 @@ namespace PrimerParcial.Clases
             return Mostrar();
         }
 
+        /// <summary>
+        /// Calcula la fecha en la que va a volver el viaje a partir de la fecha de salida y la duracion
+        /// </summary>
+        /// <param name="duracion"></param>
+        /// <returns></returns>
         private DateTime calcularVuelta(int duracion)
         {
             DateTime salida = this.FechaSalida;
@@ -127,6 +154,12 @@ namespace PrimerParcial.Clases
             return FechaRegreso;
         }
 
+        /// <summary>
+        /// Devuelve en una lista de viajes los viajes que coincidan con la fecha que pasamos por parametro.
+        /// </summary>
+        /// <param name="f"></param>
+        /// <param name="l"></param>
+        /// <returns></returns>
         public static List<Viajes> filterViaje(DateTime f, List<Viajes> l)
         {
             List<Viajes> lista = new List<Viajes>();
@@ -138,6 +171,10 @@ namespace PrimerParcial.Clases
         }
 
 
+        /// <summary>
+        /// Calcula el espacio disponible en la bodega y retona ese valor (en kg)
+        /// </summary>
+        /// <returns></returns>
         public int CalcularEspacioBodega()
         {
             int equipaje = 0;
@@ -148,21 +185,38 @@ namespace PrimerParcial.Clases
             return this.Crucero.Bodega - equipaje;
         }
 
+        /// <summary>
+        /// Calcula la disponibilidad de pasajeros para el viaje en cierto crucero.
+        /// </summary>
+        /// <returns></returns>
         public int CalcularDisponibilidad()
         {
             return this.Crucero.CapacidadPersonas - this.Lista.Count;
         }
 
+        /// <summary>
+        /// Calcula la cantidad disponible para pasejeros de tipo Premium
+        /// </summary>
+        /// <returns></returns>
         public int calcularDisponibilidadPremium()
         {
             return this.CamarotePremium - (CantidadPremium() / 2);
         }
 
+
+        /// <summary>
+        /// Calcula la cantidad disponible para pasajeros de tipo Turista
+        /// </summary>
+        /// <returns></returns>
         public int CalcularDisponibilidadTurista()
         {
             return this.CamaroteTurista - (CantidadTurista() / 2);
         }
 
+        /// <summary>
+        /// Calcula la cantidad de pasajeros turistas que hay en un viaje
+        /// </summary>
+        /// <returns></returns>
         public int CantidadTurista()
         {
             int contador = 0;
@@ -173,6 +227,11 @@ namespace PrimerParcial.Clases
             return contador;
         }
 
+
+        /// <summary>
+        /// Calcula la cantidad de pasajeros premium que hay en un viaje
+        /// </summary>
+        /// <returns></returns>
         public int CantidadPremium()
         {
             int contador = 0;
@@ -183,18 +242,35 @@ namespace PrimerParcial.Clases
             return contador;
         }
 
+
+        /// <summary>
+        /// Calcula la cantidad de Camarotes premium que hay disponibles.
+        /// </summary>
+        /// <param name="c1"></param>
+        /// <returns></returns>
         public static int CalcularCamarotesPremium(Crucero c1)
         {
             int camarotesPremium = (int)(c1.Camarotes * 0.35);
             return camarotesPremium;
         }
 
+
+        /// <summary>
+        /// Calcula la cantidad de Camarotes turistas que hay disponibles
+        /// </summary>
+        /// <param name="c1"></param>
+        /// <returns></returns>
         public static int CalcularCamarotesTurista(Crucero c1)
         {
             int camarotesTurista = (int)(c1.Camarotes * 0.65);
             return camarotesTurista;
         }
 
+
+        /// <summary>
+        /// Calcula la duracion del viaje de manera aleatoria.
+        /// </summary>
+        /// <returns></returns>
         private int CalcularDuracion()
         {
             int duracion = 0;
@@ -208,7 +284,11 @@ namespace PrimerParcial.Clases
         }
 
 
-
+        /// <summary>
+        /// Calcula el precio que va a tener un pasaje para un pasajero.
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
         public float CalcularPrecioViaje(Pasajero p)
         {
             int costoHora;
@@ -227,6 +307,11 @@ namespace PrimerParcial.Clases
             return costoBruto;
         }
 
+
+        /// <summary>
+        /// Calcula las ganancias totales de los viajes regionales
+        /// </summary>
+        /// <returns></returns>
         public float CalcularGananciasRegionales()
         {
             float ganancias = 0;
@@ -240,6 +325,10 @@ namespace PrimerParcial.Clases
             return ganancias;
         }
 
+        /// <summary>
+        /// Calcula la ganancia total de los viajes ExtraRegionales
+        /// </summary>
+        /// <returns></returns>
         public float CalcularGananciasExtraRegionales()
         {
             float ganancias = 0;

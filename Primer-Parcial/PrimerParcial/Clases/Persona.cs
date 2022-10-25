@@ -39,6 +39,11 @@ namespace PrimerParcial.Clases
         public DateTime Nacimiento { get => nacimiento; set => nacimiento = value; }
 
 
+        /// <summary>
+        /// Calcula la edad de la persona y la retorna 
+        /// </summary>
+        /// <param name="f"></param>
+        /// <returns></returns>
         protected string calcularEdad(DateTime f)
         {
             //Validar cuando ingresa la fecha de nacimiento que no sea mayor a la fecha actual

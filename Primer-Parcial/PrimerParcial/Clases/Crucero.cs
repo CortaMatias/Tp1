@@ -68,7 +68,11 @@ namespace PrimerParcial.Clases
             return c1.Mostrar();
         }
 
-
+        /// <summary>
+        /// Calcula las horas totales de viaje de un crucero y retarna dicha cantidad.
+        /// </summary>
+        /// <param name="l"> Lista de viajes</param>
+        /// <returns></returns>
         public int CalcularHorasTotales(List<Viajes> l)
         {
             int duracionTotal = 0;
@@ -82,6 +86,11 @@ namespace PrimerParcial.Clases
             return duracionTotal;
         }
 
+        /// <summary>
+        /// Calcula la cantidad de viajes realizados por cada crucero y retorna dicha cantidad.
+        /// </summary>
+        /// <param name="l"></param>
+        /// <returns></returns>
         public int CalcularViajesTotales(List<Viajes> l)
         {
             int contadorViajes = 0;
