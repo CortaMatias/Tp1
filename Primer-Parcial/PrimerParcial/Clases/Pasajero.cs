@@ -24,23 +24,34 @@ namespace PrimerParcial.Clases
         public bool Premium { get => premium; set => premium = value; }
         public bool BolsoDeMano { get => bolsoDeMano; set => bolsoDeMano = value; }
 
-
-       public string MostrarPasajero(Pasajero p, string salida, string destino)
+        #region #Metodos
+        /// <summary>
+        /// Muestra el pasajero, al destino que se dirige y la fecha de salida.
+        /// </summary>
+        /// <param name="destino"></param>
+        /// <param name="salida"></param>
+        /// <returns></returns>
+        public string MostrarPasajero(string destino, string salida)
         {
             StringBuilder sb = new();
-            sb.Append($"Nombre: {p.Nombre} - Apellido: {p.Apellido}" +
-                $" - Genero: {p.Genero} - Dni: {p.Dni} - Pais: {p.Pais}" +
-                $"  - Nacimiento: {p.Edad} - Cod. Pasaporte: {p.Pasaporte.Codigo.ToString()}" +
-                $" - Venc. Pasaporte: {p.Pasaporte.Vencimiento.ToShortDateString()}" +
+            sb.Append($"Nombre: {this.Nombre} - Apellido: {this.Apellido}" +
+                $" - Genero: {this.Genero} - Dni: {this.Dni} - Pais: {this.Pais}" +
+                $"  - Edad: {this.Edad} - Cod. Pasaporte: {this.Pasaporte.Codigo.ToString()}" +
+                $" - Venc. Pasaporte: {this.Pasaporte.Vencimiento.ToShortDateString()}" +
                 $"- Destino: {destino} " +
                 $"- Fecha de Salida: {salida}");
             return sb.ToString();
         }
 
-       public static bool operator == (Pasajero p1, Pasajero p2)
+        /// <summary>
+        /// Compara 2 pasajeros por el dni y retorna si estos coindicen o no.
+        /// </summary>
+        /// <param name="p1"></param>
+        /// <param name="p2"></param>
+        /// <returns></returns>
+        public static bool operator ==(Pasajero p1, Pasajero p2)
         {
-            if (p1.Dni == p2.Dni) return true;
-            else return false;
+            return (p1.Dni == p2.Dni);
         }
 
         public static bool operator !=(Pasajero p1, Pasajero p2)
@@ -62,5 +73,7 @@ namespace PrimerParcial.Clases
         {
             return base.GetHashCode();
         }
+        #endregion 
+
     }
 }

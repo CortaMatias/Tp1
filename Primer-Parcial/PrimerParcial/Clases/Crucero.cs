@@ -18,7 +18,6 @@ namespace PrimerParcial.Clases
         private bool casino = false;
         private int bodega;
         private int capacidadPersonas;
-        private string rutaFoto = "";
         
 
 
@@ -29,33 +28,15 @@ namespace PrimerParcial.Clases
             this.camarotes = camarotes;
             this.bodega = bodega;
             this.CapacidadPersonas = capacidadPersonas;
-        }
-        public Crucero(string matricula, string nombre, int camarotes, int bodega, int capacidadPersonas, bool casinos) : this(matricula, nombre, camarotes, bodega, capacidadPersonas)
-        {
-            this.Casino = casinos;
-        }
+        }        
 
-        public Crucero(string matricula, string nombre, int camarotes, int bodega, int capacidadPersonas, bool casinos, bool gimnasio) : this(matricula, nombre, camarotes,  bodega, capacidadPersonas,casinos)
-        {
-            this.Gimnasio = gimnasio;
-        }
-
-        public Crucero(string matricula, string nombre, int camarotes, int bodega, int capacidadPersonas, bool casinos, bool gimnasio, bool cine) : this(matricula, nombre, camarotes, bodega, capacidadPersonas, casinos, gimnasio)
-        {
-            this.Cine = cine;
-        }
-
-        public Crucero(string matricula, string nombre, int camarotes, int bodega, int capacidadPersonas, bool casinos, bool gimnasio, bool cine, bool piscina) : this(matricula, nombre, camarotes, bodega, capacidadPersonas,casinos, gimnasio, cine)
+        public Crucero(string matricula, string nombre, int camarotes, int bodega, int capacidadPersonas, bool casinos, bool gimnasio, bool cine, bool piscina) : this(matricula, nombre, camarotes, bodega, capacidadPersonas)
         {
             this.Piscina = piscina;
+            this.Casino = casinos;
+            this.Gimnasio = gimnasio;
+            this.Cine = cine;
         }
-
-        public Crucero(string matricula, string nombre, int camarotes, int bodega, int capacidadPersonas, bool casinos, bool gimnasio, bool cine, bool piscina, string foto) : this (matricula, nombre, camarotes, bodega, capacidadPersonas, casinos, gimnasio, cine, piscina)
-        {
-            this.RutaFoto = foto;
-        }
-
-
         public string Matricula { get => matricula;}
         public string Nombre { get => nombre;}
         public int Camarotes { get => camarotes;}
@@ -65,8 +46,8 @@ namespace PrimerParcial.Clases
         public bool Gimnasio { get => gimnasio; set => gimnasio = value; }
         public bool Cine { get => cine; set => cine = value; }
         public bool Casino { get => casino; set => casino = value; }
-        public string RutaFoto { get => rutaFoto; set => rutaFoto = value; }
 
+        #region #Metodos
         private string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
@@ -87,13 +68,17 @@ namespace PrimerParcial.Clases
             return c1.Mostrar();
         }
 
-
-        public int  CalcularHorasTotales(List<Viajes> l)
+        /// <summary>
+        /// Calcula las horas totales de viaje de un crucero y retarna dicha cantidad.
+        /// </summary>
+        /// <param name="l"> Lista de viajes</param>
+        /// <returns></returns>
+        public int CalcularHorasTotales(List<Viajes> l)
         {
             int duracionTotal = 0;
-            foreach(Viajes v in l)
+            foreach (Viajes v in l)
             {
-                if(this.Nombre == v.Crucero.Nombre)
+                if (this.Nombre == v.Crucero.Nombre)
                 {
                     duracionTotal += v.DuracionViaje;
                 }
@@ -101,19 +86,23 @@ namespace PrimerParcial.Clases
             return duracionTotal;
         }
 
+        /// <summary>
+        /// Calcula la cantidad de viajes realizados por cada crucero y retorna dicha cantidad.
+        /// </summary>
+        /// <param name="l"></param>
+        /// <returns></returns>
         public int CalcularViajesTotales(List<Viajes> l)
         {
             int contadorViajes = 0;
-            foreach(Viajes v in l)
+            foreach (Viajes v in l)
             {
-                if(this.Nombre == v.Crucero.Nombre)
+                if (this.Nombre == v.Crucero.Nombre)
                 {
                     contadorViajes++;
                 }
             }
             return contadorViajes;
         }
-
-
+        #endregion
     }
 }

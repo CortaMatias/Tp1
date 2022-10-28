@@ -15,25 +15,10 @@ namespace PrimerParcial.Forms
     {
         private List<Crucero> listacruceros;
         private List<Viajes> lista;
-        private bool v1;
-        private bool v2;
-        private bool v3;
-        private bool v4;
-        private bool v5;
-        private bool v6;
-        private bool v7;
-        private bool v8;
-        private bool v9;
 
         public List<Viajes> Lista { get => lista; set => lista = value; }
         public List<Crucero> Listacruceros { get => listacruceros; set => listacruceros = value; }
-        public bool V1 { get => v1; set => v1 = value; }
-        public bool V2 { get => v2; set => v2 = value; }
-        public bool V3 { get => v3; set => v3 = value; }
-        public bool V4 { get => v4; set => v4 = value; }
-        public bool V5 { get => v5; set => v5 = value; }
-        public bool V6 { get => v6; set => v6 = value; }
-        public bool V7 { get => v7; set => v7 = value; }
+
 
         public Cruceros(List<Crucero> cruceros, List<Viajes> lista)
         {
@@ -41,86 +26,54 @@ namespace PrimerParcial.Forms
             this.Lista = lista;
             InitializeComponent();
         }
-        
 
-
-
+        #region #Eventos
         private void Cruceros_Load(object sender, EventArgs e)
         {
             cargarComboCrucero(Listacruceros);
         }
 
-        private void cargarComboCrucero(List<Crucero> cruceros)
-        {
-            foreach(Crucero c in cruceros)
-            {
-                cmbNombreCrucero.Items.Add(c.Nombre);
-            }
-        }
-
-        
-
+        /// <summary>
+        /// Evento que obtiene el Crucero seleccionado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbNombreCrucero_SelectedIndexChanged(object sender, EventArgs e)
         {
             Crucero seleccionado = Listacruceros[cmbNombreCrucero.SelectedIndex];
             showCrucero(seleccionado, Lista);
-          
+
         }
 
-
-        private void OcultarFormPanel(Form f)
-        {
-            foreach (Form t in panel1.Controls)
-            {
-                if (f.Text != t.Text) f.Hide();
-            }
-            AbrirFormEnUnPanel(f);
-        }
-
-        private void AbrirFormEnUnPanel(object formhija)
-        {
-            if (this.panel1.Controls.Count > 0)
-            {
-                this.panel1.Controls.RemoveAt(0);
-            }
-
-            Form fh = formhija as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.panel1.Controls.Add(fh);
-            this.panel1.Tag = fh;
-            fh.Show();
-        }
-
-        private void showCrucero(Crucero c, List<Viajes> l)
-        {
-            txtMatricula.Text = c.Matricula;
-            txtCamarotes.Text = c.Camarotes.ToString();
-            txtPremium.Text = Viajes.CalcularCamarotesPremium(c).ToString();
-            txtTurista.Text = Viajes.CalcularCamarotesTurista(c).ToString();
-            txtBodega.Text = c.Bodega.ToString();
-            txtPasajeros.Text = c.CapacidadPersonas.ToString();
-            if (c.Piscina == true) txtPiscina.Text = "Si"; else txtPiscina.Text = "No";
-            if (c.Gimnasio == true) txtGimnasio.Text = "Si"; else txtGimnasio.Text = "No";
-            if (c.Cine == true) txtCine.Text = "Si"; else txtCine.Text = "No";
-            if (c.Casino == true) txtCasino.Text = "Si"; else txtCasino.Text = "No";
-            txtHoras.Text = c.CalcularHorasTotales(l).ToString();
-            txtViajes.Text = c.CalcularViajesTotales(l).ToString();
-            if (c.RutaFoto != "") pcbCrucero.Image = Image.FromFile(c.RutaFoto);
-        }
-
-
+        /// <summary>
+        /// Evento que habilita el formulario los componentes del formulario para ingresar un crucero.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
+            errorProvider1.Clear();
             button2.Visible = true;
             button2.Enabled = true;
             txtNombre.Visible = true;
             label14.Visible = true;
+            txtPiscina.Enabled = true;
+            txtCine.Enabled = true;
+            txtGimnasio.Enabled = true;
+            txtCasino.Enabled = true;
+            txtPiscina.Items.Add("Si");
+            txtPiscina.Items.Add("No");
+            txtGimnasio.Items.Add("Si");
+            txtGimnasio.Items.Add("No");
+            txtCine.Items.Add("Si");
+            txtCine.Items.Add("No");
+            txtCasino.Items.Add("Si");
+            txtCasino.Items.Add("No");
             cmbNombreCrucero.Items.Clear();
             cmbNombreCrucero.Text = "";
-            foreach(var t in grpDatos.Controls)
+            foreach (var t in grpDatos.Controls)
             {
-                if(t is TextBox)
+                if (t is TextBox)
                 {
                     TextBox item = t as TextBox;
                     if (item.Name != "txtViajes"
@@ -138,8 +91,14 @@ namespace PrimerParcial.Forms
             }
         }
 
+        /// <summary>
+        /// Evento que se activa al tocar el boton de validar que avisa si se pudo agregar el crucero o si hubo algun error.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
+            errorProvider1.Clear();
             if (validarCampos()) MessageBox.Show("Crucero agregado a la lista");
             else
             {
@@ -153,55 +112,16 @@ namespace PrimerParcial.Forms
                         && item.Name != "txtHoras"
                         && item.Name != "txtTurista"
                         && item.Name != "txtPremium") item.Enabled = true;
-                        item.Text = "";
                     }
-
                 }
             }
         }
 
-        private bool validarCampos()
-        {
-            bool piscina;
-            bool casino;
-            bool cine;
-            bool gimnasio;
-            bool ok = true;
-            if (txtMatricula.Text == ""
-                || txtBodega.Text == ""
-                || txtCamarotes.Text == ""
-                || txtPasajeros.Text == ""
-                || txtPiscina.Text == ""
-                || txtGimnasio.Text == ""
-                || txtCine.Text == ""
-                || txtCasino.Text == ""
-                || txtNombre.Text == "")
-            {
-                ok = false;
-                errorProvider1.SetError(button2, "Rellene todos los espacios correspondientes");
-            } else if (v1 == true &&
-                v2 == true && v3 == true &&
-                v4 == true && v5 == true &&
-                v6 == true && v7 == true &&
-                v8 == true && v9 == true)
-            {
-                if (txtCasino.Text == "Si" || txtCasino.Text == "si") casino = true;
-                else casino = false;
-                if (txtPiscina.Text == "Si" || txtPiscina.Text == "si") piscina = true;
-                else piscina = false;
-                if (txtGimnasio.Text == "Si" || txtGimnasio.Text == "si") gimnasio = true;
-                else gimnasio = false;
-                if (txtCine.Text == "Si" || txtCine.Text == "si") cine = true;
-                else cine = false;
-
-                Crucero nuevo = new(txtMatricula.Text, txtNombre.Text, int.Parse(txtCamarotes.Text),
-                 int.Parse(txtBodega.Text), int.Parse(txtPasajeros.Text), casino, gimnasio, cine, piscina);
-                Listacruceros.Add(nuevo);
- 
-            }            
-            return ok;
-        }
-
+        /// <summary>
+        /// Evento que desactiva los campos del formulario para agregar un crucero.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbNombreCrucero_MouseDown(object sender, MouseEventArgs e)
         {
             if (cmbNombreCrucero.Text == "")
@@ -219,138 +139,213 @@ namespace PrimerParcial.Forms
                         if (item.Name == "txtViajes"
                         || item.Name == "txtHoras"
                         || item.Name == "txtTurista"
-                        || item.Name == "txtPremium") item.BackColor = Color.White;                       
-                            item.Enabled = false;
+                        || item.Name == "txtPremium") item.BackColor = Color.White;
+                        item.Enabled = false;
                     }
-                
+                    txtPiscina.Items.Clear();
+                    txtGimnasio.Items.Clear();
+                    txtCine.Items.Clear();
+                    txtCasino.Items.Clear();
                 }
             }
         }
 
-        private void txtMatricula_Validating(object sender, CancelEventArgs e)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cmbNombreCrucero_Click(object sender, EventArgs e)
         {
-            string matricula = txtMatricula.Text;
-            if (matricula.Length != 8)
-            {
-                errorProvider1.SetError(txtMatricula, "Ingrese un valor alfanumerico de 8 digitos");
-                v1 = false;
-            }
-            else
-            {
-                v1 = true; errorProvider1.Clear();
-            }
+            txtCasino.Enabled = false;
 
+            txtPiscina.Enabled = false;
+
+            txtGimnasio.Enabled = false;
+
+            txtCine.Enabled = false;
         }
 
-        private void txtCamarotes_Validating(object sender, CancelEventArgs e)
+        private void txtMatricula_KeyPress(object sender, KeyPressEventArgs e)
         {
-            int camarotes;
-            bool esInt = int.TryParse(txtCamarotes.Text, out camarotes);
-            
-            if (!esInt || camarotes < 30)
-            {
-                errorProvider1.SetError(txtCamarotes, "Ingrese un numero entero que sea mayor a 30");
-                v2 = false;
-            }
-            else
-            {
-                v2 = true; errorProvider1.Clear();
-            }
+            if (!Char.IsLetter(e.KeyChar) && !(e.KeyChar == '\b') && !Char.IsNumber(e.KeyChar)) e.Handled = true;
         }
 
-        private void txtBodega_Validating(object sender, CancelEventArgs e)
+        private void txtCamarotes_KeyPress(object sender, KeyPressEventArgs e)
         {
-            int bodega;
-            bool esInt = int.TryParse(txtBodega.Text, out bodega);
-            if (!esInt || bodega < 100)
-            {
-                errorProvider1.SetError(txtBodega, "Ingrese un numero entero que sea mayor a 1000");
-                v3 = false;
-            }
-            else
-            {
-                v3 = true; errorProvider1.Clear();
-            }
+            if (!Char.IsNumber(e.KeyChar) && !(e.KeyChar == '\b')) e.Handled = true;
         }
 
-        private void txtPasajeros_Validating(object sender, CancelEventArgs e)
+        private void txtPasajeros_KeyPress(object sender, KeyPressEventArgs e)
         {
-            int pasajeros;
-            bool esInt = int.TryParse(txtPasajeros.Text, out pasajeros);
-            if (!esInt || pasajeros < 100)
-            {
-                errorProvider1.SetError(txtPasajeros, "Ingrese un numero entero que sea mayor a 100");
-                v4 = false;
-            }
-            else
-            {
-                v4 = true; errorProvider1.Clear();
-            }
+            if (!Char.IsNumber(e.KeyChar) && !(e.KeyChar == '\b')) e.Handled = true;
         }
 
-        private void txtPiscina_Validating(object sender, CancelEventArgs e)
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            string piscina = txtPiscina.Text;
-            if (piscina != "Si" && piscina != "si" && piscina != "No" && piscina != "no")
-            {
-                errorProvider1.SetError(txtPiscina, "Ingrese Si/si o No/no");
-                v5 = false;
-            }
-            else
-            {
-                v5 = true; errorProvider1.Clear();
-            }
+            if (!Char.IsLetter(e.KeyChar) && !(e.KeyChar == '\b')) e.Handled = true;
         }
 
-        private void txtGimnasio_Validating(object sender, CancelEventArgs e)
+        private void txtCine_KeyPress(object sender, KeyPressEventArgs e)
         {
-            string gimnasio = txtGimnasio.Text;
-            if (gimnasio != "Si" && gimnasio != "si" && gimnasio != "No" && gimnasio != "no")
+            e.Handled = true;
+        }
+
+        private void txtCasino_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtGimnasio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtPiscina_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+
+        #endregion
+
+        #region #Metodos
+
+        /// <summary>
+        /// Carga en el comboBox los nombres de los cruceros
+        /// </summary>
+        /// <param name="cruceros"></param>
+        private void cargarComboCrucero(List<Crucero> cruceros)
+        {
+            foreach (Crucero c in cruceros)
             {
-                errorProvider1.SetError(txtGimnasio, "Ingrese Si/si o No/no");
-                v6 = false;
-            }
-            else
-            {
-                v6 = true; errorProvider1.Clear();
+                cmbNombreCrucero.Items.Add(c.Nombre);
             }
         }
 
-        private void txtCine_Validating(object sender, CancelEventArgs e)
+        /// <summary>
+        /// Muestra los datos de un crucero en los componentes del form
+        /// </summary>
+        /// <param name="c"></param>
+        /// <param name="l"></param>
+        private void showCrucero(Crucero c, List<Viajes> l)
         {
-            string gimnasio =txtCine.Text;
-            if (gimnasio != "Si" && gimnasio != "si" && gimnasio != "No" && gimnasio != "no") {
-                errorProvider1.SetError(txtCine, "Ingrese Si/si o No/no"); v7 = false; }
-            else
-            {
-                v7 = true; errorProvider1.Clear();
-            }
+            txtMatricula.Text = c.Matricula;
+            txtCamarotes.Text = c.Camarotes.ToString();
+            txtPremium.Text = Viajes.CalcularCamarotesPremium(c).ToString();
+            txtTurista.Text = Viajes.CalcularCamarotesTurista(c).ToString();
+            txtBodega.Text = c.Bodega.ToString();
+            txtPasajeros.Text = c.CapacidadPersonas.ToString();
+            if (c.Piscina == true) txtPiscina.Text = "Si"; else txtPiscina.Text = "No";
+            if (c.Gimnasio == true) txtGimnasio.Text = "Si"; else txtGimnasio.Text = "No";
+            if (c.Cine == true) txtCine.Text = "Si"; else txtCine.Text = "No";
+            if (c.Casino == true) txtCasino.Text = "Si"; else txtCasino.Text = "No";
+            txtHoras.Text = c.CalcularHorasTotales(l).ToString();
+            txtViajes.Text = c.CalcularViajesTotales(l).ToString();
         }
 
-        private void txtCasino_TextChanged(object sender, EventArgs e)
+
+        /// <summary>
+        /// Valida los datos ingresados para agregar el crucero y si pasa las validaciones lo agrega a la lista
+        /// </summary>
+        /// <returns></returns>
+        private bool validarCampos()
         {
-            string gimnasio = txtCasino.Text;
-            if (gimnasio != "Si" && gimnasio != "si" && gimnasio != "No" && gimnasio != "no") 
+            bool piscina = false;
+            bool casino = false;
+            bool cine = false;
+            bool gimnasio = false;
+            bool todoOk = true;
+            foreach (var item in grpDatos.Controls)
             {
-                errorProvider1.SetError(txtCasino, "Ingrese Si/si o No/no"); v8 = false;
+                if (item is TextBox)
+                {
+                    TextBox t = item as TextBox;
+                    if (t.Name != "txtViajes" && t.Name != "txtHoras" && t.Name != "txtTurista" && t.Name != "txtPremium")
+                    {
+                        if (t.Text == "")
+                        {
+                            errorProvider1.SetError(t, "Rellene los campos correspondientes");
+                            todoOk = false;
+                        }
+                        else
+                        {
+                            string s = t.Text;
+                            if (t.Name == "txtCamarotes") if (int.Parse(t.Text) > 1000 || int.Parse(t.Text) < 10)
+                                {
+                                    errorProvider1.SetError(t, "Ingrese un numero de camarotes valido (entre 10 y 1000)");
+                                    todoOk = false;
+                                }
+                            if (t.Name == "txtBodega") if (int.Parse(t.Text) > 40000 || int.Parse(t.Text) < 1000)
+                                {
+                                    todoOk = false;
+                                    errorProvider1.SetError(t, "Ingrese un numero valido (entre 1000 y 40000)");
+                                }
+
+                            if (t.Name == "txtMatricula") if (s.Length != 10)
+                                {
+                                    todoOk = false;
+                                    errorProvider1.SetError(t, "Ingrese un alfanumerico de 10 digitos");
+                                }
+                            if (t.Name == "txtPasajeros") if (int.Parse(t.Text) > 20000 || int.Parse(t.Text) < 50)
+                                {
+                                    todoOk = false;
+                                    errorProvider1.SetError(t, "Ingrese un numero valido (entre 50 y 20000)");
+                                }
+                        }
+                    }
+
+                }
+                if (item is ComboBox)
+                {
+                    ComboBox c = item as ComboBox;
+                    if (c.SelectedItem == null)
+                    {
+                        errorProvider1.SetError(c, "Rellene los campos correspondientes");
+                        todoOk = false;
+                    }
+                    else
+                    {
+                       if(c.Name == "txtCasino")
+                        {
+                            if (txtCasino.SelectedItem.ToString() == "Si") casino = true;
+                            else casino = false;
+                        }
+                        
+                       if(c.Name == "txtPiscina")
+                        {
+                            if (txtPiscina.SelectedItem.ToString() == "Si") piscina = true;
+                            else piscina = false;
+                        }
+                      
+                       if(c.Name == "txtGimnasio")
+                        {
+                            if (txtGimnasio.SelectedItem.ToString() == "Si") gimnasio = true;
+                            else gimnasio = false;
+                        }
+                        
+                       if(c.Name == "txtCine")
+                        {
+                            if (txtCine.SelectedItem.ToString() == "Si") cine = true;
+                            else cine = false;
+                        }
+                        
+                    }
+
+                }
+
             }
-            else
+            if (todoOk)
             {
-                v8 = true; errorProvider1.Clear();
+                Crucero nuevo = new(txtMatricula.Text, txtNombre.Text, int.Parse(txtCamarotes.Text),
+          int.Parse(txtBodega.Text), int.Parse(txtPasajeros.Text), casino, gimnasio, cine, piscina);
+                Listacruceros.Add(nuevo);
             }
+            return todoOk;
         }
 
-        private void txtNombre_Validating(object sender, CancelEventArgs e)
-        {
-            string nombre = txtNombre.Text;
-            if (nombre.Length > 25)
-            {
-                errorProvider1.SetError(txtNombre, "Nombre demasiado largo"); v9 = false;
-            }
-            else
-            {
-                v9 = true; errorProvider1.Clear();
-            }
-        }
+        #endregion
+
+
     }
 }

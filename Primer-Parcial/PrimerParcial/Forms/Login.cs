@@ -28,6 +28,25 @@ namespace PrimerParcial
             InitializeComponent();
         }
 
+        #region #Metodos
+        private bool ValidarUsuario(string usuario, string contraseña)
+        {
+            bool todoOk = false;
+            foreach (Vendedor v in vendedores)
+            {
+                if (v == new Vendedor(usuario, contraseña)) todoOk = true;
+            }
+            return todoOk;
+        }
+
+        private void msgError(string msg)
+        {
+            lblError.Text = "      " + msg;
+            lblError.Visible = true;
+        }
+        #endregion
+
+        #region #Eventos
         private void btnIngresar_Click_1(object sender, EventArgs e)
         {
             string usuario = txtNombre.Text;
@@ -39,29 +58,18 @@ namespace PrimerParcial
                     if (ValidarUsuario(usuario, contraseña))
                     {
                         this.Hide();
+                        fmrLogin.NombreUsuario = usuario;
                         Home home = new Home();
                         home.Show();
-                    }else msgError("Usuario invalido");
-                }else msgError("Ingrese una contraseña");               
-            }else msgError("Ingrese un usuario");        
-        }
-
-        private bool ValidarUsuario(string usuario, string contraseña)
-        {
-            NombreUsuario = usuario;
-            foreach (Vendedor v1 in vendedores)
-            {
-                if (v1 == new Vendedor(usuario, contraseña)) return true;
-                else break;
+                    }
+                    else msgError("Usuario invalido");
+                }
+                else msgError("Ingrese una contraseña");
             }
-            return false;
+            else msgError("Ingrese un usuario");
         }
 
-        private void msgError(string msg)
-        { 
-            lblError.Text = "      " + msg;
-            lblError.Visible = true;
-        }
+
 
         private void btnIngresar_MouseEnter(object sender, EventArgs e)
         {
@@ -75,7 +83,7 @@ namespace PrimerParcial
 
         private void txtNombre_Enter(object sender, EventArgs e)
         {
-            if(txtNombre.Text == "Usuario")
+            if (txtNombre.Text == "Usuario")
             {
                 txtNombre.Text = "";
                 txtNombre.ForeColor = Color.Black;
@@ -84,12 +92,11 @@ namespace PrimerParcial
 
         private void txtNombre_Leave(object sender, EventArgs e)
         {
-            if(txtNombre.Text == "")
+            if (txtNombre.Text == "")
             {
                 txtNombre.Text = "Usuario";
-
             }
-        }        
+        }
         private void txtNombre_MouseEnter(object sender, EventArgs e)
         {
             txtNombre.BackColor = Color.FromArgb(45, 60, 80);
@@ -97,7 +104,7 @@ namespace PrimerParcial
 
         private void txtNombre_MouseLeave(object sender, EventArgs e)
         {
-            txtNombre.BackColor = Color.FromArgb(37, 54,75);
+            txtNombre.BackColor = Color.FromArgb(37, 54, 75);
         }
 
         private void txtContraseña_MouseEnter(object sender, EventArgs e)
@@ -147,12 +154,13 @@ namespace PrimerParcial
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
-        {           
+        {
             if (pictureBox2.Image == imageList1.Images[2]) pictureBox2.Image = imageList1.Images[1];
             else pictureBox2.Image = imageList1.Images[1];
 
-            if(txtContraseña.UseSystemPasswordChar == true) txtContraseña.UseSystemPasswordChar = false;
+            if (txtContraseña.UseSystemPasswordChar == true) txtContraseña.UseSystemPasswordChar = false;
             else txtContraseña.UseSystemPasswordChar = true;
         }
+        #endregion
     }  
 }
