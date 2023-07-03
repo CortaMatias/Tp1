@@ -1,11 +1,5 @@
 ## **ROYAL CRUISES**
 
-## SOBRE MI :  
-
-### Mi nombre es **Matias Corta**
-*Este trabajo fue un gran desafio para mi porque nunca habia hecho algo tan "Grande", me llevo muchisimo tiempo pero me gusto mucho hacerlo porque aprendi un monton de cosas, me hubiese gustado conocer un poco mas sobre algunas herramientas que me hubiesen facilitado bastante las cosas. Sin embargo considero que el trabajo esteticamente y el funcionamiento es correcto y esta bueno asique espero que les guste.*
-
-
   <h2>RESUMEN DE LA APLICACION </h2>
 <ul>
   <li><h3>Login</h3>
